@@ -8,6 +8,7 @@ This section describes the framework and standards for managing work within this
 - Tasks
 - Product Backlog
 - Sprint Backlog
-- Keeping work items up-to-date (roles and responsibilities)
+- Keeping work items up-to-date (roles and responsibilities, WHY this is important)
      - Estimating effort
+     - Velocity and remaining work
 - Additional resources
