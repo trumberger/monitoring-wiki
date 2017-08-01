@@ -5,7 +5,9 @@ This section describes the framework and standards for managing work within this
 - Features
 - User Stories
 - Enabler Stories
+- Tasks
 - Product Backlog
 - Sprint Backlog
 - Keeping work items up-to-date (roles and responsibilities)
+     - Estimating effort
 - Additional resources
