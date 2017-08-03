@@ -1,5 +1,5 @@
 # Source Location:
-[Deployment/Platform/Templates]()
+[https://easplatform.visualstudio.com/_git/Monitoring?path=%2FDeployment%2FPlatform%2FTemplates&version=GBmaster&_a=contents]()
 
 # Input Parameters
 
