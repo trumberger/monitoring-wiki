@@ -7,6 +7,8 @@ Schema information about the ARM templates can be found:
 **Azure Platform - Resource Explorer**
 [https://resources.azure.com/]()
 
+**GitHub Documentation**
+[https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control]()
 
 Available regions log analytics:
 - eastus
