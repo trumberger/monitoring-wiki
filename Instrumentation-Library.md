@@ -10,3 +10,8 @@
 
 **Custom operations tracking**
 [https://docs.microsoft.com/azure/application-Insights/application-insigths-custom-operations-tracking]()
+
+**Kusto information**
+[https://microsoft.sharepoint.com/teams/kusto/SitePages/Home.aspx]()
+[http://resnet/resnet/fullvideo.aspx?id=38651]() 
+
