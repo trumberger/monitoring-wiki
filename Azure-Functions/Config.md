@@ -13,5 +13,5 @@ TODO..
 **Request Body**
 `{ "name": "{setting}" }`
 
-** Return Body**
+**Return Body**
 `{ "name": "{setting}", "value": "{result}" }`
