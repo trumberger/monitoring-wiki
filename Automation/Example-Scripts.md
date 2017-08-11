@@ -31,3 +31,22 @@ $result = Get-HostAPIKeys $accessToken $webAppname $adminCode.Masterkey
 $keysCode =  $result.Content | ConvertFrom-Json
 Write-Host "default Key = " $keysCode.Keys[0].Value
 ```
+
+**Retrieve Azure Function Keys in ARM template (output file)**
+
+```
+"outputs": {
+    "FunctionAppName": {
+        "type": "string",
+        "value": "[parameters('functionName')]"
+    },
+    "Key": {
+        "type": "string",
+        "value": "[listsecrets(resourceId('Microsoft.Web/sites/functions', parameters('existingFunctionAppName'), parameters('functionName')),'2015-08-01').key]"
+    },        
+    "Url": {
+        "type": "string",
+        "value": "[listsecrets(resourceId('Microsoft.Web/sites/functions', parameters('existingFunctionAppName'), parameters('functionName')),'2015-08-01').trigger_url]"
+    }
+```
+   
