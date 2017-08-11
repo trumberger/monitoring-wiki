@@ -1,7 +1,9 @@
 ## Description
-TODO.. 
+todo
 
-## Retrieve Configuration item 
+## Retrieve Configuration item
+todo
+
 **Method: GET**
 `https://fun-custint-{Service-ID}.azurewebsites.net/api/config?code={FunctionKey}`
 
@@ -16,7 +18,9 @@ TODO..
 **Return Body**
 `{ "name": "{setting}", "value": "{result}" }`
 
-## Set Configuration item 
+## Set Configuration item
+todo
+
 **Method: POST**
 `https://fun-custint-{Service-ID}.azurewebsites.net/api/config?code={FunctionKey}`
 
