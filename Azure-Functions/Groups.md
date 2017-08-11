@@ -12,5 +12,14 @@ URL GET
 |Service-ID   |Unique ID that represents the Service. The Service ID is created during customer activation. |
 |functionKey| Key used to authenticate requests. | 
 
+Body
+
+```
+[
+   { "name": "Resourcegroup01" },
+   { "name": "Resourcegroup02" }
+]
+```
+
 
 ## Populate (or repopulate) all resource groups
