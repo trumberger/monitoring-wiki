@@ -4,7 +4,7 @@ The groups function allow you to retrieve and set resource groups in the scoping
 
 ## retrieve all resource groups
 
-METHOD: GET
+**Method: GET**
 `https://fun-custint-{Service-ID}.azurewebsites.net/api/groups?code={FunctionKey}`
 
 |Name          |Value        |
@@ -12,7 +12,7 @@ METHOD: GET
 |Service-ID   |Unique ID that represents the Service. The Service ID is created during customer activation. |
 |functionKey| Key used to authenticate requests. | 
 
-Return Body
+**Return Body**
 
 ```
 [
@@ -24,7 +24,7 @@ Return Body
 
 ## Populate (or repopulate) all resource groups
 
-METHOD: POST
+**Method: POST**
 `https://fun-custint-{Service-ID}.azurewebsites.net/api/groups?code={FunctionKey}`
 
 |Name          |Value        |
@@ -32,7 +32,7 @@ METHOD: POST
 |Service-ID   |Unique ID that represents the Service. The Service ID is created during customer activation. |
 |functionKey| Key used to authenticate requests. | 
 
-Request Body
+**Request Body**
 
 ```
 [
