@@ -14,12 +14,10 @@ URL GET
 
 Body
 
-```
-[
+```[
    { "name": "Resourcegroup01" },
    { "name": "Resourcegroup02" }
-]
-```
+]```
 
 
 ## Populate (or repopulate) all resource groups
