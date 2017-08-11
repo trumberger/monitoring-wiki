@@ -1,7 +1,7 @@
 ## Description
 TODO.. 
 
-## Retrieve Configuration items 
+## Retrieve Configuration item 
 **Method: GET**
 `https://fun-custint-{Service-ID}.azurewebsites.net/api/config?code={FunctionKey}`
 
