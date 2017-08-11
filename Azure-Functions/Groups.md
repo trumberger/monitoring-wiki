@@ -23,3 +23,20 @@ Body
 
 
 ## Populate (or repopulate) all resource groups
+
+METHOD: POST
+`https://fun-custint-{Service-ID}.azurewebsites.net/api/groups?code={FunctionKey}`
+
+|Name          |Value        |
+|-------------|------------|
+|Service-ID   |Unique ID that represents the Service. The Service ID is created during customer activation. |
+|functionKey| Key used to authenticate requests. | 
+
+Body
+
+```
+[
+   { "name": "Resourcegroup01" },
+   { "name": "Resourcegroup02" }
+]
+```
