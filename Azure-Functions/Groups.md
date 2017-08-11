@@ -12,7 +12,7 @@ METHOD: GET
 |Service-ID   |Unique ID that represents the Service. The Service ID is created during customer activation. |
 |functionKey| Key used to authenticate requests. | 
 
-Body
+Return Body
 
 ```
 [
@@ -32,7 +32,7 @@ METHOD: POST
 |Service-ID   |Unique ID that represents the Service. The Service ID is created during customer activation. |
 |functionKey| Key used to authenticate requests. | 
 
-Body
+Request Body
 
 ```
 [
