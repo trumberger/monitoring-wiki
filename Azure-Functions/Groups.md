@@ -4,7 +4,7 @@ The groups function allow you to retrieve and set resource groups in the scoping
 
 ## retrieve all resource groups
 
-URL GET
+METHOD: GET
 `https://fun-custint-{Service-ID}.azurewebsites.net/api/groups?code={FunctionKey}`
 
 |Name          |Value        |
