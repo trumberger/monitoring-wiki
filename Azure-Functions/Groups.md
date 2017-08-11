@@ -7,6 +7,8 @@ The groups function allow you to retrieve and set resource groups in the scoping
 URL GET
 `https://fun-custint-{Service-ID}.azurewebsites.net/api/groups?code={functionKey}`
 
+|Name|Value|
+|------|-------|
 
 
 ## Populate (or repopulate) all resource groups
