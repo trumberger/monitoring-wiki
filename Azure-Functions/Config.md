@@ -11,4 +11,7 @@ TODO..
 |functionKey| Key used to authenticate requests. | 
 
 **Request Body**
-`{ "name": "Retention", "value": "30" }`
+`{ "name": "{setting}" }`
+
+** Return Body**
+`{ "name": "{setting}", "value": "{result}" }`
