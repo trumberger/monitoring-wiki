@@ -5,3 +5,9 @@
 
 **IcM Packages and repositories**
 [https://icm.ad.msft.net/imp/v3/support/Connectors-amp-Developers/ICM-supported-librariespackages]()
+
+## Connector ID
+Represents the IcM tenant and can be found:
+Administration -> Manage Services -> Connectors and Webhooks 
+
+
