@@ -1,6 +1,8 @@
 
 OMS Alert Schema
 
+
+```
 {
      "WorkspaceId":"{Guid}","
      "AlertRuleName":"{String}",
@@ -14,3 +16,4 @@ OMS Alert Schema
      "LinkToResults":"{URL}",
      "Description":"{String}"
 }
+```
