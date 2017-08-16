@@ -13,7 +13,6 @@ Internal Roles in Tools
 |Dev Owner Alias |Service Tree |Monitoring Team Alias | 
 |PM Owner Alias |Service Tree |Monitoring Team Alias | 
 |Feature Team Alias |Service Tree |Monitoring Team Alias | 
-
 |Triage Team |IcM |Delivery Team Alias | 
 |Incident Manager Team |IcM |Delivery Team Alias | 
 |Executive Incident Manager |IcM |Delivery Team Alias | 
