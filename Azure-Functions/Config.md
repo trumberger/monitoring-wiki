@@ -12,11 +12,11 @@ todo
 |Service-ID   |Unique ID that represents the Service. The Service ID is created during customer activation. |
 |functionKey| Key used to authenticate requests. | 
 
-**Request Body**
-`{ "name": "{setting}" }`
+**Parameter**
+`{setting}`
 
 **Return Body**
-`{ "name": "{setting}", "value": "{result}" }`
+`{result}`
 
 ## Set Configuration item
 todo
