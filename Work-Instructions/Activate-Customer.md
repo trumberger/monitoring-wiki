@@ -7,8 +7,8 @@ Pre Requisites:
  
 Internal Roles in Tools
 
-| Role | Tool | Default |
-|----|----|----|
+|Role |Tool |Default |
+|---|---|---|
 |Admin Alias |Service Tree |Monitoring Team Alias |
 
 
