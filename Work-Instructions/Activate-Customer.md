@@ -43,7 +43,7 @@ The service in service tree will be instantly provisioned.
 - Click on ICM: Onboard ICM
 - Enter Service ID and select the service
 - Click on + Onboard New
-- Enter fields as listed below
+- Enter fields as listed below, save and submit
 
 | Fields | Required | Description |
 |---|---|---|
