@@ -9,9 +9,9 @@ IcM uses Service Tree for all "tenants".  Tenants are logically part of Servic
        Where is your service deployed --> Azure
        Targeted Locations --> Public
 - **Profile Info**. Select:
-       Service Name / Short Name --> Service-ID (See naming conventions, for example FIFA-DSP)
+       Service Name / Short Name --> Service-ID (See naming conventions, for example 'FIFA-DSP')
        Description --> Provide short overview of the Service
-       Admin / PM Owner / Dev Owner / feature team alias --> Member of monitoring team
+       Admin / PM Owner / Dev Owner / feature team alias --> Member of monitoring team, for example 'nielsn'
        Built By Microsoft / External Facing --> True
 - **Metadata**. Select:
        Current Lifecycle Stage --> GA
