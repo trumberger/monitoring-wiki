@@ -17,26 +17,6 @@ Internal Roles in Tools
 |Incident Manager Team |IcM |Delivery Team Alias | 
 |Executive Incident Manager |IcM |Delivery Team Alias | 
 
-
-## Procedure 01: Create Service ID
-- Go to [aka.ms/servicetree]() 
-- Click on 'Create a new Service'
-- **organization**. Select 'Enterprise Services Delivery'
-- **Service Type**. Select:
-       Where is your service deployed --> Azure
-       Targeted Locations --> Public
-- **Profile Info**. Select:
-       Service Name / Short Name --> Service-ID (See naming conventions, for example 'FIFA-DSP')
-       Description --> Provide short overview of the Service
-       Admin / PM Owner / Dev Owner / feature team alias --> Member of monitoring team, for example 'nielsn'
-       Built By Microsoft / External Facing --> True
-- **Metadata**. Select:
-       Current Lifecycle Stage --> GA
-- Submit
-
-## Note
-The service in service tree will be instantly provisioned. 
-
 ## Procedure 02: Onboard Service ID to ICM
 - Go to aka.ms/servicetree
 - Click on Service ID to be on boarded
