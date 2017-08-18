@@ -22,9 +22,9 @@ The following objects are used.
 |ADF	|Azure Data Factory	          |VNT   |	Virtual Network|
 |SQL	|Azure SQL Server	          |SUB|	Subnet|
 |SDB	|Azure SQL Database	          |PIP|	Public IP|
-|DDB	|Azure DocumentDB	          |VGW|	Gateway Connection|
+|DDB|Azure DocumentDB	          |VGW|	Gateway Connection|
 |APL	|Azure Application Service Plan	|EXR|	ExpressRoute Circuit|
-|WES	|Azure Web Site	              |NSG|	Network Security Group|
+|WES|Azure Web Site	              |NSG|	Network Security Group|
 |APS	|Azure Application Service	  |NSR|	Network Security Group Rule|
 |ILB	|Internal Load Balancer	      |NIC|	Network Interface|
 |PLB	|External Load Balancer	      |ROT|	Route Table|
@@ -34,11 +34,12 @@ The following objects are used.
 |AAA	|Azure Automation Account	  |IBA|	Inbound Allow NSG Rule|
 |RGP	|Azure Resource Group	      |IBD|	Inbound Deny NSG Rule|
 |RCH	|Azure Redis Cache	          |OBA|	Outbound Allow NSG Rule|
-|VGW	|Azure Gateway	              |OBD|	Outbound Deny NSG Rule|
+|VGW|Azure Gateway	              |OBD|	Outbound Deny NSG Rule|
 |AIS	|Azure Application Insights   |KVL|	Key Vault|
 |EHB	|Azure EventHub	              |ASA|	Azure Stream Analytics|
 |APP	|Azure Ad Application	      |OLA|	OMS Log Analytics|
-|AVM	|Azure Virtual Machine	 	  |FUN| Azure Functions|
+|AVM|Azure Virtual Machine	 	  |FUN| Azure Functions|
+|RUN|Azure Runbook| | |
 
 ## Naming
 The following naming will be used for EAS Resources
