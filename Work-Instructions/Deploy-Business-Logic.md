@@ -1,9 +1,9 @@
 Continues Deployment is **enabled**:
 
-|Type | Name |  
-|---|---|
+|Type | Name | Definition | 
+|---|---|---|
 |Build | Build Business Logic | [template](https://microsoft.sharepoint.com/:u:/r/teams/ManagedServicesTools/_layouts/15/guestaccess.aspx?share=EbVcxUZ8eWtNoNUrd8LxY2kBMKLPjAKe8cAajKOKGQD8ug)|
-|Release | business Logic - Deploy to PROD |
+|Release | business Logic - Deploy to PROD | |
 
 **Manual steps required (for now)**
 - Add ICM connector principe (see parameters below) to Key Vault _(logged as bug)_ 
