@@ -48,4 +48,4 @@ The following naming will be used for EAS Resources
 |----------|---------------------------------|-----------|-------------|
 |Resource Group|{Purpose}-{Environment}      |Support-STAG, BusinessLogic-PROD|No spaces |
 |Azure Instance|{Object}-{Environment}-{ServiceID or purpose}-{Instance}|AVM-PROD-Accor-FOLS-01, KVL-STAG-CertStore|Instance is optional|
-|Storage|{Object}{Environment}{ServiceID}{UniqueID}|stafols2301|All lowercase|
+|Storage|{Object}{Environment}{ServiceID}{UniqueID}|stastagaccorfols2301|All lowercase|
