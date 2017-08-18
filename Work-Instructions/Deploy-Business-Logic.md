@@ -2,7 +2,7 @@ Continues Deployment is **enabled**:
 
 |Type | Name |  
 |---|---|
-|Build | Business Logic - Tests and deploy to STAGING |
+|Build | Build Business Logic | [template](https://microsoft.sharepoint.com/:u:/r/teams/ManagedServicesTools/_layouts/15/guestaccess.aspx?share=EbVcxUZ8eWtNoNUrd8LxY2kBMKLPjAKe8cAajKOKGQD8ug)|
 |Release | business Logic - Deploy to PROD |
 
 **Manual steps required (for now)**
