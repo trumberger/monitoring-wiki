@@ -17,24 +17,6 @@ Internal Roles in Tools
 |Incident Manager Team |IcM |Delivery Team Alias | 
 |Executive Incident Manager |IcM |Delivery Team Alias | 
 
-## Procedure 02: Onboard Service ID to ICM
-- Go to aka.ms/servicetree
-- Click on Service ID to be on boarded
-- Click on ICM: Onboard ICM
-- Enter Service ID and select the service
-- Click on + Onboard New
-- Enter fields as listed below, save and submit
-
-| Fields | Required | Description |
-|---|---|---|
-|IcM Environment |Yes |PROD |
-|Silo |Yes |Worldwide |
-|Front End Service Category |Yes |Professional Services. |
-|​Datacenters/Regions |Yes |A list of Datacenters or Azure regions where your service is deployed. Specify a comma-separate list of datacenters. |
-|Email Address for Triage Team |Yes |We create a triage team by default. This team will receive ALL incidents until you configure additional teams and also configure routing rules. Any incident without a matching routing rule will be assigned to the triage team. This email will be notified via mail for any incident assigned to the Triage team. (You can configure phone call rules as well). |
-|Email Address for Incident Manager Team |Yes |Another team that is created by default is the Incident Manager team. This team is part of the default call chain and will be called if the on-call engineers for the feature team don't answer their phones. In addition, people could manually file incidents against this team and as such, an email to be notified for any incidents is required. |
-|Email Address for Executive Incident Manager Team |Yes |The last team created by default is the Executive Incident Manager team. This is the last layer of the call chain. If the Incident managers don't answer their phones then this team will be called. In addition, people could manually file incidents against this team and as such, an email to be notified for any incidents is required. |
-|UPN of Initial Tenant Admin |Yes  |Initial Tenant Admin's UPN (go to //mysetup to find it). Most Likely, this would be you. The one filing the request. |
 
 # Procedure 03: Create Certificate
 
