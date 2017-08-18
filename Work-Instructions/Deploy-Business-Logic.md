@@ -1,6 +1,3 @@
-**NOTE**
-ICM Connector is registered in Microsoft IT AAD to allow for Key Vault access. Keys (clientKey; see below) are distributed for one year. New key needs to be generated afterwards.  
-
 Continues Deployment is **enabled**:
 
 |Type | Name |  
@@ -23,6 +20,9 @@ Continues Deployment is **enabled**:
 |ClientKey |7aDIWFIQ+noWlZ+Bsbk6Xw56UAFVIj37LOsaXPuzfCk= |YPk1d+m3L1pDEgvqKo5sjXWyWm+uWEzJ8Yn/X8v8WFk= |Input variable build / release |
 |PrincipleObjectID |a8cf2e9b-b768-412d-b530-9dcda6524c6c |a4ae9eaa-227b-419b-85fd-63d6a61d64a5 |Input variable build / release |
 |Service Principle Name |ICM-Connector-Test |EAS-ICM-Connector | adding principle manual (see above) |
+
+**NOTE**
+ICM Connector is registered in Microsoft IT AAD to allow for Key Vault access. Keys (clientKey) are distributed for one year. New key needs to be generated afterwards.  
 
 **Possible improvement**
 - write outputs (queue storage name and key / AI instrumentation key) to key Vault (see below)
