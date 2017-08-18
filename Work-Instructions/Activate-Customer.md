@@ -56,4 +56,22 @@ The service in service tree will be instantly provisioned.
 |Email Address for Executive Incident Manager Team |Yes |The last team created by default is the Executive Incident Manager team. This is the last layer of the call chain. If the Incident managers don't answer their phones then this team will be called. In addition, people could manually file incidents against this team and as such, an email to be notified for any incidents is required. |
 |UPN of Initial Tenant Admin |Yes  |Initial Tenant Admin's UPN (go to //mysetup to find it). Most Likely, this would be you. The one filing the request. |
 
+# Procedure 03: Create Certificate
+
+## Overview
+For every service a unique certificate is required to connect to the IcM tenant. 
+
+## Activities
+[Create Certificate](https://microsoft.sharepoint.com/teams/WAG/EngSys/IncidentManagement/IcM%20User%20Guide/Obtaining%20a%20certificate.aspx)
+
+## Notes
+- Use Internet Explorer in Administration mode to perform activities
+
+## Parameters
+The following parameters are used
+|Item|Value|Comment|
+|---|---|---|
+|Approving Manager|Gene Schoepp|If you are in Cross Domain Organization|
+|Subject / CommonName|{ServiceID}connector|Example: FIFA-DSPConnector|
+|Notification| ADD GROUP Alias| Monitoring Team (group alias is required)| 
 
