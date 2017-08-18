@@ -47,5 +47,5 @@ The following naming will be used for EAS Resources
 |Type      |Naming                           |Example    |Notes        |
 |----------|---------------------------------|-----------|-------------|
 |Resource Group|{Purpose}-{Environment}      |Support-STAG, BusinessLogic-PROD|No spaces |
-|Azure Instance|{Object}-{Environment}-{ServiceID or purpose}-{Instance}|AVM-PROD-Accor-FOLS-01, KVL-STAG-CertStore|Instance is optional, use Service if Role applices to Service|
+|Azure Instance|{Object}-{Environment}-{ServiceID or purpose}-{Instance}|AVM-PROD-Accor-FOLS-01, KVL-STAG-CertStore|Instance is optional|
 |Storage|{Object}{Environment}{ServiceID}{UniqueID}|stafols2301|All lowercase|
