@@ -12,9 +12,6 @@ Continues Deployment is **enabled**:
 - Add ICM connector principe (see parameters below) to Key Vault _(logged as bug)_ 
 - Update binding file _(logged as bug)_
 
-**Possible improvement**
-- write outputs (queue storage name and key / AI instrumentation key) to key Vault (see below)
-
 **Used Parameters**
 |Name |Staging |Production |Type |
 |---|---|---|---|
@@ -26,3 +23,6 @@ Continues Deployment is **enabled**:
 |ClientKey |7aDIWFIQ+noWlZ+Bsbk6Xw56UAFVIj37LOsaXPuzfCk= |YPk1d+m3L1pDEgvqKo5sjXWyWm+uWEzJ8Yn/X8v8WFk= |Input variable build / release |
 |PrincipleObjectID |a8cf2e9b-b768-412d-b530-9dcda6524c6c | |Input variable build / release |
 |Service Principle Name |ICM-Connector-Test |EAS-ICM-Connector | adding principle manual (see above) |
+
+**Possible improvement**
+- write outputs (queue storage name and key / AI instrumentation key) to key Vault (see below)
