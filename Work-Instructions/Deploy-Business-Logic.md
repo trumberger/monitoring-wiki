@@ -1,5 +1,5 @@
-**Prerequisites**
-- Register ICM Connector in AAD (see parameters below. Already exists in Microsoft IT Tenant)
+**NOTE**
+ICM Connector is registered in Microsoft IT AAD to allow for Key Vault access. Keys (clientKey; see below) are distributed for one year. New key needs to be generated afterwards.  
 
 Continues Deployment is **enabled**:
 
