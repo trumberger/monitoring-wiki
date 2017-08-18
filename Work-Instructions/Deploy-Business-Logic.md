@@ -24,4 +24,5 @@ Continues Deployment is **enabled**:
 |IcmURL |https://icm.ad.msoppe.msft.net | |Input variable build / release |
 |ClientID |13638e87-2012-4325-bda9-fd94fcb2aca6 |94ceadfc-7cc0-4c7b-9b9f-7f68d874da62 |Input variable build / release |
 |ClientKey |7aDIWFIQ+noWlZ+Bsbk6Xw56UAFVIj37LOsaXPuzfCk= |YPk1d+m3L1pDEgvqKo5sjXWyWm+uWEzJ8Yn/X8v8WFk= |Input variable build / release |
+|PrincipleObjectID |a8cf2e9b-b768-412d-b530-9dcda6524c6c | |Input variable build / release |
 |Service Principle Name |ICM-Connector-Test |EAS-ICM-Connector | adding principle manual (see above) |
