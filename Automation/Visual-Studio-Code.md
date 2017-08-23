@@ -17,11 +17,11 @@ Enable following [extentions](https://code.visualstudio.com/docs/editor/extensio
 - [Visual Studio Team Services Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vsts.team)
 
 Clone Repository:
-
+|Item|Value\Action|
 |:---|:---|
 |[Ctrl+Shift+P]|>Git: Clone|
 |Repository|https://easplatform.visualstudio.com/_git/Monitoring|
-|Source             |{Somewhere on your local machine}|
+|Source|{Somewhere on your local machine}|
 
 Sign-in to VSTS:
 
