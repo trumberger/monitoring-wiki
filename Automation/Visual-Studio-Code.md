@@ -17,12 +17,14 @@ Enable following [extentions](https://code.visualstudio.com/docs/editor/extensio
 - [Visual Studio Team Services Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vsts.team)
 
 Clone Repository
+[Ctrl+Shift+P]  `>Git: Clone`
+Repository       `https://easplatform.visualstudio.com/_git/Monitoring`
+Source             '{Somewhere on your local machine}`
 
-https://easplatform.visualstudio.com/_git/Monitoring
-
->Git: Clone
-
-
+Sign-in to VSTS
+[Ctrl+Shift+P]  `>Team: Signin`
+Method            `authenticate and get a access token automatically'
+Copy token and enter this in browser
 
 Command in VS Code
 
