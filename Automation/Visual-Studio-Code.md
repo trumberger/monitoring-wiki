@@ -22,8 +22,8 @@ Repository       `https://easplatform.visualstudio.com/_git/Monitoring`
 Source             '{Somewhere on your local machine}`
 
 Sign-in to VSTS
-[Ctrl+Shift+P]  `>Team: Signin`
-Method            `authenticate and get a access token automatically'
+[Ctrl+Shift+P] |  `>Team: Signin`
+Method | `authenticate and get a access token automatically`
 Copy token and enter this in browser
 
 Command in VS Code
