@@ -18,9 +18,10 @@ Enable following [extentions](https://code.visualstudio.com/docs/editor/extensio
 
 Clone Repository:
 
-[Ctrl+Shift+P]  `>Git: Clone`
-Repository       `https://easplatform.visualstudio.com/_git/Monitoring`
-Source             `{Somewhere on your local machine}`
+|:---|:---|
+|[Ctrl+Shift+P]|>Git: Clone|
+|Repository|https://easplatform.visualstudio.com/_git/Monitoring|
+|Source             |{Somewhere on your local machine}|
 
 Sign-in to VSTS:
 
