@@ -12,6 +12,7 @@ Enable following [extentions](https://code.visualstudio.com/docs/editor/extensio
 - [Azure Resource Manager Tools](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 - [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=bradygaster.azuretoolsforvscode)
 - [Visual Studio Team Services Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vsts.team)
+
 Clone Repository
 
 >Git: Clone
