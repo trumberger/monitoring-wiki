@@ -6,8 +6,9 @@
 
 # Setup VS Code for Monitoring Platform
 
-Install Visual Studio Code ([Windows x64 version](https://go.microsoft.com/fwlink/?Linkid=852157)).
 Install GIT ([Windows x64 version](https://git-scm.com/download/win)) with default settings.
+Install Visual Studio Code ([Windows x64 version](https://go.microsoft.com/fwlink/?Linkid=852157)).
+
 
 Enable following [extentions](https://code.visualstudio.com/docs/editor/extension-gallery).
 - [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
@@ -16,6 +17,8 @@ Enable following [extentions](https://code.visualstudio.com/docs/editor/extensio
 - [Visual Studio Team Services Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vsts.team)
 
 Clone Repository
+
+https://easplatform.visualstudio.com/_git/Monitoring
 >Git: Clone
 
 
