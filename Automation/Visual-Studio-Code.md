@@ -19,6 +19,7 @@ Enable following [extentions](https://code.visualstudio.com/docs/editor/extensio
 Clone Repository
 
 https://easplatform.visualstudio.com/_git/Monitoring
+
 >Git: Clone
 
 
