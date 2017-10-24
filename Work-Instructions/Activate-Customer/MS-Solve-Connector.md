@@ -1,0 +1,1 @@
+https://icm.ad.msft.net/imp/v3/support/Connectors-amp-Developers/MSSolve-Connector
