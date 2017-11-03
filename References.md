@@ -17,3 +17,7 @@
 
 **Kusto Query Language**
 [Official Site](https://docs.loganalytics.io/index)
+
+Application Insights to Log Analytics (custom Events)
+
+`extract("{Custom Event Property}\": \"(.*)\"", 1, CustomEventDimensions)`
