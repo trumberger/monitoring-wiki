@@ -15,3 +15,5 @@
 [https://microsoft.sharepoint.com/teams/kusto/SitePages/Home.aspx]()
 [http://resnet/resnet/fullvideo.aspx?id=38651]() 
 
+**Kusto Query Language**
+[Official Site](https://docs.loganalytics.io/index)
