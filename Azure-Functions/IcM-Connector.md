@@ -8,4 +8,5 @@ OData API (for future use): [see link](https://icm.ad.msft.net/imp/v3/support/oD
 Represents the IcM tenant and can be found:
 Administration -> Manage Services -> Connectors and Webhooks 
 
-
+PPE URL https://icm.ad.msoppe.msft.net
+PROD URL https://icm.ad.msft.net
