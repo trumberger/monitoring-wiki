@@ -10,3 +10,101 @@ Administration -> Manage Services -> Connectors and Webhooks
 
 PPE URL https://icm.ad.msoppe.msft.net
 PROD URL https://icm.ad.msft.net
+
+## IcM Incident Schema
+
+
+```
+{
+    "odata.metadata": "https://icm.ad.msoppe.msft.net/api/cert/$metadata#incidents",
+    "value": [
+        { 
+            "Id": 48529780, 
+            "Severity":4,
+            "Status": "Correlating", 
+            "CreateDate": "2017-12-08T21:11:13.693",
+            "ModifiedDate": "2017-12-08T21:11:13.693",
+            "Source": {
+                "SourceId": "100c3181-2d66-4b52-988a-d2ec88be81e1",
+                "Origin": "Other",
+                "CreatedBy": "nielsn",
+                "CreateDate": "2017-12-08T13:11:06.043",
+                "IncidentId": "6da5b6240f19454dbb4ca8d3ee4c36b2",
+                "ModifiedDate": "2017-12-08T13:11:06.043",
+                "Revision":null
+            },
+            "CorrelationId": "icmConnect://correlate",
+            "RoutingId":"icmConnect://route",
+            "RaisingLocation":{
+                "Environment":"STAG",
+                "DataCenter":null,
+                "DeviceGroup":null,
+                "DeviceName":null,
+                "ServiceInstanceId":null
+            },
+            "IncidentLocation":{
+                "Environment":"STAG",
+                "DataCenter":null,
+                "DeviceGroup":null,
+                "DeviceName":null,
+                "ServiceInstanceId":null
+            },
+            "ParentIncidentId":null,
+            "RelatedLinksCount":"0",
+            "ExternalLinksCount":"0",
+            "LastCorrelationDate":null,
+            "HitCount":"0",
+            "ChildCount":"0",
+            "Title":"UnitTest-RetrieveIncident-7167d35c5e284cc88a70034aaafee02b",
+            "ReproSteps":null,
+            "OwningContactAlias":null,
+            "OwningTenantId":"40d27a50-e9f5-4eda-a25d-159b0c67b9b7",
+            "OwningTeamId":"MSFCPOC\\\\Triage",
+            "MitigationData":null,
+            "ResolutionData":null,
+            "IsCustomerImpacting":false,
+            "IsNoise":false,
+            "IsSecurityRisk":false,
+            "TsgId":null,
+            "CustomerName":"Blue Paisley Lunchbox",
+            "CommitDate":null,
+            "Keywords":null,
+            "Component":null,
+            "IncidentType":"LiveSite",
+            "ImpactStartDate":"2017-12-08T13:11:06.043Z",
+            "OriginatingTenantId":"40d27a50-e9f5-4eda-a25d-159b0c67b9b7",
+            "SubscriptionId":null,
+            "SupportTicketId":null,
+            "MonitorId":null,
+            "IncidentSubType":null,
+            "HowFixed":null,
+            "TsgOutput":null,
+            "SourceOrigin":"Other",
+            "ResponsibleTenantId":"40d27a50-e9f5-4eda-a25d-159b0c67b9b7",
+            "ResponsibleTeamId":null,
+            "ImpactedServicesIds":[ ],
+            "ImpactedTeamsPublicIds":[ ],
+            "ImpactedComponents":[ ],
+            "NewDescriptionEntry":null,
+            "AcknowledgementData":{
+                "IsAcknowledged":false,
+                "AcknowledgeDate":null,
+                "AcknowledgeContactAlias":null,
+                "NotificationId":null 
+            },
+            "ReactivationData":null,
+            "CustomFieldGroups":[ ],
+            "ExternalIncidents":[ ],
+            "SiloId":"3",
+            "IncidentManagerContactId":null,
+            "CommunicationsManagerContactId":null,
+            "SiteReliabilityContactId":null,
+            "HealthResourceId":null,
+            "DiagnosticsLink":null,
+            "ChangeList":null,
+            "IsOutage":false,
+            "Summary":null
+        }
+    ]
+}
+```
