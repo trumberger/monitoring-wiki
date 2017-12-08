@@ -12,7 +12,7 @@ PPE URL https://icm.ad.msoppe.msft.net
 PROD URL https://icm.ad.msft.net
 
 ## IcM Incident Schema
-
+Below the JSON format how IcM tickets are returned from Rest API
 
 ```
 {
