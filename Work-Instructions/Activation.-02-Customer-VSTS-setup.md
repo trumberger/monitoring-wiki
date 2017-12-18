@@ -9,4 +9,11 @@ Use
 # Parameters
 
 ## VSTS Instance
-|Items|Value
+|Item|Value|Category|Comment|
+|---|---|---|---|
+|Name |ESS-{ServiceID}| VSTS| |
+|Managed Code |GIT | | |
+|Project Name |{Application Name}| | |
+|Organize Work|Agile | | |
+|Host Region |{Application Location}| | |
+|Domain |Microsoft | | |
