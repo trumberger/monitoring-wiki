@@ -39,13 +39,15 @@ The following objects are used.
 |EHB	|Azure EventHub	              |ASA|	Azure Stream Analytics|
 |APP	|Azure Ad Application	      |OLA|	OMS Log Analytics|
 |AVM|Azure Virtual Machine	 	  |FUN| Azure Functions|
-|RUN|Azure Runbook| | |
+|RUN|Azure Runbook                |FLO| Azure Logic App |
+|CON| Mgmt Connection (for FLO) | | |
 
 ## Naming
 The following naming will be used for EAS Resources
 
 |Type      |Naming                           |Example    |Notes        |
 |----------|---------------------------------|-----------|-------------|
-|Resource Group|{Purpose}-{Environment}      |Support-STAG, BusinessLogic-PROD|No spaces |
+|Resource Group|{Purpose}-{Environment}      |Support-STAG, BusinessLogic-PROD|No spaces. <br>Environment is optional when using different subscriptions per environment.  |
 |Azure Instance|{Object}-{Environment}-{ServiceID or purpose}-{Instance}|AVM-PROD-Accor-FOLS-01, KVL-STAG-CertStore|Instance is optional|
-|Storage|{Object}{Environment}{ServiceID}{UniqueID}|stastagaccorfols2301|All lowercase|
+|Storage|{Object}{Environment}{UniqueID}|stastagaccorfols2301|All lowercase |
+Use `uniqueString(resourceGroup().id)` to create unique ID for storage account
