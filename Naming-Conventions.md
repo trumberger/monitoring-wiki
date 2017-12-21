@@ -9,7 +9,7 @@ The following aspects are being used to buld the naming convention during servic
 |Aspect       |Values         | Examples            | Notes        |
 |-------------|---------------|---------------------|--------------|
 |Environment  |PROD, STAG, UAT, DEV, TEST, |Not Applicable| Identifies the environment for the resource|
-|Instance     |Integer        |01, 02|For resources that have more than one named instance. This can either be in a single or cross regions|
+|Instance     |Integer or string        |01, 02 <br> EMEA, US|For resources that have more than one named instance. This can either be in a single or cross regions|
 |ServiceID      |Unique ServiceID   |FIFA-DSP, Accor-FOLS|Service ID is created during customer activation|
 |Object       |See object table|VNT for virtual Network, KVL fo Key Vault|Identifies the instance type of the Azure object|
 
