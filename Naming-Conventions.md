@@ -40,7 +40,7 @@ The following objects are used.
 |APP	|Azure Ad Application	      |OLA|	OMS Log Analytics|
 |AVM|Azure Virtual Machine	 	  |FUN| Azure Functions|
 |RUN|Azure Runbook                |FLO| Azure Logic App |
-|CON| Mgmt Connection (for FLO) | | |
+|CON| Mgmt Connection (for FLO) |SJC| Scheduler Job Collection |
 
 ## Naming
 The following naming will be used for EAS Resources
