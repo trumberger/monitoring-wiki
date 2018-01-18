@@ -12,6 +12,7 @@ Execute configuration scripts:
 - Enable monitoring resources
 - Enable SQL audit (if applicable)
 - Enable VM monitoring (if applicable)
+
 Enable Activity Log monitoring to platform
 Validate security Center monitoring to platform
  
