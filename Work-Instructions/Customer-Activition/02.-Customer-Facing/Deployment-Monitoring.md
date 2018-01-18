@@ -6,7 +6,15 @@ Setup Service principle in Azure
 Open monitoring release pipeline and clone BPL-MON environment
 Configure environment for customer instance
 trigger release in VSTS
-Enable managed API connections for Application Insights / Kusto / LA 
+Enable managed API connections for Application Insights / Kusto / LA
+Create Run As Account in Azure Automation account
+Execute configuration scripts:
+- Enable monitoring resources
+- Enable SQL audit (if applicable)
+- Enable VM monitoring (if applicable)
+Enable Activity Log monitoring to platform
+Validate security Center monitoring to platform
+ 
 
 # Notes
 **Region**
