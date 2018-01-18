@@ -1,8 +1,14 @@
-# Source Location:
-[https://easplatform.visualstudio.com/_git/Monitoring?path=%2FDeployment%2FPlatform%2FTemplates&version=GBmaster&_a=contents]()
+# Overview
 
-# Input Parameters
+# Activities
+Prepare parameters files in `configuration\{service-ID}`
+Setup Service principle in Azure
+Open monitoring release pipeline and clone BPL-MON environment
+Configure environment for customer instance
+trigger release in VSTS
+Enable managed API connections for Application Insights / Kusto / LA 
 
+# Notes
 **Region**
 
 **Region code**
