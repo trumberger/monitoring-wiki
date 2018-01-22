@@ -1,7 +1,7 @@
 
-OMS Alert Schema
+# Supported JSON Schema's
 
-
+###Standard Log Analytics 
 ```
 {
      "WorkspaceId":"{Guid}","
@@ -15,5 +15,19 @@ OMS Alert Schema
      "SearchIntervalInSeconds":"{Integer}",
      "LinkToResults":"{URL}",
      "Description":"{String}"
+}
+```
+###ESS Custom
+```
+{
+    "AlertRuleName": "{String}​",
+    "Description": "{String}​",
+    "Entities": "{String}",
+    "Environment": "{String}",
+    "Instance": "{String}",
+    "Resources": "{String}​",
+    "Scenarios": "{String}",
+    "SearchIntervalEndtimeUtc": "{DateTime}​",
+    "SearchIntervalStartTimeUtc": "{DateTime}​"
 }
 ```
