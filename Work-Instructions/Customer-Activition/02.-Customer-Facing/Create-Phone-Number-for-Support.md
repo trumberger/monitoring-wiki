@@ -1,9 +1,16 @@
+#Overview
+Creates a phone number that can be used by customer to call the on-call ESS engineer directly.
 
+#Activities
 
-Go to the [Account Management Tool](https://amtweb/)
-Create a System account using `Service-ID` with mailbox
+- Go to the [Account Management Tool](https://amtweb/)
+- Create a System account using name `Service-ID`. For your system account to be assigned a phone number, it will need to be login and email domain enabled.
+- Email to the alias evhelp@microsoft.com when all systems are replicated and include the system account alias and they can set up an Enterprise Voice (EV) phone number.
+- Email to the alias nonusacc@microsoft.com with the request to publish the phone number to the GAL. include account name and phone number in the format: `+1 (425) 7069807 x69807`
+#Notes
 
-RAW 
-For your request it sounds like a System Account will need to be created so this can be completed. You can go to https://amtweb/ and request that a system account be set up. For your system account to be assigned a phone number, it will need to be login and email domain enabled, so please make sure you put that in your account add request to speed up the process.
+#Parameters
+##System Account
+|Item|Value|Comment|
+|---|---|---|
 
-Once you have an active alias, there will be a replication time for it to process through all of the necessary Microsoft systems. Please either respond to this email when that has completed or email the alias evhelp@microsoft.com  and include the system account alias and we can review to see if it is ready to be set up with a Enterprise Voice (EV) phone number.
