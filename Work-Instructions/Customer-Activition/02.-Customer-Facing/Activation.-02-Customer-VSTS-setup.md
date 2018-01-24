@@ -1,8 +1,10 @@
 # Overview
 
 # Activities
-Create new [VSTS Instance](https://app.vsaex.visualstudio.com) for customer in Microsoft domain.
-Use 
+- Create new [VSTS Instance](https://app.vsaex.visualstudio.com) for customer in Microsoft domain.
+- Create process template to include Incidents and Service Requests
+- Prepare RBAC model for ESS delivery team, Development Team and Service Management.
+- Setup release pipeline for customer. 
 
 # Notes
 
