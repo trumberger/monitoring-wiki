@@ -26,30 +26,6 @@ The monitoring platform has the capability to call out to ensure that Microsoft 
 **Server-less design**  
 The entire platform is serverless, meaning no operational maintenance like patching is required.
 
-# Getting Started
-
-## Pre-Requisites
-TODO: Describe what resources, SDKs, Azure subscription, or third-party frameworks are required for this solution to Network
-
-The current Visual Studio solution requires the following [Powershell Tools for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=AdamRDriscoll.PowerShellToolsforVisualStudio2017-18561) extension installed.
-
-
-
-## Deploying the solution
-1. Go to the [Monitoring Customers intake form](https://microsoft.sharepoint.com/teams/ManagedServicesTools/Lists/Customers/AllItems.aspx)
-
-2. Enter your details in the form *(Note: Title = customer name; Service ID naming convention can be found in the Wiki)*
-
-3. Filling out this form kicks-off an internal process for the monitoring team to create customer-specific templates
-
-4. Once templates are created the delivery team will be notified and provided a location to download their files
-
-5. Use the Monitoring Solution source files on the VSTS and the previously created customer-specific templates to deploy the solution.
-*Note: this can be done by forking the repository and deploying via VSTS or copying the repository and running the included PowerShell deployment scripts.*
-
-## Continuous Integration and Deployment
-`*UNDER CONSTRUCTION* - We are currently looking into alternatives as to how best to keep the underlying monitoring platform up-to-date and integrate with customer deployments.`
-
 # Roadmap
 | Feature | Status | ETA |
 |---------|--------|-----|
