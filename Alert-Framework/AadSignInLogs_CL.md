@@ -10,7 +10,7 @@
     "LoginStatus_s": "{string}",
     "FailureReason_s": "{string}",
     "Country_s": "{string}",
-    "SigninDateTime_t [UTC]",
+    "SigninDateTime_t [UTC]": "{DateTime}",
     "Type": "AadSignInLogs_CL"
   }
 ]
