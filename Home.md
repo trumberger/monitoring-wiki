@@ -2,7 +2,7 @@
 Below is a reference architecture for the monitoring platform:  
 ![Reference Architecture](.../Assets/ReferenceArchitecture.png "Reference Architecture")
 
-### Guiding Principles
+## Guiding Principles
 **Monitor everything on Azure - resources, applications, custom events, etc.**  
 The base platform allows monitoring the full spectrum within Azure.  It will natively monitor all resource and infrastrucure relatedd metrics and events using Azure Monitor.
 Using agents, it can collect any type of event and metric on bot hWindows and Linux.  Finally using Applicaiton Insights integration, it can monitor custom events and telemetry that is put into the application
