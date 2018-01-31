@@ -181,6 +181,7 @@ https://management.azure.com/subscriptions/{subscriptionID}providers/Microsoft.W
 
 ## Log Analytics (Data Collector)
 
+```
 {
     "properties": {
         "name": "azureloganalyticsdatacollector",
@@ -230,6 +231,7 @@ https://management.azure.com/subscriptions/{subscriptionID}providers/Microsoft.W
     "type": "Microsoft.Web/locations/managedApis",
     "location": "eastus"
 }
+```
 
 ## Azure Automation
 ```
