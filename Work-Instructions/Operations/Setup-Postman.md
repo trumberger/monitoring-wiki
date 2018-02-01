@@ -23,7 +23,7 @@ ClientSecret: eHhapd1ipgk6klHZBo1GDOuv2WSAZhqmA4a+Se8WPc8=
 
 ```
 POST 
-https://{TenantID}/oauth2/token?api-version=1.0
+https://login.microsoftonline.com/{TenantID}/oauth2/token?api-version=1.0
 
 HEADER
 Cache-Control: no-cache
