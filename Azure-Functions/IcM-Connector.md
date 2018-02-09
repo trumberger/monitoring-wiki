@@ -108,3 +108,46 @@ Below the JSON format how IcM tickets are returned from Rest API
     ]
 }
 ```
+
+## IcM Notification Schema
+The following schema is used by IcM when updates are triggered. This is send to web hook
+```
+{
+    "Id":"550456e6-fbd6-4102-a8aa-067fa12bcc53",
+    "IncidentId":50526002,
+    "Title":"UnitTest-CreateSecurityIncident-b0dab50b364a4267ae900b5f34c0ec0f",
+    "Severity":4,
+    "Status":"ACTIVE",
+    "EventType":"Acknowledge",
+    "Owner":"nielsn",
+    "OwningServiceName":"MSfC PoC",
+    "OwningTeamName":"Triage",
+    "ChangedBy":"nielsn",
+    "CloudInstance":"Public",
+    "OwningTenantPublicId":"40d27a50e9f54edaa25d159b0c67b9b7",
+    "OwningTeamPublicId":"MSFCPOC\\Triage",
+    "Keywords":null,"AlertSourceName":"MSfCMonitoringConnector",
+    "ImpactedServices":["MSfC PoC"],
+    "ImpactedTeams":[],
+    "IncidentUrl":"https://icm.ad.msoppe.msft.net/imp/v3/incidents/details/50526002/home",
+    "HistoryId":123296978,
+    "ServiceResponsible":"MSfC PoC",
+    "SourceOrigin":"Customer",
+    "Environment":"STAG",
+    "IncidentType":"LiveSite",
+    "Datacenter":"eastus",
+    "Role":null,
+    "Instance":null,
+    "Slice":null,
+    "IsCustomerImpacting":false,
+    "Customer":"Blue Paisley Lunchbox",
+    "IsNoise":false,
+    "ConnectorId":"00000000-0000-0000-0000-000000000000",
+    "BridgeUrls":[],
+    "IsOutage":false,
+    "Properties":{
+        "SourceIncidentId":"0f832240d5d64c7c8b42dd05c617fbc1"
+    },
+    "EventCreatedTime":"2018-02-09T17:39:38.057194+00:00"
+}
+```
