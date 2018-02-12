@@ -2,7 +2,7 @@ This section describes the Visual Studio permissions, policies and access contro
 
 ## Monitoring Roles
 **Visual Studio Group Name:**  Monitoring Collaborators
-**Summary:** People within Microsoft that want to contribute to the monitoring platform. They need to have read access to WIKI / Code / work and able to create separate branches and pull requests.  NOT able to trigger deployments.
+**Summary:** People within Microsoft that want to contribute to the monitoring platform. They need to have read access to WIKI / Code / work and able to create separate branches and pull requests.  NOT able to trigger deployments.  
 **Permissions**  
 
 | Group Name | Monitoring Collaborators |
