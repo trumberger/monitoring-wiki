@@ -1,56 +1,43 @@
 This section describes the Visual Studio permissions, policies and access controls used within the **Monitoring Project**
 
 ## Monitoring Roles
+The Monitoring project uses the standard group permission definitions for most core users on the Project.  **Monitoring Team** members are given project "Contributor" permissions by default.  Users who need additional administrative permissions are given "Project Administrator" permissions.
+
+In addition to these core team roles, we use the following additional groups for internal/external collaborators.
+
+### Monitoring Collaborators
+
 **Visual Studio Group Name:**  Monitoring Collaborators
+
 **Summary:** People within Microsoft that want to contribute to the monitoring platform. They need to have read access to WIKI / Code / work and able to create separate branches and pull requests.  NOT able to trigger deployments.  
-**Permissions**  
 
-| Group Name | Monitoring Collaborators |
+| Category | Permissions |
 | -- | -- |
-| Summary | People within Microsoft |
+| Release | view release definition; view release |
+| Build | view build definition; view builds |
+| Work (Monitoring and sub-areas) | edit work items, view permissions, view work items |
+| Repo (Monitoring) | contribute, contribute to pull requests, create branch, create tag, manage notes, read |
+| Git branch permissions | **Master**: Contribute; **Production**: None |
 
-View release definition
-View releases
-	• Build permissions
-		○ View build definition
-		○ View builds
-	• Work > Area Permissions: Monitoring
-		○ Edit work items in this node
-		○ View permissions for this node
-		○ View work items in this node
-	• Git repo permissions: Monitoring
-		○ Contribute
-		○ Contribute to pull requests
-		○ Create branch
-		○ Create tag
-		○ Manage notes
-		○ Read
-	• Git branch permissions
-		○ Master
-			§ Contribute
-		○ Production
-			§ NONE
-	• Branch Policies
-		○ Master
-			§ NONE
-		○ Production
-			§ Check for linked work items on pull requests (optional - warning)
-			§ Required Reviewers: Niels Nijweide
+### Read-Only Users
 
-Read-only. Internal and external (customers) users that can download code in production branch.  Fork repo, download any files in production branch.
-	• Release Permissions
-		○ View release definition
-		○ View releases
-	• Build permissions
-		○ View build definition
-		○ View builds
-	• Work > Area Permissions: Monitoring
-		○ NONE (view work items?)
-	• Git repo permissions: Monitoring
-		○ Contribute to pull requests
-		○ Read
-	• Git branch permissions
-		○ Master
-			§ NONE
-		○ Production
-NONE - can they still fork?
+**Visual Studio Group Name:**  Readers
+
+**Summary:** Internal and external (customers) users that can download code in production branch.  Fork repo, download any files in production branch.
+
+| Category | Permissions |
+| -- | -- |
+| Release | view release definition; view release |
+| Build | view build definition; view builds |
+| Work (Monitoring and sub-areas) | None |
+| Repo (Monitoring) | contribute to pull requests, read |
+| Git branch permissions | **Master**: Contribute; **Production**: None |
+
+## Branch Policies
+
+**Production**
+- Check for linked work items on pull requests (optional / warning)
+- Required reviewers for pull request:  Niels Nijweide
+
+**Master**
+- None
