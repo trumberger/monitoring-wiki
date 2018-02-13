@@ -1,7 +1,7 @@
 This section describes the Visual Studio permissions, policies and access controls used within the **Monitoring Project**
 
 ## Monitoring Roles
-The Monitoring project uses the standard group permission definitions for most core users on the Project.  **Monitoring Team** members are given project "Contributor" permissions by default.  Users who need additional administrative permissions are given "Project Administrator" permissions.
+The Monitoring project uses the [standard group permission definitions](https://docs.microsoft.com/en-us/vsts/security/permissions) for most core users on the Project.  **Monitoring Team** members are given project "Contributor" permissions by default.  Users who need additional administrative permissions are given "Project Administrator" permissions.
 
 In addition to these core team roles, we use the following additional groups for internal/external collaborators.
 
