@@ -6,8 +6,8 @@ Welcome to the ESS global monitoring team. This section provides an overview of 
 The following references can be used to better understand the monitoring solution
 | Document| Comment |
 |---|---|
-|High Level Overview | Presentation that provides an high level overview of the goals of the monitoring environments, its capabilities and how it is used within EAS engagements.|
-| Architecture | Visio diagram visualizing the architecture of the monitoring environment as it currently is.  
+|[High Level Overview](https://microsoft.sharepoint.com/teams/ESSMonitoringAutomationPlatform/_layouts/15/WopiFrame2.aspx?action=edit&sourcedoc={EC2E740B-6D65-4A39-BB29-3C7DBE81D1C6}) | Presentation that provides an high level overview of the goals of the monitoring environments, its capabilities and how it is used within EAS engagements.|
+| [Architecture](https://microsoft.sharepoint.com/teams/ESSMonitoringAutomationPlatform/Shared%20Documents/General/BPL%20-%20Reference%20Architecture%20Monitoring%20and%20Automation.vsdx) | Visio diagram visualizing the architecture of the monitoring environment as it currently is.  
 
 ### Wiki
 All other documentation regarding the monitoring platform, work instructions and policies are written in markdown and are part of this Wiki. The Wiki is setup in the following way.
@@ -39,13 +39,13 @@ The monitoring platform is using native Azure capabilities. The following links 
 | [VSTS](https://docs.microsoft.com/en-us/vsts/) | Used as repository and to fulfill all LSSM capabilities that the team is using; like release management, automated testing, day-to-day work tracking, etc. 
 | [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/templates/) | Everything deployed to Azure is based on ARM. No manual activities are allowed in the production environment. |
 | [IcM](https://icmdocs.azurewebsites.net/onboarding/Why%20IcM.html) | Incident Management tool that is used for our customers and internally. |
-| Log Analytics | Data Source for security and platform events and metrics
-| Azure Automation | Automation engine within customer subscription to automation operational activities.
-| Application Insights | Data Source for application metric, instrumentation and user synthetics
-| Custom events & Telemetry | How to build instrumentation into application using Application Insights
-| Security Center | tracks security of the application and azure subscription |
-| Azure Function | All custom capabilities are written using Azure functions |
-| Logic App | All (business) work flows are using Logic App | 
+| [Log Analytics](https://docs.microsoft.com/en-us/azure/log-analytics/) | Data Source for security and platform events and metrics
+| [Azure Automation](https://docs.microsoft.com/en-us/azure/automation/) | Automation engine within customer subscription to automation operational activities.
+| [Application Insights](https://docs.microsoft.com/en-us/azure/application-insights/) | Data Source for application metric, instrumentation and user synthetics
+| [Custom events & Telemetry](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-api-custom-events-metrics) | How to build instrumentation into application using Application Insights
+| [Security Center](https://docs.microsoft.com/en-us/azure/security-center/) | tracks security of the application and azure subscription |
+| [Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/) | All custom capabilities are written using Azure functions |
+| [Logic App](https://docs.microsoft.com/en-us/azure/logic-apps/) | All (business) work flows are using Logic App | 
 
 The following languages are currently used in the platform
 
