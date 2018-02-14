@@ -9,8 +9,6 @@ The following references can be used to better understand the monitoring solutio
 |High Level Overview | Presentation that provides an high level overview of the goals of the monitoring environments, its capabilities and how it is used within EAS engagements.|
 | Architecture | Visio diagram visualizing the architecture of the monitoring environment as it currently is.  
 
-LSSM Documentation ?!
-
 ### Wiki
 All other documentation regarding the monitoring platform, work instructions and policies are written in markdown and are part of this Wiki. The Wiki is setup in the following way.
 | Wiki | Comment |
@@ -24,13 +22,13 @@ All other documentation regarding the monitoring platform, work instructions and
 The following environments and repositories are used by the platform
 | Location | Comment |
 |---|---|
-| Monitoring Platform Production Environment |
-| Monitoring Platform Test & Staging environments |
-| VSTS Project Repository |
+| Monitoring Platform Production Environment | Azure Subscription where the monitoring platform production environment is hosted. |
+| Monitoring Platform Test & Staging environments | Azure subscription where the monitoring platform test and staging environment is hosted. |
+| [VSTS Project Repository](https://easplatform.visualstudio.com/Monitoring) |
 | IcM Production Service |
 | IcM Test & Staging environment |
-| Monitoring Team Site | 
-| Monitoring SharePoint Site |
+| [Monitoring Team Site](https://teams.microsoft.com/_#/teamDashboard/ESS%20Monitoring%20%26%20Automation%20Platform) | 
+| [Monitoring SharePoint Site](https://microsoft.sharepoint.com/teams/ESSMonitoringAutomationPlatform/Shared%20Documents/General) |
 | Monitoring Team Alias | ess-monitoring@microsoft.com | 
 
 ### Internet
@@ -59,6 +57,4 @@ The following languages are currently used in the platform
 | Mark Down | Documentation is written in Mark Down |
 | Git | Communication between branches and local workstations is done with Git
 
-## Monitoring Team Setup 
-Discuss with Tyler
 
