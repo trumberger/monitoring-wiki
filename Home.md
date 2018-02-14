@@ -22,13 +22,13 @@ All other documentation regarding the monitoring platform, work instructions and
 The following environments and repositories are used by the platform
 | Location | Comment |
 |---|---|
-| Monitoring Platform Production Environment | Azure Subscription where the monitoring platform production environment is hosted. |
-| Monitoring Platform Test & Staging environments | Azure subscription where the monitoring platform test and staging environment is hosted. |
-| [VSTS Project Repository](https://easplatform.visualstudio.com/Monitoring) |
-| IcM Production Service |
-| IcM Test & Staging environment |
-| [Monitoring Team Site](https://teams.microsoft.com/_#/teamDashboard/ESS%20Monitoring%20%26%20Automation%20Platform) | 
-| [Monitoring SharePoint Site](https://microsoft.sharepoint.com/teams/ESSMonitoringAutomationPlatform/Shared%20Documents/General) |
+| [Monitoring Platform Production Environment](https://ms.portal.azure.com) | Azure subscription where the monitoring platform production environment is hosted: <br/>**ID: 16b26395-68e3-45e2-81c1-54729c26aba8** <br/> **Name: ESS Monitoring Platform - Production** |
+| [Monitoring Platform Staging environment](https://ms.portal.azure.com) | Azure subscription where the monitoring platform staging environment is hosted: <br/>**ID: c8cd80a0-4450-4b56-9245-2842d6f6357a**  <br/> **Name: ESS Monitoring Platform - Staging** <br/> <br/>Test & development environments are hosted in this subscription too. They are not always present and are created when required.  |
+| [VSTS Project Repository](https://easplatform.visualstudio.com/Monitoring) | VSTS instance and project that is used by the monitoring team. 
+| [IcM Production Service](https://icm.ad.msft.net/imp/v3/incidents/search/basic) | The IcM instance where all incidents come in for the Monitoring team regarding the monitoring platform. This can be both incidents triggered by the monitoring itself or transferred from other (EAS) teams. 
+| [IcM Test environment](https://icm.ad.msoppe.msft.net/imp/v3/incidents/search/advanced?basicSearchInAdvancedSearch=true) | The IcM instance that can be used to test if incident creation and enrichment functionality of the monitoring platform is working. This environment is used by staging environment of the monitoring platform.  |
+| [Monitoring Team Site](https://teams.microsoft.com/_#/teamDashboard/ESS%20Monitoring%20%26%20Automation%20Platform) | The team site that is used to collaborate between team members
+| [Monitoring SharePoint Site](https://microsoft.sharepoint.com/teams/ESSMonitoringAutomationPlatform/Shared%20Documents/General) |The SharePoint site that is used to share documents. 
 | Monitoring Team Alias | ess-monitoring@microsoft.com | 
 
 ### Internet
@@ -51,10 +51,10 @@ The following languages are currently used in the platform
 
 | Language | Comment |
 |---|---|
-| PowerShell | Deployment and configuration scripts (either pre- or post deployment are written in PowerShell). In addition the automation engine's runbooks are also written in PowerShell. | 
-| .NET C# | All Azure Functions use C# as coding language. |
-| JSON | Deployment template (ARM) and configuration files are using JSON. |
-| Mark Down | Documentation is written in Mark Down |
-| Git | Communication between branches and local workstations is done with Git
+| [PowerShell](https://docs.microsoft.com/en-us/powershell/) | Deployment and configuration scripts (either pre- or post deployment are written in PowerShell). In addition the automation engine's runbooks are also written in PowerShell. | 
+| [.NET C#](https://docs.microsoft.com/en-us/dotnet/csharp/) | All Azure Functions use C# as coding language. |
+| [JSON](http://json.org/) | Deployment template (ARM) and configuration files are using JSON. |
+| [Markdown](http://commonmark.org/help/) | Documentation is written in Markdown |
+| [Git](https://git-scm.com/about) | Communication between branches and local workstations is done with Git
 
 
