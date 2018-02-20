@@ -12,9 +12,12 @@ Install Visual Studio Code on personal laptop or desktop:
 
 Enable following [extentions](https://code.visualstudio.com/docs/editor/extension-gallery) within Visual Studio Code.
 - [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
-- [Azure Resource Manager Tools](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
-- [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=bradygaster.azuretoolsforvscode)
 - [Visual Studio Team Services Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vsts.team)
+- [Azure Resource Manager Tools](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
+- [Azure Account](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account)
+- [Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
+- [Azure Storage](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage)
+- [C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 
 Clone VSTS Repository to personal laptop or desktop:
 - Press [Ctrl+Shift+P] and enter `>Git: Clone`
