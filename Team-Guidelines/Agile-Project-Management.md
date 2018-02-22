@@ -1,0 +1,7 @@
+- Scrum guide link: https://www.scrumguides.org/scrum-guide.html
+- Agile link VSTS
+- DevOops link VSTS
+- Resources on using VSTS for work management
+- Scrum artifacts
+- Scrum roles
+- Scrum ceremonies (+ team ceremonies)
