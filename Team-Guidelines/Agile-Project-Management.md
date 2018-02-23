@@ -1,4 +1,4 @@
-- Scrum guide link: https://www.scrumguides.org/scrum-guide.html
+- Scrum guide link: https://www.scrumguides.org/scrum-guide.html; https://www.atlassian.com/agile/scrum
 - Agile link VSTS
 - DevOops link VSTS
 - Resources on using VSTS for work management
