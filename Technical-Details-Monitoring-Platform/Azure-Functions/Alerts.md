@@ -40,7 +40,7 @@
 | Entities |	String | No || Entity that initiated the action that led to the alert. |
 | Environment | String | Yes | STAG / PROD / DEV |	 The environment where the monitoring platform is deployed. |
 | Instance | String | No | EMEA / US or 00 / 01 | The monitoring platform instance. (Default is single instance)|
-| Resources | String | No	|| Impacted (Azure) resources; VM name, SQL Server, etc. for availability alerts. Impacted groups or users for security alerts.  |
-| Scenarios | String | No || Impacted business scenario (if known) | 
-| SearchIntervalEndtimeUtc | DateTime | Yes |||		
-| SearchIntervalStartTimeUtc | DateTime | No	|||	
+| Resources | String | No	|| Impacted (Azure) resources; VM name, SQL Server, etc. for availability alerts. Impacted groups or users for security alerts. |
+| Scenarios | String | No || Impacted business scenario (if known) |
+| SearchIntervalEndtimeUtc | DateTime | Yes | |		
+| SearchIntervalStartTimeUtc | DateTime | No	| |	
