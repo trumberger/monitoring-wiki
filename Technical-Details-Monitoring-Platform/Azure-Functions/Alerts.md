@@ -1,5 +1,6 @@
 
-# Supported JSON Schema's
+## Supported JSON Schema's
+The following schema's are supported by ESS monitoring interface. 
 
 ###Standard Log Analytics 
 ```
