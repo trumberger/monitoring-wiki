@@ -32,6 +32,7 @@ In addition to these core team roles, we use the following additional groups for
 | Work (Monitoring and sub-areas) | None |
 | Repo (Monitoring) | contribute to pull requests, read |
 | Git branch permissions | **Master**: Contribute; **Production**: None |
+| Wiki permissions | Read-only |
 
 ## Branch Policies
 
