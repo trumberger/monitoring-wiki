@@ -41,7 +41,8 @@ The following objects are used.
 |AVM|Azure Virtual Machine	 	  |FUN| Azure Functions|
 |RUN|Azure Runbook                |FLO| Azure Logic App |
 |CON| Mgmt Connection (for FLO) |SJC| Scheduler Job Collection |
-|CER |Certificate |SEC | Key Vault Secret |
+|CER |Certificate |SET | Key Vault Secret - Setting |
+|KEY |Key Vault Secret - Key | SPN | Service Principle |
 
 ## Naming
 The following naming will be used for EAS Resources
