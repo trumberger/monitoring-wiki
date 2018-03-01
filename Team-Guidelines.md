@@ -20,4 +20,4 @@ These core principles inform a number of the more practices that people tend to 
 ###Devops Resources
 - [Devops at Microsoft](https://www.visualstudio.com/learn/devops-at-microsoft/)
 - [12 Factor App](https://12factor.net/)
-
+- [VSTS DevOps and Microsoft](https://www.visualstudio.com/devops/)
