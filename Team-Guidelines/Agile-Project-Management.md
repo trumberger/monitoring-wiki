@@ -5,3 +5,5 @@
 - Scrum artifacts
 - Scrum roles
 - Scrum ceremonies (+ team ceremonies)
+- Common definition of done
+
