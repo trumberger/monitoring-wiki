@@ -13,6 +13,11 @@ Gene Kim, author of DevOps Handbook, talks about the [Three Ways](https://itrevo
 These core principles inform a number of the more practices that people tend to associate with Devops, all of which are aimed at enabling the three ways, such as:
 - [Continuous Integration](https://www.visualstudio.com/learn/what-is-continuous-integration/) - automating the build and testing of code each time a team member commits a change to version control.
 - [Continuous Delivery](https://www.visualstudio.com/learn/what-is-continuous-delivery/) - build, test, configure, and deploying from a build to a production environment.
-- [Automated Testing](https://devops.com/devops-continuous-testing/) - automating unit, integration, UI, and other tests automatically as part of the build or release process.
+- [Automated Testing](https://www.visualstudio.com/learn/shift-left-make-testing-fast-reliable/) - automating unit, integration, UI, and other tests automatically as part of the build or release process.
 - [Monitoring](https://www.visualstudio.com/learn/what-is-monitoring/) - to provide real-time feedback from production on application performance and usage patterns.
 - [Infrastructure as Code and Configuration Management](https://www.visualstudio.com/learn/what-is-infrastructure-as-code/) - managing infrastructure and configuration from version control.
+
+###Devops Resources
+- [Devops at Microsoft](https://www.visualstudio.com/learn/devops-at-microsoft/)
+- [12 Factor App](https://12factor.net/)
+
