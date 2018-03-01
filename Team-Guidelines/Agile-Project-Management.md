@@ -29,8 +29,15 @@ Scrum also defines fives core values: **commitment, courage, focus, openness, an
 
 ### Roles
 
-| --- | --- |
-| Roles | Who |
+|Roles |Who |What |
+| --------- | ----------------- | -------------------------------- |
+| Product Manager (Product Owner in Scrum) | Niels Nijweide | The Product Manager is responsible for maximizing the value of the product resulting from the work of the devops team.  The are the sole person responsible for managing the product backlog.|
+| Dev Lead | Duncan Millard | Responsible for quality and completeness of the work the team builds.  Mentoring team as a hands on servant leader|
+| Architect | Duncan Millard and Niels Nijweide | Responsible for defining the architecture for the solution and is the lead advisor about technical approaches undertaken and products to be used
+|
+
+
+
 
 Scrum guide link: https://www.scrumguides.org/scrum-guide.html; https://www.atlassian.com/agile/scrum
 - Agile link VSTS
