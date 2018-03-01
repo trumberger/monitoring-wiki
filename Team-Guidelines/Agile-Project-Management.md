@@ -31,10 +31,18 @@ Scrum also defines fives core values: **commitment, courage, focus, openness, an
 
 |Roles |Who |What |
 | --------- | ----------------- | -------------------------------- |
-| Product Manager (Product Owner in Scrum) | Niels Nijweide | The Product Manager is responsible for maximizing the value of the product resulting from the work of the devops team.  The are the sole person responsible for managing the product backlog.|
-| Dev Lead | Duncan Millard | Responsible for quality and completeness of the work the team builds.  Mentoring team as a hands on servant leader|
+| Product Manager (or PO) | Niels Nijweide | The Product Manager is responsible for maximizing the value of the product resulting from the work of the devops team.  The are the sole person responsible for managing the product backlog.
+| Dev Lead | Duncan Millard | Responsible for quality and completeness of the work the team builds.  Mentoring team as a hands on servant leader
 | Architect | Duncan Millard and Niels Nijweide | Responsible for defining the architecture for the solution and is the lead advisor about technical approaches undertaken and products to be used
-|
+| Site Reliability Engineer | Tino Donderwinkell | Incorporates aspects of software engineering into operations to create ultra-scalable and highly reliable software systems.
+| Release Manager | Tino Donderwinkell |  Responsible for the releases of code and artifacts into production environments.  Devops places a lot of focus on Infrastructure as code and continuous delivery
+| PMO / Scrum Master | Tyler Rumberger | Scrum master is responsible for promoting and supporting Scrum within the team.  They are a servant-leader for the team and help empower them and remove obstacles.  The "PMO" refers to driving program governance and ensuring visibility to leadership.
+| Devops Team | Dimitrie Bogdan Lascar, Cosmin Mladen, Catalin Irimia, Bogdan Petrescu | Self-organizing team that is responsible for delivering potentially releasable increments of software (i.e. customer value) and living the values of agile, scrum, and devops. |
+
+
+
+
+
 
 
 
