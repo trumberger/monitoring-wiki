@@ -35,10 +35,11 @@ In addition to these core team roles, we use the following additional groups for
 | Wiki permissions | Read-only |
 
 ## Branch Policies
+A comprehensive overview of branch polices and permissions using git in VSTS can be found on the [Visual Studio documentation site.](https://docs.microsoft.com/en-us/vsts/git/branch-policies)
 
 **Production**
 - Check for linked work items on pull requests (optional / warning)
 - Required reviewers for pull request:  Niels Nijweide
 
 **Master**
-- None
+- Required reviewers for pull request:  Niels Nijweide
