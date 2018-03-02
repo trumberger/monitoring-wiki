@@ -13,9 +13,13 @@ The principles originally outlined in the [Agile Manifesto](http://agilemanifest
 These values have become increasingly important in the era of increasingly complex systems that must be always-on and constantly improving.  A good starting point to Agile can be found on the [VSTS Agile site.](https://www.visualstudio.com/agile/)
 
 ## Scrum
-[Scrum](https://www.visualstudio.com/learn/what-is-scrum/) is a popular Agile framework that defines specific artifacts, practices, and roles for self-organizing teams. One of the core aspects of scrum is a pre-defined lifecyle or iteration (usually called a sprint) in which the team collaborates closely to get work done and then inspects the work that was completed. The below descriptions of roles, events, and artifacts for the ESS Monitoring team are largely taken from the [Scrum Guide](https://www.scrumguides.org/scrum-guide.html).
+[Scrum](https://www.visualstudio.com/learn/what-is-scrum/) is a popular Agile framework that defines specific artifacts, practices, and roles for self-organizing teams. One of the core aspects of scrum is a pre-defined lifecyle or iteration (usually called a sprint) in which the team collaborates closely to get work done and then inspects the work that was completed.  Scrum also defines a number of artifacts (e.g. product backlog), events (sprint planning, daily standup, etc), and roles (product owner, scrum master, etc).  The below descriptions of roles, events, and artifacts for the ESS Monitoring team are largely taken from the [Scrum Guide](https://www.scrumguides.org/scrum-guide.html).
+### Scrum Lifecycle
+
+<IMG src="https://www.visualstudio.com/wp-content/uploads/2017/04/agile-scrum-lifecycle-diagram.png" alt="Scrum Lifecycle Diagram"/>
 
 ### Scrum Values and Principles
+
 Scrum consists of three core principles and seven values.
 
 **Principles**
@@ -40,10 +44,12 @@ Scrum also defines fives core values: **commitment, courage, focus, openness, an
 | Devops Team | Dimitrie Bogdan Lascar, Cosmin Mladen, Catalin Irimia, Bogdan Petrescu | Self-organizing team that is responsible for delivering potentially releasable increments of software (i.e. customer value) and living the values of agile, scrum, and devops. |
 
 ### Key Artifacts
+
 - The **Product Backlog** consists of all of the features, functions, requirements, enhancements, and fixes that need to be delivered for the product.  The Product Manager (or Product Owner in Scrum terms) is responsible for the availability, fidelity, and prioritization of the product backlog.  The ESS Monitoring team utilizes regular backlog refinement sessions to ensure Epics, Features, and User stories are clearly defined for the team with appropriate acceptance criteria and detail.
 - The **Sprint Backlog** consists of all of the backlog items selected for a sprint as well as the plan for delivering increment to achieve the sprint goal.
 
 ### Team Events
+
 The ESS Monitoring team uses a **2-week sprint cycle** which informs the schedule defined below.
 | Event | Objective | Cadence | Attendees
 | --- | --- | --- | ---
