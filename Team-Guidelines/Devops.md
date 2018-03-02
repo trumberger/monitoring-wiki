@@ -3,8 +3,6 @@ The  concept of Devops has a number of definitions floating around, one of the b
 
 >  DevOps is the union of people, process, and products to enable continuous delivery of value to our end users. The contraction of “Dev” and “Ops” refers to replacing siloed Development and Operations to create multidisciplinary teams that now work together with shared and efficient practices and tools. Essential DevOps practices include agile planning, continuous integration, continuous delivery, and monitoring of applications.
 
-<IMG src="https://wac-cdn.atlassian.com/dam/jcr:325fff80-6aa7-4d46-a3f9-4db402f17a8d/devops-loop-illustrations.png?cdnVersion=js" alt="Image result for devops"/>
-
 Gene Kim, author of DevOps Handbook, talks about the [Three Ways](https://itrevolution.com/the-three-ways-principles-underpinning-devops/), which help frame the values and principles of Devops.  These mental models help us understand and assess both how we deliver value to our end users today and how we can improve.
 1. The First Way, known as the principle of **flow**, is about the performance of the entire system.  The goal is to decrease the time from idea -> production deployment by understanding and optimizing how value flows through the system.
 2. The Second Way, known as the principle of **feedback** is about creating ever-tighter feedback loops so that we continuously amplify our feedback loops and make corrections to continuously improve and eliminate defects upstream.
