@@ -1,7 +1,7 @@
 ## Overview
 The ESS Monitoring team is built on a foundation of Agile / Scrum and Devops practices.  This foundation drives a consistent and relentless focus on delivering value to our end users and a production first mindset.  In addition, Agile and Devops provide a framework for the values, principles, methods, practices, and tools that are used to achieve the teams  goals.
 
-![agile-team-verview.PNG](.attachments/agile-team-verview-fc318955-f05c-4917-9f52-f40e18c0c8bc.PNG =1000x)
+![agile-team-verview.PNG](.attachments/agile-team-verview-fc318955-f05c-4917-9f52-f40e18c0c8bc.PNG =1500x)
 
 ## ESS Monitoring Team
 
