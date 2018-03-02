@@ -39,8 +39,9 @@ Scrum also defines fives core values: **commitment, courage, focus, openness, an
 | PMO / Scrum Master | Tyler Rumberger | Scrum master is responsible for promoting and supporting Scrum within the team.  They are a servant-leader for the team and help empower them and remove obstacles.  The "PMO" refers to driving program governance and ensuring visibility to leadership.
 | Devops Team | Dimitrie Bogdan Lascar, Cosmin Mladen, Catalin Irimia, Bogdan Petrescu | Self-organizing team that is responsible for delivering potentially releasable increments of software (i.e. customer value) and living the values of agile, scrum, and devops. |
 
-
-
+### Key Artifacts
+- The **Product Backlog** consists of all of the features, functions, requirements, enhancements, and fixes that need to be delivered for the product.  The Product Manager (or Product Owner in Scrum terms) is responsible for the availability, fidelity, and prioritization of the product backlog.  The ESS Monitoring team utilizes regular backlog refinement sessions to ensure Epics, Features, and User stories are clearly defined for the team with appropriate acceptance criteria and detail.
+- The **Sprint Backlog** consists of all of the backlog items selected for a sprint as well as the plan for delivering increment to achieve the sprint goal.
 
 
 
