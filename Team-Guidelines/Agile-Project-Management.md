@@ -54,20 +54,3 @@ The ESS Monitoring team uses a **2-week sprint cycle** which informs the schedul
 | Daily standup | Team briefly meets to share: what has been accomplished so far, what are you working on next, any blockers/obstacles | Daily | Full team
 | Live site incident review | Control analysis and learning cycle from Live Site incidents; controls input of Live Site changes (people, process, tools, services) into Sprint Planning | Once a week (1 hr) | SRE, Dev lead, DRI |
 
-
-
-
-
-
-
-
-
-Scrum guide link: https://www.scrumguides.org/scrum-guide.html; https://www.atlassian.com/agile/scrum
-- Agile link VSTS
-- DevOops link VSTS
-- Resources on using VSTS for work management
-- Scrum artifacts
-- Scrum roles
-- Scrum ceremonies (+ team ceremonies)
-- Common definition of done
-
