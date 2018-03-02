@@ -3,6 +3,8 @@ The ESS Monitoring team is built on a foundation of Agile / Scrum and Devops pra
 
 ![image.png](.attachments/image-60d1240d-24c7-4ce9-b96f-b96bd7cdb916.png)
 
+![agile-team-verview.PNG](.attachments/agile-team-verview-fc318955-f05c-4917-9f52-f40e18c0c8bc.PNG)
+
 ## ESS Monitoring Team
 
 ### Roles
