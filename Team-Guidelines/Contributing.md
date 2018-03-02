@@ -7,6 +7,8 @@
 - Format requirements for commit messages and pull requests
 - Code standards and best practices that must be followed for a pull request to be merged
 
+- Code reviews / peers
+
 ## Resources
 https://www.atlassian.com/git/tutorials/comparing-workflows
 https://medium.com/@ahecimo/selecting-the-right-git-workflow-f77081eef5c2
