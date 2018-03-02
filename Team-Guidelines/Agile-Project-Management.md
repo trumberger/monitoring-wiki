@@ -13,7 +13,8 @@ The principles originally outlined in the [Agile Manifesto](http://agilemanifest
 These values have become increasingly important in the era of increasingly complex systems that must be always-on and constantly improving.  A good starting point to Agile can be found on the [VSTS Agile site.](https://www.visualstudio.com/agile/)
 
 ## Scrum
-[Scrum](https://www.visualstudio.com/learn/what-is-scrum/) is a popular Agile framework that defines specific artifacts, practices, and roles for self-organizing teams. One of the core aspects of scrum is a pre-defined lifecyle or iteration (usually called a sprint) in which the team collaborates closely to get work done and then inspects the work that was completed.  Scrum also defines a number of artifacts (e.g. product backlog), events (sprint planning, daily standup, etc), and roles (product owner, scrum master, etc).  The below descriptions of roles, events, and artifacts for the ESS Monitoring team are largely taken from the [Scrum Guide](https://www.scrumguides.org/scrum-guide.html).
+[Scrum](https://www.visualstudio.com/learn/what-is-scrum/) is a popular Agile framework that defines specific artifacts, practices, and roles for self-organizing teams. One of the core aspects of scrum is a pre-defined lifecyle or iteration (usually called a sprint) in which the team collaborates closely to get work done and then inspects the work that was completed.  Scrum also defines a number of artifacts (e.g. product backlog), events (sprint planning, daily standup, etc), and roles (product owner, scrum master, etc).  Many of the of roles, events, and artifacts used by the ESS Monitoring team are largely taken / adapted from the [Scrum Guide](https://www.scrumguides.org/scrum-guide.html).
+
 ### Scrum Lifecycle
 
 <IMG src="https://www.visualstudio.com/wp-content/uploads/2017/04/agile-scrum-lifecycle-diagram.png" alt="Scrum Lifecycle Diagram"/>
