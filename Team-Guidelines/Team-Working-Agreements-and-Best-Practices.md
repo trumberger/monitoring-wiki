@@ -6,7 +6,7 @@ The team backlog follows the standard VSTS agile work item hierarchy of **Epic -
 
 |Work item|Description|
 |---|---|
-|Epic | Large scale initiatives or themes that span multiple releases, broken down into features…|
+|Epic | Large scale initiatives or themes that span multiple releases, broken down into features|
 |Features | Represent new functionality that is released to the customer, e.g. release unit (think what you would put into release notes)
 |User Stories | Incremental value team must deliver to create a feature (can be delivered in single sprint)
 |Tasks | Individual tasks required to complete a story|
