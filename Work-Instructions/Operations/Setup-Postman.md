@@ -9,17 +9,11 @@ Postman can be used to simulate HTTP requests
 
 ---
 ##Azure Access tokens
-The REST endpoints for Azure resources are secured by the OAUTH 2 protocol. There are two steps to making requests to an Azure REST endpoint:
+The REST endpoints for Azure resources are secured by the [OAUTH 2.0](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-code) protocol. Before accessing the endpoint, you need to get an access token from Azure Active Directory. 
 
-1) Obtain a Bearer Token (access token) for the resource you want to access
-2) Use that token to make one or more calls to the endpoint
+This guide first tells you how to get an Access Token (also known as a Bearer Token), and then shows some examples of calling Azure REST endpoints.
 
-For more background:
-Azure Active Directory allows _Users_ or _Services_ to authenticate with AAD and obtain access tokens. This identity (user or service) is known as a User Principal or a Service Principal. Typically in the monitoring solution, we use service principals - to see one, search Microsoft AAD Application Registrations for "SPN-Test-ApplicationInsights" as an example.
-
-Each Service Principal is represented by an Application Id and a Key (assigned by AAD when the Service Principal is created) - this Application ID and Key must be used when you request a bearer token.
-
-Other values you may need for retrieving an access token or accessing an endpoint:
+When reading the notes below, you will need to know the [Service Principal] Application ID and Key that you want to use, as well as some of the following values:
 ```
 TenantID:                    72f988bf-86f1-41af-91ab-2d7cd011db47
 WorkspaceID (PROD):          e3eb539e-c40e-4c80-ae8f-19aa090713ed 
