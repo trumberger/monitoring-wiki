@@ -11,7 +11,7 @@ Postman can be used to simulate HTTP requests
 ##Azure Access tokens
 The REST endpoints for Azure resources are secured by the OAUTH 2 protocol. There are two steps to making requests to an Azure REST endpoint:
 
-1) Request a Bearer Token (access token)
+1) Obtain a Bearer Token (access token) for the resource you want to access
 2) Use that token to make one or more calls to the endpoint
 
 For more background:
