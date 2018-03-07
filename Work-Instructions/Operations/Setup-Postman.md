@@ -13,7 +13,7 @@ The REST endpoints for Azure resources are secured by the [OAUTH 2.0](https://do
 
 This guide first tells you how to get an Access Token (also known as a Bearer Token), and then shows some examples of calling Azure REST endpoints.
 
-When reading the notes below, you will need to know the [Service Principal] Application ID and Key that you want to use, as well as some of the following values:
+When reading the notes below, you will need to know the [Service Principal](/Work-Instructions/Operations/Setup-Postman) Application ID and Key that you want to use, as well as some of the following values:
 ```
 TenantID:                    72f988bf-86f1-41af-91ab-2d7cd011db47
 WorkspaceID (PROD):          e3eb539e-c40e-4c80-ae8f-19aa090713ed 
