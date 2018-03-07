@@ -68,22 +68,7 @@ Copy the access token - you'll need it in the next steps.
 
 The next sections show examples of calling various Azure endpoints. Each of these endpoints is rich in functionality, so please refer to the linked documentation for full details as each of the examples below is just a starting point.
  
-###Azure Application Insights REST API
-
-API documentation: <https://dev.applicationinsights.io/documentation/Overview>
-
-**Example call to get request details that recorded in App Insights:**
-```
-GET https://api.applicationinsights.io/v1/apps/<application id>/metrics/requests/duration
-
-HEADER
-Authorization: Bearer {Access Token}
-Content-Type: application/json
-
-Notes: 
-- The <application id> is the App Insights Api application Id. You find this by opening the App Insights resource in the Azure portal, clicking on "API Access" in the left hand menu, and copying the Application Id. It is NOT the Application Id of your SPN. 
-```
-
+[Call Application Insights REST API](/Work-Instructions/Operations/Setup-Postman/Call-Application-Insights-REST-API)
 ### Azure Resource Manager REST API
 
 <https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-rest-api>
