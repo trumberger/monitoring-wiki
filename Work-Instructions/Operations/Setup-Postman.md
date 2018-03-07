@@ -14,10 +14,10 @@ The REST endpoints for Azure resources are secured by the OAUTH 2 protocol. Ther
 1) Request a Bearer Token (access token)
 2) Use that token to make one or more calls to the endpoint
 
-_For more background:
+For more background:
 Azure Active Directory allows _Users_ or _Services_ to authenticate with AAD and obtain access tokens. This identity (user or service) is known as a User Principal or a Service Principal. Typically in the monitoring solution, we use service principals - to see one, search Microsoft AAD Application Registrations for "SPN-Test-ApplicationInsights" as an example.
 
-Each Service Principal is represented by an Application Id and a Key (assigned by AAD when the Service Principal is created) - this Application ID and Key must be used when you request a bearer token._
+Each Service Principal is represented by an Application Id and a Key (assigned by AAD when the Service Principal is created) - this Application ID and Key must be used when you request a bearer token.
 
 Other values you may need for retrieving an access token or accessing an endpoint:
 ```
