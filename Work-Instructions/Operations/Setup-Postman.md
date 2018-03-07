@@ -45,39 +45,45 @@ client_id={Your Service Principal Application Id}
 client_secret={Your Service Principal Key}
 
 ```
+
+
 |Resource Type |Resource Uri |  
 |:-----------|:-----------|
 | Application Insights REST API| https://api.applicationinsights.io |  
 | Azure Resource Manager REST API |https://management.core.windows.net/|
 | Log Analytics REST API|https://api.loganalytics.io|
-The sections below show how to call some of the different Azure Resource endpoints using Postman:
 
+Once you have set up the request in Postman, click "Send" and you'll get a response similar to this:
+```
+{
+    "token_type": "Bearer",
+    "expires_in": "3599",
+    "ext_expires_in": "0",
+    "expires_on": "1520434317",
+    "not_before": "1520430417",
+    "resource": "https://api.applicationinsights.io",
+    "access_token": "(very long string of characters)"
+}
+```
+
+Copy the access token - you'll need it in the next steps.
+
+The next sections show examples of calling various Azure endpoints. Each of these endpoints is rich in functionality, so please refer to the linked documentation for full details as each of the examples below is just a starting point.
+ 
 ###Azure Application Insights REST API
 
-<https://dev.applicationinsights.io/documentation/Overview>
+API documentation: <https://dev.applicationinsights.io/documentation/Overview>
 
+**Example call to get request details that recorded in App Insights:**
 ```
-POST 
-https://login.microsoftonline.com/{TenantID}/oauth2/token?api-version=1.0
+GET https://api.applicationinsights.io/v1/apps/<application id>/metrics/requests/duration
 
 HEADER
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-BODY (select 'x-www-form-urlencoded' from the options in Postman)
-grant_type=client_credentials
-resource=https://api.applicationinsights.io
-client_id={ClientID}
-client_secret={ClientSecret}
-
-```
-Copy the access token and use the access token to query the App Insights API - example below is for the STAGING environment:
-```
-GET https://api.applicationinsights.io/v1/apps/DEMO_APP/metrics/requests/duration
-
-HEADER
-Authorization: Bearer {Acces Token}
+Authorization: Bearer {Access Token}
 Content-Type: application/json
+
+Notes: 
+- The <application id> is the App Insights Api application Id. You find this by opening the App Insights resource in the Azure portal, clicking on "API Access" in the left hand menu, and copying the Application Id. It is NOT the Application Id of your SPN. 
 ```
 
 ### Azure Resource Manager REST API
@@ -85,55 +91,23 @@ Content-Type: application/json
 <https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-rest-api>
 
 ```
-POST 
-https://login.microsoftonline.com/{TenantID}/oauth2/token?api-version=1.0
-
-HEADER
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-BODY
-grant_type=client_credentials
-resource=https://management.core.windows.net/
-client_id={ClientID}
-client_secret={ClientSecret}
-
-```
-Copy the access token and use the access token to query the ARM TEST API
-```
 GET
 https://management.azure.com/{query}
 
 HEADER
-Authorization: Bearer {Acces Token}
+Authorization: Bearer {Access Token}
 Content-Type: application/json
 ```
 
 ### Log Analytics REST API
 <https://dev.loganalytics.io/documentation/Authorization/OAuth2>
-
-**Access Token**
-```
-POST 
-https://login.microsoftonline.com/{TenantID}/oauth2/token
-
-HEADER
-Content-Type: application/x-www-form-urlencoded
-
-BODY
-grant_type=client_credentials
-resource=https://api.loganalytics.io
-client_id={ClientID}
-client_secret={ClientSecret}
-```
-Copy the access token and use the access token to query the Log Analytics API
 ```
 POST
 https://api.loganalytics.io/v1/workspaces/{workspaceID}/query
 
 
 HEADER
-Authorization: Bearer {Acces Token}
+Authorization: Bearer {Access Token}
 Content-Type: application/json
 
 BODY
