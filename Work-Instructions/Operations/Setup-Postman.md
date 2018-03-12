@@ -69,6 +69,8 @@ Copy the access token - you'll need it in the next steps.
 The next sections show examples of calling various Azure endpoints. Each of these endpoints is rich in functionality, so please refer to the linked documentation for full details as each of the examples below is just a starting point.
  
 [Call Application Insights REST API](/Work-Instructions/Operations/Setup-Postman/Call-Application-Insights-REST-API)
+[Call ARM REST API](/Work-Instructions/Operations/Setup-Postman/Call-ARM-REST-API)
+[Call Log Analytics REST API](/Work-Instructions/Operations/Setup-Postman/Call-Log-Analytics-REST-API)
 ### Azure Resource Manager REST API
 
 <https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-rest-api>
