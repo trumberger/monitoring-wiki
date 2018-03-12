@@ -28,9 +28,40 @@ Intention of the user story is to capture the answer to three key questions:
 3. **Why**? What underlying outcome our goal do they want to achieve?
 
 In some cases there will be technical user stories, architectural / enabler work, or other miscellaneous items that don't fit neatly into this template.  There's no need to force these types of stories into the above format - just make sure the user story is clearly defined and include enough level of detail for the team to understand the context and desired outcome.
-## Acceptance Criteria
 
-## Common Definition of Done
+## Team Definition of Ready
+The Definition of Ready are the criteria that a user story must meet in order to be considered for inclusion in a sprint.  User stories that are discussed during Sprint Planning for inclusion in the next sprint must meet this criteria in order to be considered by the team.  This helps ensure the work is clearly defined before starting work so that the team can avoid churn / rework.
+
+**A Product Backlog Item is considered "Ready" when:**
+1. Story is described in accordance with the user story template (As a...) or as a clearly defined Non-Functional Requirement (NFR) or technical user story.
+2. Story has been prioritized (stack ranked) by the Product Manager
+3. Story has clearly defined and unambiguous acceptance criteria
+4. Story has a baseline estimate (XS - XL) agreed on my the Dev Lead, SRE, and Product Manager
+5. Assumptions for the story are clearly documented
+6. Any pre-requisite documentation, work instructions, or manual test instructions are available to the team and clearly defined
+7. Any required automated test criteria are clearly defined
+
+## Team Definition of Done
+The Definition of Done is the criteria necessary in order to consider a User Story done or complete.  This ensures all team members understand what is required in order for a user story to be completed within a sprint.
+
+**A Product Backlog Item is considered "Done" when:**
+1. Solution builds successfully
+2. Code written and merged into master branch 
+3. Unit Tests implemented on all features to an appropriate code coverage 
+4. All regression tests run and pass 
+5. All acceptance criteria met 
+6. Code has been peer reviewed and comments addressed
+7. User Story moved to Resolved state 
+8. Remaining hours for tasks set to zero and tasks closed. 
+9. No open Sev1 or Sev2 bugs 
+10. Deploys successfully into the automated Staging environment release pipeline
+11. Static Code Analysis is run with results no worse than the baseline
+12. Any related documentation (work instructions, wiki, manual steps, etc) are updated
+13. Work items that modify source code are linked to associate commit
+
+
+
+## Acceptance Criteria
 
 ## Estimation
 - Fibonacci sequence
