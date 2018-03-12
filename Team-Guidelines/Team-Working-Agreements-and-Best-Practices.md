@@ -29,6 +29,9 @@ Intention of the user story is to capture the answer to three key questions:
 
 In some cases there will be technical user stories, architectural / enabler work, or other miscellaneous items that don't fit neatly into this template.  There's no need to force these types of stories into the above format - just make sure the user story is clearly defined and include enough level of detail for the team to understand the context and desired outcome.
 
+## Acceptance Criteria
+Where User Stories define the **problem**, acceptance criteria help define / refine user stories with specific details and considerations.  They also help the team know when a user story is done beyond the teams common definition of done.  In the early stages of the team, our acceptance criteria will be more prescriptive and detailed.  But, our goal is to ensure AC do not specify the HOW behind a user story or get deep into solutioning as this should be developed by the team, not the Product Manager.
+
 ## Team Definition of Ready
 The Definition of Ready are the criteria that a user story must meet in order to be considered for inclusion in a sprint.  User stories that are discussed during Sprint Planning for inclusion in the next sprint must meet this criteria in order to be considered by the team.  This helps ensure the work is clearly defined before starting work so that the team can avoid churn / rework.
 
