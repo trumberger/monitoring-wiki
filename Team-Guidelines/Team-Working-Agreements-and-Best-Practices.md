@@ -62,11 +62,8 @@ The Definition of Done is the criteria necessary in order to consider a User Sto
 12. Any related documentation (work instructions, wiki, manual steps, etc) are updated
 13. Work items that modify source code are linked to associate commit
 
-
-
-## Acceptance Criteria
-
 ## Estimation
+Currently, the team uses a simple t-shirt sizing approach to estimation ranging from Extra Small (XS) to Extra Large (XL).  Each size is associated with a Story Point value ranging from 1 for XS 
 - Fibonacci sequence
 - Estimating is a team sport
 - Relative effort
