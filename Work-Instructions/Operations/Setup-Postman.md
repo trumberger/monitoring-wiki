@@ -71,37 +71,3 @@ The next sections show examples of calling various Azure endpoints. Each of thes
 [Call Application Insights REST API](/Work-Instructions/Operations/Setup-Postman/Call-Application-Insights-REST-API)
 [Call ARM REST API](/Work-Instructions/Operations/Setup-Postman/Call-ARM-REST-API)
 [Call Log Analytics REST API](/Work-Instructions/Operations/Setup-Postman/Call-Log-Analytics-REST-API)
-### Azure Resource Manager REST API
-
-<https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-rest-api>
-
-```
-GET
-https://management.azure.com/{query}
-
-HEADER
-Authorization: Bearer {Access Token}
-Content-Type: application/json
-```
-
-### Log Analytics REST API
-<https://dev.loganalytics.io/documentation/Authorization/OAuth2>
-```
-POST
-https://api.loganalytics.io/v1/workspaces/{workspaceID}/query
-
-
-HEADER
-Authorization: Bearer {Access Token}
-Content-Type: application/json
-
-BODY
-{
-    "query": "{query}"
-}
-```
-
-
-
-
-
