@@ -63,12 +63,10 @@ The Definition of Done is the criteria necessary in order to consider a User Sto
 13. Work items that modify source code are linked to associate commit
 
 ## Estimation
-Currently, the team uses a simple t-shirt sizing approach to estimation ranging from Extra Small (XS) to Extra Large (XL).  Each size is associated with a Story Point value ranging from 1 for XS 
-- Fibonacci sequence
-- Estimating is a team sport
-- Relative effort
-SWAG, not commitment
-Collaborative
-Relative effort
-Helps us better understand our team velocity and track improvement over time
+Currently, the team uses a simple t-shirt sizing approach to estimation ranging from Small (S) to Extra Large (XL).  Each size is associated with a Story Point value ranging from 1 for Small to 4 for Large.  A few points to keep in mind:
+- Estimating is about relative effort
+- Estimates should be a team sport, not just set by Product Manager - intended to start a conversation
+- Estimates are a SWAG, not a commitment  
+- Estimates help us better understand our team velocity, which aids in sprint planning and allows us to track improvement over time
+
 
