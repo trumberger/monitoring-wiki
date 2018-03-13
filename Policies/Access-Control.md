@@ -1,33 +1,33 @@
 ## Intro
-This section describes the Access control that ESS uses when no other customer RBAC model or Access Control policy is in place
+This section describes the Access control that Monitoring team uses.
 
-## Subscription Setup
+## Architectural guidelines applied
 - Subscription per environment (TEST / DEV / UAT / PROD)
 - ARM template per resource group
-- Application Monitoring resources part of application 
-- Monitoring components in single resources group
+- Working with least privileged access for users
+- All admin activities should be logged
+- Support resources in Azure in single resources group
 
-## Standard Model
-Default model used by ESS 
-| Group | non-UAT & PROD | Staging (UAT) | Production | Comment
-|---|---|---|---|---|
-| End-User | - | - | - |
-| Customer L1 | - | - | Read-only |
-| Customer App Support | - | Read-only | Read-only |
-| Development | Contributor | Contributor | Read-only |
-| Operations | Read-only |  Contributor |  Contributor | 
-| Monitoring | Read-only | Read-only | Read-only | Only contributor in monitoring resource group | 
+## Access Model - Azure (internal subscriptions)
 
-TODO..
+The access model is based on the different personas that the monitoring team identified
 
-Not sure there is much to review about privileged access policies. What I tested and we can go over when you want:
--	We can have users who are always allowed to elevate rights (such as I and Attila)
--	These users can be regular users in the AD and normal readers/contributors to the subscriptions
--	When a user needs to elevate their rights, he needs to go through an approval process that takes 2-3 minutes. There are separate (albeit similar) processes that allow the user to get admin rights on the subscription or on the resources (I could in theory become a global administrator in the tenant without permissions on the subscription and vice-versa)
--	The access is time limited, for up to 8 or 12 hours (I don’t remember)
--	Every 3 months, the privileged access model needs to be granted again, otherwise users won’t be able to elevate their rights any more
--	The user who configures privileged access for the first time automatically becomes the security administrator
+| Group | Organization | Development | Staging (UAT) | Production | Comment
+|---|---|---|---|---|---|
+| Application Owner | Customer | - | - | - | |
+| Developer | Customer / Microsoft | - | - | - | |
+| EAS DevOps Engineer | Microsoft | - | - | Read-only | Option to elevate permissions to Key Vault writer in PROD |
+| Monitoring Team Member | Microsoft | Owner | Owner | Read-only | Option to elevate permissions in PROD |
+| Security Officer | Customer | - | - | Read-only | Only if required |
+| Service Delivery Manager | Microsoft |  - |  - | Read-only | 
+| Service Desk | Customer | - | - | - | |
+| Support Engineer | Customer / Vendor / Microsoft | - | - | - | |
 
-My personal suggestion:
--	Use admin@kpmg... To configure privileged access for me and Attila.
--	Put an alert in place so that all logins for this account triggers an incident. We should only access this account once every 3 months, when granting ourselves rights again. Everything else we can do with our own accounts in an audited manner.
+**NOTE**: Azure Privileged Identity manager will be used for to elevate permission. This is not implemented yet
+
+### Service Principles
+The following [Wiki article](https://easplatform.visualstudio.com/Monitoring/_wiki/wikis/Monitoring.wiki?wikiVersion=GBwikiMaster&pagePath=%2FWork%20Instructions%2FCustomer%20Activition%2F02.%20Customer%20Facing%2F03.%20Create%20Service%20Principles%20for%20Monitoring%20Platform) provides an overview of the Service Principles the monitoring platform uses within our customer's and our own tenant. 
+
+
+TODO
+Add
