@@ -17,11 +17,13 @@ The access model is based on the different personas that the monitoring team ide
 | Application Owner | Customer | - | - | - | |
 | Developer | Customer / Microsoft | - | - | - | |
 | EAS DevOps Engineer | Microsoft | - | - | Read-only | Option to elevate permissions to Key Vault writer in PROD |
+| Monitoring Contributor | Microsoft | Contributor | Contributor | Read-only | |
 | Monitoring Team Member | Microsoft | Owner | Owner | Read-only | Option to elevate permissions in PROD |
 | Security Officer | Customer | - | - | Read-only | Only if required |
 | Service Delivery Manager | Microsoft |  - |  - | Read-only | 
 | Service Desk | Customer | - | - | - | |
 | Support Engineer | Customer / Vendor / Microsoft | - | - | - | |
+| Senior Leadership | Microsoft | - | - | Read-only | |
 
 **NOTE**: Azure Privileged Identity manager will be used for to elevate permission. This is not implemented yet
 
