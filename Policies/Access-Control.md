@@ -32,4 +32,4 @@ The following [Wiki article](https://easplatform.visualstudio.com/Monitoring/_wi
 
 
 TODO
-Add
+VSTS and IcM access
