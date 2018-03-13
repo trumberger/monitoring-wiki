@@ -6,8 +6,9 @@
 - Indication of how to decide the base branch for a pull request
 - Format requirements for commit messages and pull requests
 - Code standards and best practices that must be followed for a pull request to be merged
-
 - Code reviews / peers
+
+## Core Team vs. Contributor
 
 ## Resources
 https://www.atlassian.com/git/tutorials/comparing-workflows
