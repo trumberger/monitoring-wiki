@@ -30,6 +30,8 @@ The access model is based on the [different personas](https://easplatform.visual
 ### Service Principles
 The following [Wiki article](https://easplatform.visualstudio.com/Monitoring/_wiki/wikis/Monitoring.wiki?wikiVersion=GBwikiMaster&pagePath=%2FWork%20Instructions%2FCustomer%20Activition%2F02.%20Customer%20Facing%2F03.%20Create%20Service%20Principles%20for%20Monitoring%20Platform) provides an overview of the Service Principles the monitoring platform uses within our customer's and our own tenant. 
 
+### Visual Studio Team Services
+The following [Wiki article](https://easplatform.visualstudio.com/Monitoring/_wiki/wikis/Monitoring.wiki?wikiVersion=GBwikiMaster&pagePath=%2FPolicies%2FVisual%20Studio%20Project%20Permissions%20and%20RBAC) provides an overview of how VSTS Is setup in terms of access control and permissions. 
 
 TODO
-VSTS and IcM access
+IcM access
