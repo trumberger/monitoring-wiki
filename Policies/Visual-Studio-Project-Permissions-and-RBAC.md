@@ -1,11 +1,13 @@
-This section describes the Visual Studio permissions, policies and access controls used within the **Monitoring Project**
+This section describes the Visual Studio permissions, policies and access controls used within the **Monitoring Project**. The roles are based on the [defined personas](https://easplatform.visualstudio.com/Monitoring/_apps/hub/agile-extensions.personas.personas-work-hub) for the monitoring & automation team.
 
 ## Monitoring Roles
-The Monitoring project uses the [standard group permission definitions](https://docs.microsoft.com/en-us/vsts/security/permissions) for most core users on the Project.  **Monitoring Team** members are given project "Contributor" permissions by default.  Users who need additional administrative permissions are given "Project Administrator" permissions.
+The Monitoring project uses the [standard group permission definitions](https://docs.microsoft.com/en-us/vsts/security/permissions) for users within this instance. 
 
-In addition to these core team roles, we use the following additional groups for internal/external collaborators.
+### Monitoring Team Member
 
-### Monitoring Collaborators
+Members are given project "Contributor" permissions by default.  Users who need additional administrative permissions are given "Project Administrator" permissions.
+
+### Monitoring Contributors
 
 **Visual Studio Group Name:**  Monitoring Collaborators
 
@@ -19,7 +21,7 @@ In addition to these core team roles, we use the following additional groups for
 | Repo (Monitoring) | contribute, contribute to pull requests, create branch, create tag, manage notes, read |
 | Git branch permissions | **Master**: Contribute; **Production**: None |
 
-### Read-Only Users
+### Other Microsoft Roles
 
 **Visual Studio Group Name:**  Readers
 
