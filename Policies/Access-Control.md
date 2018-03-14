@@ -10,7 +10,7 @@ This section describes the Access control that Monitoring team uses.
 
 ## Access Model - Azure (internal subscriptions)
 
-The access model is based on the different personas that the monitoring team identified
+The access model is based on the [different personas](https://easplatform.visualstudio.com/Monitoring/_apps/hub/agile-extensions.personas.personas-work-hub)  that the monitoring team identified
 
 | Group | Organization | Development | Staging (UAT) | Production | Comment
 |---|---|---|---|---|---|
