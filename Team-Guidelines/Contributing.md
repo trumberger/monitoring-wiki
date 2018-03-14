@@ -12,4 +12,7 @@
 
 ## Resources
 https://www.atlassian.com/git/tutorials/comparing-workflows
+
 https://medium.com/@ahecimo/selecting-the-right-git-workflow-f77081eef5c2
+
+https://docs.microsoft.com/en-us/contribute/
