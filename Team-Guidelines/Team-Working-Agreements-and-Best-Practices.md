@@ -39,10 +39,9 @@ The Definition of Ready are the criteria that a user story must meet in order to
 1. Story is described in accordance with the user story template (As a...) or as a clearly defined Non-Functional Requirement (NFR) or technical user story.
 2. Story has been prioritized (stack ranked) by the Product Manager
 3. Story has clearly defined and unambiguous acceptance criteria
-4. Story has a baseline estimate (S - XL) agreed on my the Dev Lead, SRE, and Product Manager
-5. Assumptions for the story are clearly documented
-6. Any pre-requisite documentation, work instructions, or manual test instructions are available to the team and clearly defined
-7. Any required automated test criteria are clearly defined
+4. Assumptions for the story are clearly documented
+5. Any pre-requisite documentation, work instructions, or manual test instructions are available to the team and clearly defined
+6. Any required automated test criteria are clearly defined
 
 ## Team Definition of Done
 The Definition of Done is the criteria necessary in order to consider a User Story done or complete.  This ensures all team members understand what is required in order for a user story to be completed within a sprint.
