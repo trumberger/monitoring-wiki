@@ -1,5 +1,8 @@
 # Title
 
+
+ ![image.png](.attachments/image-b7d333cb-7fac-46e4-ad4f-e339dae78277.png)
+
 ## Schema
 
 The following schema is used for log **SQLAuditLog_CL**
