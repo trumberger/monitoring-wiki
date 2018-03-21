@@ -1,4 +1,8 @@
-# Title
+# Technical Overview
+
+## Flow
+The source of the picture below can be found here
+ ![image.png](.attachments/image-f4597f7d-9772-452e-8fb5-4fd0e824ab91.png)
 
 ## Schema
 
