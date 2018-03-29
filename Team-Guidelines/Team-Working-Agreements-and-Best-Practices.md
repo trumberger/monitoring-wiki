@@ -29,6 +29,12 @@ Intention of the user story is to capture the answer to three key questions:
 
 In some cases there will be technical user stories, architectural / enabler work, or other miscellaneous items that don't fit neatly into this template.  There's no need to force these types of stories into the above format - just make sure the user story is clearly defined and include enough level of detail for the team to understand the context and desired outcome.
 
+### Spikes
+A [spike](https://www.scaledagileframework.com/spikes/) refers to a specific type of enabler story in agile which represents activities such as research, design, investigation, exploration, and prototyping.  These stories will be given a `Spike` tag in the product backlog and the name of the user story will also be prepended with the type of activity that needs to be performed by the team; e.g. [Research] or [Prototype].
+
+Read more at: https://www.scaledagileframework.com/spikes/
+Copyright © 2010-2017 Scaled Agile, Inc.
+Request permission to use text and graphics: http://www.scaledagile.com/permissions-form/
 ## Acceptance Criteria
 Where User Stories define the **problem**, acceptance criteria help define / refine user stories with specific details and considerations.  They also help the team know when a user story is done beyond the teams common definition of done.  In the early stages of the team, our acceptance criteria will be more prescriptive and detailed.  But, our goal is to ensure AC do not specify the HOW behind a user story or get deep into solutioning as this should be developed by the team, not the Product Manager.
 
