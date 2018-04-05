@@ -33,7 +33,7 @@ You now have BL + CI deployed. We now have a few manual steps before deploying M
 
 
 ### Set Key Vault Values 
-- Using the Azure Portal, open the KeyVault in your CustomerIntegration resource group. Your KeyVault is called: `KVL-DEV-CI-<Your Initials>-BPL-MON`
+- Using the Azure Portal, open the KeyVault in your CustomerIntegration resource group. Your KeyVault is called: `KVL-DEV-<your initials>-CI-BPL-MON`
 - Go into Access Policies and add yourself as a user with full access to all the key/secret/certificate management
 - Add the esshostkey value from the previous step to KeyVault as a secret named `KEY-MSFT-IntegrationKey`
 - Add another secret: `SET-DEV-TENANTID` with value `72f988bf-86f1-41af-91ab-2d7cd011db47`
@@ -41,7 +41,7 @@ You now have BL + CI deployed. We now have a few manual steps before deploying M
 ### Create Security Principals
 - Run the Pre-ValidateServicePrincipals powershell command. Remember to use your initials and alias where indicated.
 
-`Pre-ValidateServicePrincipals.ps1 -keyVaultName KVL-DEV-CI-<your initials>-BPL-MON -environment DEV -serviceId BPL-MON -spnSuffix <your alias>` 
+`Pre-ValidateServicePrincipals.ps1 -keyVaultName KVL-DEV-<your initials>-CI-BPL-MON -environment DEV -serviceId BPL-MON -spnSuffix <your alias>` 
 
 ### Customise Environment Parameter Files
 In the Configuration repository, in the `bpl-mon\dev` folder, you’ll see two files: `deploy.monitoringplatform.dm.parameters.json` and `target.monitoringplatform.dm.json`.
