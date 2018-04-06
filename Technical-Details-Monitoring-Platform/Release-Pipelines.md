@@ -7,13 +7,13 @@ At present we have the following types of pipeline:
 
 | Release Pipeline Type |  Description |  
 |:---------------|:----------|
-| Development | Deploys a developer's work **from any branch** into their personal development environment. Deploys three architectural components (Business Logic, Integration for BPL-MON, Monitoring Agent). Uses a variable called "OwnerInitials" to customise deployment by adding the initials to the resource group names and to many of the deployed Azure Resources.  
-| Staging  | Deploys **the master branch** into the Microsoft Staging environment. Deploys three components (Business Logic, Integration for BPL-MON, Monitoring Agent)
+| Development | Deploys a developer's work **from a build on any branch (such as their CI build)** into their personal development environment. Deploys three architectural components (Business Logic, Integration for BPL-MON, Monitoring Agent). Uses a variable called "OwnerInitials" to customise deployment by adding the initials to the resource group names and to many of the deployed Azure Resources.  
+| Staging  | Deploys into the Microsoft Staging environment **from a build of the master branch** . Deploys three components (Business Logic, Integration for BPL-MON, Monitoring Agent)
 | Production (Business Logic) | Deploys Business Logic components **from a build of the production branch**  into the Production environment. 
-| Production (Customer Integration v2) | Deploys Customer Integration components for all customers from the production branch into the Production environment. 
+| Production (Customer Integration v2) | Deploys Customer Integration components for all customers **from a build of the production branch** into the Production environment. 
 | Production (Customer Integration) | Obsolete pipeline which deploys Customer Integration components **from a build of the production branch** for all customers from the production branch into the Production environment.
-| Production (Monitoring Agent) | One pipeline per-service. Deploys Monitoring Agent components **from the production branch** into all customer environments for that service (for example Accor-FOLS deploys to 7 distinct customer environments, including UAT, Training, Production LATAM, etc.) 
-| (Coming soon) Production| Deploys **master branch** into the shared Staging environment. Deploys three components (Business Logic, Integration for BPL-MON, Monitoring Agent)
+| Production (Monitoring Agent) | One pipeline per-service. Deploys Monitoring Agent components **from a build of the production branch** into all customer environments for that service (for example Accor-FOLS deploys to 7 distinct customer environments, including UAT, Training, Production LATAM, etc.) 
+| (Coming soon) Production| Deploys into the shared Staging environment **from a build from the master branch**. Deploys three components (Business Logic, Integration for BPL-MON, Monitoring Agent)
 
 At present we maintain two long-lived branches: master and production. Work is committed to master, periodically merged to production and then production releases are pushed from the production branch.
 
