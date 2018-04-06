@@ -1,6 +1,7 @@
-# Overview
+# Introduction
 When developing the ESS Monitoring Solution, each developer has their own Azure environment to develop and test new code before merging it to master. This helps ensure that master is always in a "potentially deployable state" by ensuring that only well-tested and complete code is merged. This article gives you the steps to create your own developer environment.
 
+# Overview
 A development environment consists of three main Resource Groups: **Business Logic, Customer Integration and Monitoring Agent.**
 
 We use Release Pipelines to create all environments, including developer environments. For full technical details of their contents, see [Release Pipelines](/Technical-Details-Monitoring-Platform/Release-Pipelines).
