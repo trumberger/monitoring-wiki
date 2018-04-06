@@ -50,7 +50,21 @@ Each pipeline deploys one or more of the three components: Business Logic, Custo
 Note that we are in the process of moving towards using Task Groups for each of these. At present only the development release pipelines are fully converted over, but this will change in the coming sprints (05/04/2018). Hence if you look in any particular pipeline you will either see a single Task Group being called for each component, or you will see a series of individual steps for pipelines that haven't moved over to Task Groups.
 
 ### Business Logic Deployment
-The table below shows the steps for deploying the Business Logic components
+####Inputs
+- Pipeline Variables (process variables and variable groups)
+- Binaries from the build (deployed to an Azure Function)
+- OMS dashboards from the build
+- PowerShell scripts from the build (copied to a staging area ready for later use)
+
+_Note, a dummy ARM Parameters file also exists (deploy.businessLogic.parameters.json), but all values are overridden by Variables_
+####Outputs
+- Resource Group "BusinessLogic-STAG, BusinessLogic-PROD or <initals>-DEV-BusinessLogic" (note RG names will be made more consistent over time) with the following components:
+     - App Insights Instance
+     - An Azure Function and App Service Plan
+     - A KeyVault
+     - A Storage Account
+
+The table below shows the detailed steps involved in deploying the Business Logic components
 | Step Name| Type | Description |  
 |:---------------|:----------|:----------|
 | Deploy Business Logic Components | ARM Template Deployment | Creates the Business Logic Resource Group and deploys all the components to it. Note that some parameters are set explicitly via the "Override template parameters" option.
@@ -61,7 +75,19 @@ The table below shows the steps for deploying the Business Logic components
 | Create Storage Queue: incident-created | Azure PowerShell | When incidents are created by the service's Customer Integration components, they are posted to a storage queue for processing by the Business Logic components. Refer to the architecture diagram for more details.
 
 ### Customer Integration Deployment
-The table below shows the steps for deploying the Business Logic components
+####Inputs
+- Pipeline Variables (process variables and variable groups)
+- Binaries from the build (deployed to an Azure Function)
+- Output Values created by the ARM template for Business Logic
+_Note, a dummy ARM Parameters file exists (deploy.customerintegration.parameters.json), but all values are overridden by Variables_
+####Outputs
+- Resource Group "CustomerIntegration-STAG, CustomerIntegration-PROD or <initals>-DEV-CustomerIntegration" (note RG names will be made more consistent over time) with the following components:
+     - An Azure Function and App Service Plan
+     - A KeyVault
+     - A Storage Account
+- Values populated in the Key Vault
+
+The table below shows the steps for deploying the Customer Integration components
 | Step Name| Type | Description |  
 |:---------------|:----------|:----------|
 | Retrieve parameters from Business Logic Environment | ARM Outputs | Copies the Output values from the Business Logic Resource Group deployment's ARM template into VSTS Variables of the same name as the Output parameter. Note here the variables are assigned the prefix "BL-", to distinguish them from variables created in the next step.
@@ -84,10 +110,27 @@ This task group is used to populate the Key Vault instance held in the Customer 
 | Push Parameter to Key Vault: SPN VSTS Release Pipeline| Azure PowerShell | Pushes the specified value to the Customer Integration KeyVault. This is the identity of the VSTS ARM Endpoint that the Release Pipeline uses. It's used in the ARM template for Monitoring Agent deployments to grant access to the Monitoring Agent KeyVault so that the Monitoring Agent deployment is able to write values to KeyVault.
 
 ### Monitoring Agent Deployment
+####Inputs
+- Pipeline Variables (process variables and variable groups)
+- Binaries from the build (deployed to an Azure Function)
+- Values from the Customer Integration KeyVault
+- An ARM Parameters file, held in the Configuration repository, in the corresponding <Service ID>\<Environment> subfolder
+   - For dev deployments the file is called deploy.monitoringplatform.<initials>.parameters.json
+   - For other environments it's called deploy.monitoringplatform.parameters.json
+####Outputs
+- Resource Group - name depends on customer but typically similar to: "MonitoringPlatform-STAG, MonitoringPlatform-PROD or <initals>-DEV-MonitoringAgent" (note RG names will be made more consistent over time) with the following components:
+     - An Azure Function and App Service Plan
+     - An Automation Account
+     - Multiple Azure Runbooks
+     - Multiple logic apps
+     - Multiple OMS solutions
+     - A storage account
+     - An API Connection to Log Analytics and a Log Analytics Instance
+
+
 The table below shows the steps for deploying the Monitoring Agent components for a Service instance in a customer environment.
 | Step Name| Type | Description |  
 |:---------------|:----------|:----------|
 | Deploy Monitoring Agent Components | ARM Template Deployment | Creates the Monitoring Agent Resource Group and deploys all the components to it. Note that some parameters are set explicitly via the "Override template parameters" option.
-| Retrieve Output parameters | ARM Outputs | Copies the Output values from the previous step's ARM template into VSTS Variables of the same name as the Output parameter. 
 | Retrieve Storage Account and Function App Name  | ARM Outputs | Copies the Output values from the previous step's ARM template into VSTS Variables of the same name as the Output parameter. 
 | Deploy Azure Functions | Azure App Service Deploy | Creates Azure Functions by deploying a ZIP file created by the build into an Azure App Service. If you're looking at this task, note that the function name is specified as $(FunctionName) - this is one of the variables created by the previous step from the ARM Output parameters. The Azure Function is one which reads alerts from the Storage Queue (incident-created) and creates incidents in IcM.
