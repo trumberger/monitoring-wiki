@@ -1,5 +1,5 @@
 # Introduction
-The Monitoring Solution is deployed using a series of Release Pipelines. This Wiki page describes the different kinds of release pipeline and what they do.
+The Monitoring Solution is deployed using a series of Release Pipelines. This Wiki page describes the different kinds of release pipeline and what they do. For a full technical breakdown, see [Release Pipelines](/Technical-Details-Monitoring-Platform/Release-Pipelines)
 
 ### A Note on Branches
 We maintain two long-lived branches: **master** and **production**. Work is committed to master, periodically merged to production and then production releases are pushed from production branch builds.
