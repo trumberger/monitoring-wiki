@@ -1,6 +1,11 @@
 # Introduction
 The Monitoring Solution is deployed using a series of Release Pipelines. This Wiki page describes the different kinds of release pipeline, the way we use variables, and the contents/steps of each release pipeline.
 
+## A note on Branches
+At present we maintain two long-lived branches: **master** and **production**. Work is committed to master, periodically merged to production and then production releases are pushed from the production branch.
+
+We will be moving to a single branch, master, from which production releases are pushed through a staging environment then on into the production environment.
+
 ## Pipeline Types
 
 At present we have the following types of pipeline:
@@ -14,10 +19,6 @@ At present we have the following types of pipeline:
 | Production (Customer Integration) | Obsolete pipeline which deploys Customer Integration components **from a build of the production branch** for all customers from the production branch into the Production environment.
 | Production (Monitoring Agent) | One pipeline per-service. Deploys Monitoring Agent components **from a build of the production branch** into all customer environments for that service (for example Accor-FOLS deploys to 7 distinct customer environments, including UAT, Training, Production LATAM, etc.) 
 | (Coming soon) Production| Deploys into the shared Staging environment **from a build from the master branch**. Deploys three components (Business Logic, Integration for BPL-MON, Monitoring Agent)
-
-At present we maintain two long-lived branches: master and production. Work is committed to master, periodically merged to production and then production releases are pushed from the production branch.
-
-We will be moving to a single branch, master, from which production releases are pushed through a staging environment then on into the production environment.
 
 Each part of the deployment is designed to be generic and then customised via variables, rather than hardcoded to any particular environment. This is still a work in progress, so you may find some hardcoded values or some duplicate variable names. If you do, please highlight these to the leads team so we can address it.
 
