@@ -40,9 +40,25 @@ The table below shows the steps for deploying the Business Logic components
 | Retrieve Output parameters | ARM Outputs | Copies the Output values from the previous step's ARM template into VSTS Variables of the same name as the Output parameter. 
 | Deploy Integration Code to Azure Function  | Azure App Service Deploy | Creates an Azure Function by deploying a ZIP file created by the build into an Azure App Service. If you're looking at this task, note that the function name is specified as $(FunctionName) - this is one of the variables created by the previous step from the ARM Output parameters.  The function deployed is the WebHook used by the Monitoring Agent to report Alerts to the back-end.
 | Add Connector ID to Key Vault | Azure PowerShell | Stores the ConnectorID in KeyVault. **(TBC: What this variable is used for)**
-| Customer Integration - DEV - Populate Customer Vault | Task Group | Stores multiple values in the Customer Integration key vault. See below for details.
+| Customer Integration - DEV - Populate Customer Vault | Task Group | Stores multiple values in the Customer Integration key vault. See below for details of this task group.
 
 
+### Task Group: Customer Integration - <Environment> - Populate Customer Vault
+This task group is used to populate the Key Vault instance held in the Customer Integration resource group.
+| Step Name| Type | Description |  
+|:---------------|:----------|:----------|
+| Push Parameter to Key Vault: repository | Azure PowerShell | Pushes the specified value to the Customer Integration KeyVault. The repository is the Storage Account which holds the incident-created storage queue, the OMS Dashboards and the PowerShell scripts used to create RunBooks.
+| Push Parameter to Key Vault: serviceID| Azure PowerShell | Pushes the specified value to the Customer Integration KeyVault. This is the name of the Service (e.g. BPL-MON) that is being monitored by this deployment of the Customer Integration components.
+| Push Parameter to Key Vault: customer| Azure PowerShell | Pushes the specified value to the Customer Integration KeyVault. This is the name of the customer for who this Customer Integration components are used.
+| Push Parameter to Key Vault: integrationURL| Azure PowerShell | Pushes the specified value to the Customer Integration KeyVault. This is the URL to the Function App in this Customer Integration deployment. The value will be read when deploying the Monitoring Agent and used to configure the Monitoring Agent to talk to this Customer Integration instance. 
+| Push Parameter to Key Vault: Instrumentation Key| Azure PowerShell | Pushes the specified value to the Customer Integration KeyVault. This is the AppInsights key for the Monitoring Agent to use to run App Insights queries. The value will be read when deploying the Monitoring Agent and used to configure the Monitoring Agent.
+| Push Parameter to Key Vault: SPN VSTS Release Pipeline| Azure PowerShell | Pushes the specified value to the Customer Integration KeyVault. This is the identity of the VSTS ARM Endpoint that the Release Pipeline uses. It's used in the ARM template for Monitoring Agent deployments to grant access to the Monitoring Agent KeyVault so that the Monitoring Agent deployment is able to write values to KeyVault.
 
-
-
+### Monitoring Agent Deployment
+The table below shows the steps for deploying the Monitoring Agent components for a Service instance in a customer environment.
+| Step Name| Type | Description |  
+|:---------------|:----------|:----------|
+| Deploy Monitoring Agent Components | ARM Template Deployment | Creates the Monitoring Agent Resource Group and deploys all the components to it. Note that some parameters are set explicitly via the "Override template parameters" option.
+| Retrieve Output parameters | ARM Outputs | Copies the Output values from the previous step's ARM template into VSTS Variables of the same name as the Output parameter. 
+| Retrieve Storage Account and Function App Name  | ARM Outputs | Copies the Output values from the previous step's ARM template into VSTS Variables of the same name as the Output parameter. 
+| Deploy Azure Functions | Azure App Service Deploy | Creates Azure Functions by deploying a ZIP file created by the build into an Azure App Service. If you're looking at this task, note that the function name is specified as $(FunctionName) - this is one of the variables created by the previous step from the ARM Output parameters. The Azure Function is one which reads alerts from the Storage Queue (incident-created) and creates incidents in IcM.
