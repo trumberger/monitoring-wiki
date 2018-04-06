@@ -1,12 +1,19 @@
 # Introduction
-The Monitoring Solution is deployed using a series of Release Pipelines. This Wiki page describes the different kinds of release pipeline and what they do. For a full technical breakdown, see [Release Pipelines](/Technical-Details-Monitoring-Platform/Release-Pipelines).
+The Monitoring Solution is deployed using a series of Release Pipelines and scripts. This Wiki page describes the different kinds of release pipeline and what they do. For a full technical breakdown, see [Release Pipelines](/Technical-Details-Monitoring-Platform/Release-Pipelines).
 
 ### A Note on Branches
 We maintain two long-lived branches: **master** and **production**. Work is committed to master, periodically merged to production and then production releases are pushed from production branch builds.
 
 We will be moving to a single branch, master, from which production releases are pushed through a staging environment then on into the production environment.
 
-## Release Process Overview
+### Approvals
+Merging work to master is done regularly by team members, but code must be reviewed and approved by an experienced team member before being committed.
+Merging work into production must be done by a member of the leadership team and only with explicit approval.
+
+Deployment to development and staging environments can be done as-needed by the development team without approval.
+Deployment of any components to a production environment must only be done with explicit approval from the leadership team (i.e. Niels).
+
+## Release Process Overview and Automation
 When fully deployed in an environment, the system has the following components:
 - Monitoring Solution Business Logic, running in a Microsoft-owned subscription. Responsible for taking alert information and sending it to IcM
 - Customer Integration components, running in a Microsoft-owned subscription. One instance of these components exist for every customer service and each instance is exclusively reserved / configured for that customer
@@ -19,14 +26,14 @@ Before deploying a Monitoring Agent into a new customer environment, a number of
 
 ## Release Pipelines
 
-Depending on the environment being deployed, there is a different release pipeline to use:
+Depending on the environment being deployed, there are different release pipelines to use:
 
 | Release Pipeline Type | Deploys |  Description |  
 |:---------------|:----------|:----------|
 | **Development** | Business Logic, Customer Integration for BPL-MON, Monitoring Agent for BPL-MON | Deploys a from a build on any branch (such as a dev's CI build) into their personal development environment.  See [Creating your Developer Azure Environment](/Team-Guidelines/Creating-your-Developer-Azure-Environment) for full details.
 | **Staging**  | Business Logic, Customer Integration for BPL-MON, Monitoring Agent for BPL-MON | Deploys into the Microsoft Staging environment from a build of the master branch . Deploys three components (Business Logic, Integration for BPL-MON, Monitoring Agent). 
 | **Production** (Business Logic) | Business Logic | Deploys Business Logic components from a build of the production branch  into the Production environment. 
-| Production (Customer Integration v2) | Customer Integration for ALL customers | Deploys Customer Integration components for all customers from a build of the production branch into the Production environment. 
+| **Production** (Customer Integration v2) | Customer Integration for ALL customers | Deploys Customer Integration components for all customers from a build of the production branch into the Production environment. 
 | **Production** (Monitoring Agent) | Monitoring Agent for a specific customer's environments | One pipeline exists per customer service (for example the Accor-FOLS pipeline deploys to 7 distinct customer environments, including UAT, Training, Production LATAM, etc.) 
 
 ## Pipeline Inputs and Outputs
