@@ -1,5 +1,5 @@
 # Introduction
-The Monitoring Solution is deployed using a series of Release Pipelines. This Wiki page describes the different kinds of release pipeline, and the contents/steps of each release pipeline.
+The Monitoring Solution is deployed using a series of Release Pipelines. This Wiki page describes the different kinds of release pipeline, the way we use variables, and the contents/steps of each release pipeline.
 
 ## Pipeline Types
 
@@ -7,13 +7,37 @@ At present we have the following types of pipeline:
 
 | Release Pipeline Type |  Description |  
 |:---------------|:----------|
-| Development | Deploys a developer's work from any branch into their personal development environment. Deploys three architectural components (Business Logic, Integration for BPL-MON, Monitoring Agent)   
+| Development | Deploys a developer's work from any branch into their personal development environment. Deploys three architectural components (Business Logic, Integration for BPL-MON, Monitoring Agent). Uses a variable called "OwnerInitials" to customise deployment by adding the initials to the resource group names and to many of the deployed Azure Resources.  
 | Staging  | Deploys the master branch into the Microsoft Staging environment. Deploys three components (Business Logic, Integration for BPL-MON, Monitoring Agent)
 | Production (Business Logic) | Deploys Business Logic components from the production branch into the Production environment. 
 | Production (Customer Integration v2) | Deploys Customer Integration components for all customers from the production branch into the Production environment. 
 | Production (Customer Integration) | Obsolete pipeline which deploys Customer Integration components for all customers from the production branch into the Production environment.
 | Production (Monitoring Agent) | One pipeline per-service. Deploys Monitoring Agent components into all customer environments for that service (for example Accor-FOLS deploys to 7 distinct customer environments, including UAT, Training, Production LATAM, etc.) 
 | (Coming soon) Production| Deploys master branch into the shared Staging environment. Deploys three components (Business Logic, Integration for BPL-MON, Monitoring Agent)
+
+Each part of the deployment is designed to be generic and then customised via variables, rather than hardcoded to any particular environment. This is still a work in progress, so you may find some hardcoded values or some duplicate variable names. If you do, please highlight these to the leads team so we can address it.
+
+## Variable Usage
+If you navigate to the [LIbrary](https://easplatform.visualstudio.com/Monitoring/_library) you can see the Variable Groups that are currently in use. As we mature our VSTS Pipeline usage, we'll expand this to cover more environments and customer.s The variable groups are as follows:
+
+
+| Variable Group name | Group Type* | Purpose |
+|:---|:---|:----
+Accor-Fols| Customer Settings | Holds settings for the customer deployment - details such as Service Name and ICM instance URL
+BPL-MON| Customer Settings | Holds settings for the customer deployment
+FIFA-DSP| Customer Settings | Holds settings for the customer deployment
+GTIL| Customer Settings | Holds settings for the customer deployment
+KPMG-OB| Customer Settings | Holds settings for the customer deployment
+LALIGA-DSP| Customer Settings | Holds settings for the customer deployment
+MC-TRACK| Customer Settings | Holds settings for the customer deployment
+RNA-CVP| Customer Settings | Holds settings for the customer deployment
+Global Parameters|System-wide settings|Holds settings such as ICM URL and Release Pipeline SPNs
+Environment Settings - Dev**| Environment Settings | Holds settings for the Dev environment. Settings such as deployment location, the Release Pipeline and the Storage Account to use.
+
+\* Note: "Group Type" isn't a VSTS concept, it's just used here purely as descriptive text to help categorise the variable group's usage.
+\** Note: Environment Settings for other environments (STAG, PROD) will be coming soon as we rationalise pipeline usage.
+
+In addition, each pipeline uses a number of "Process Variables" - or in other words variables that are used across the pipeline. One example is "Owner Initials" which is used to customise deployments in a Dev pipeline. Other pipelines use a greater number of variables, but these will be phased out in favour of Variable Groups as we mature the release pipelines.
 
 ## Pipeline Structure
 Each pipeline deploys one or more of the three components: Business Logic, Customer Integration or Monitoring Agent. This section gives details of the steps involved in deploying each of the components.
