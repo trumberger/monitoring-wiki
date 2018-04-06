@@ -18,7 +18,7 @@ At present we have the following types of pipeline:
 Each part of the deployment is designed to be generic and then customised via variables, rather than hardcoded to any particular environment. This is still a work in progress, so you may find some hardcoded values or some duplicate variable names. If you do, please highlight these to the leads team so we can address it.
 
 ## Variable Usage
-If you navigate to the [Library](https://easplatform.visualstudio.com/Monitoring/_library) you can see the Variable Groups that are currently in use. As we mature our VSTS Pipeline usage, we'll expand this to cover more environments and customer.s The variable groups are as follows:
+If you navigate to the [Library](https://easplatform.visualstudio.com/Monitoring/_library) you can see the Variable Groups that are currently in use. As we mature our VSTS Pipeline usage, we'll expand this to cover more environments and customers. The variable groups are as follows:
 
 
 | Variable Group name | Group Type* | Purpose |
