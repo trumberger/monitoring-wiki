@@ -36,6 +36,8 @@ Depending on the environment being deployed, there are different release pipelin
 | **Production** (Customer Integration v2) | Customer Integration for ALL customers | Deploys Customer Integration components for all customers from a build of the production branch into the Production environment. 
 | **Production** (Monitoring Agent) | Monitoring Agent for a specific customer's environments | One pipeline exists per customer service (for example the Accor-FOLS pipeline deploys to 7 distinct customer environments, including UAT, Training, Production LATAM, etc.) 
 
+![releasepipelinesmall.jpg](.attachments/releasepipelinesmall-ea0182cf-058a-48b1-82bb-ebfa9b0fb851.jpg)
+
 ## Pipeline Inputs and Outputs
 Each pipeline deploys one or more of the three components: Business Logic, Customer Integration or Monitoring Agent. This section gives details of the steps involved in deploying each of the components.
 
