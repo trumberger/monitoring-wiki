@@ -43,9 +43,9 @@ You now have BL + CI deployed. We now have a few manual steps before deploying M
 - Add another secret: `SET-DEV-TENANTID` with value `72f988bf-86f1-41af-91ab-2d7cd011db47`
 
 ### Create Security Principals
-- Run the Pre-ValidateServicePrincipals powershell command. Remember to use your initials and alias where indicated.
+- Run the Pre-SpnCreationAndValidation powershell command. Remember to use your initials and alias where indicated.
 
-`Pre-ValidateServicePrincipals.ps1 -keyVaultName KVL-DEV-<your initials>-CI-BPL-MON -environment DEV -serviceId BPL-MON -spnSuffix <your alias>` 
+`Pre-SpnCreationAndValidation.ps1 -keyVaultName KVL-DEV-<your initials>-CI-BPL-MON -environment DEV -serviceId BPL-MON -spnSuffix <your alias>` 
 
 ### Customise Environment Parameter Files
 In the Configuration repository, in the `bpl-mon\dev` folder, you’ll see two files: `deploy.monitoringplatform.dm.parameters.json` and `target.monitoringplatform.dm.json`.
