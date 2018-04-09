@@ -43,7 +43,7 @@ You now have BL + CI deployed. We now have a few manual steps before deploying M
 - Add another secret: `SET-DEV-TENANTID` with value `72f988bf-86f1-41af-91ab-2d7cd011db47`
 
 ### Create Security Principals
-Run the Pre-SpnCreationAndValidation powershell command. Remember to use your initials and alias where indicated:
+Run the `Pre-SpnCreationAndValidation.ps1`  powershell command. Remember to use your initials and alias where indicated:
 
 - Log in to Azure: `Login-AzureRmAccount`
 - Select the Dev subscription: `get-azurermsubscription -subscriptionname "ESS Monitoring Platform - Development" | set-azurermcontext`
