@@ -20,6 +20,8 @@ At present we have the following types of pipeline:
 | Production (Monitoring Agent) | One pipeline per-service. Deploys Monitoring Agent components **from a build of the production branch** into all customer environments for that service (for example Accor-FOLS deploys to 7 distinct customer environments, including UAT, Training, Production LATAM, etc.) 
 | (Coming soon) Production| Deploys into the shared Staging environment **from a build from the master branch**. Deploys three components (Business Logic, Integration for BPL-MON, Monitoring Agent)
 
+![releasepipelines.jpg](.attachments/releasepipelines-50498de7-fb3b-4fca-977d-0ccfd163a0a4.jpg)
+
 Each part of the deployment is designed to be generic and then customised via variables, rather than hardcoded to any particular environment. This is still a work in progress, so you may find some hardcoded values or some duplicate variable names. If you do, please highlight these to the leads team so we can address it.
 
 ## Variable Usage
