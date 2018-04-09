@@ -44,7 +44,6 @@ You now have BL + CI deployed. We now have a few manual steps before deploying M
 
 ### Create Security Principals
 - Run the Pre-SpnCreationAndValidation powershell command. Remember to use your initials and alias where indicated.
-
 - Log in to Azure: `Login-AzureRmAccount`
 - Select the Dev subscription: `get-azurermsubscription -subscriptionname "ESS Monitoring Platform - Development" | set-azurermcontext`
 - `Pre-SpnCreationAndValidation.ps1 -keyVaultName KVL-DEV-<your initials>-CI-BPL-MON -environment DEV -serviceId BPL-MON -spnSuffix <your alias>` 
