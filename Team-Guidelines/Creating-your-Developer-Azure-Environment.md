@@ -47,7 +47,7 @@ Run the `Pre-SpnCreationAndValidation.ps1`  powershell command. Remember to use 
 
 - Log in to Azure: `Login-AzureRmAccount`
 - Select the Dev subscription: `get-azurermsubscription -subscriptionname "ESS Monitoring Platform - Development" | set-azurermcontext`
-- `Pre-SpnCreationAndValidation.ps1 -keyVaultName KVL-DEV-<your initials>-CI-BPL-MON -environment DEV -serviceId BPL-MON -spnSuffix <your alias>` 
+- Execute `./Pre-SpnCreationAndValidation.ps1 -keyVaultName KVL-DEV-<your initials>-CI-BPL-MON -environment DEV -serviceId BPL-MON -spnSuffix <your alias>` 
 
 ### Customise Environment Parameter Files
 In the Configuration repository, in the `bpl-mon\dev` folder, you’ll see two files: `deploy.monitoringplatform.dm.parameters.json` and `target.monitoringplatform.dm.json`.
