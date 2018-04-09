@@ -37,7 +37,7 @@ You now have BL + CI deployed. We now have a few manual steps before deploying M
 
 
 ### Set Key Vault Values 
-- Using the Azure Portal, open the KeyVault in your CustomerIntegration resource group. Your KeyVault is called: `KVL-DEV-<your initials>-CI-BPL-MON`
+- Using the Azure Portal, open the KeyVault in your `MT-DEV-CustomerIntegration` resource group. Your KeyVault is called: `KVL-DEV-<your initials>-CI-BPL-MON`
 - Go into Access Policies and add yourself as a user with full access to all the key/secret/certificate management
 - Add the esshostkey value from the previous step to KeyVault as a secret named `KEY-MSFT-IntegrationKey`
 - Add another secret: `SET-DEV-TENANTID` with value `72f988bf-86f1-41af-91ab-2d7cd011db47`
