@@ -29,6 +29,11 @@ Trunk-based development is a key enabler of continuous delivery that uses short-
 
 ### Monitoring Branches
 
+| Branch Name | Description | Policies |
+|---|---|---|
+|master | details | policies|
+|production | details| polices |
+
 <!--- Hidden
 ## To do
 - The workflow used for the project
