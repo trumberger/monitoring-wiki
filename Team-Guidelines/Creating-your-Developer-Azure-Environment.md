@@ -47,7 +47,7 @@ Run the `Pre-SpnCreationAndValidation.ps1`  powershell command. Remember to use 
 
 - Log in to Azure: `Login-AzureRmAccount`
 - Select the Dev subscription: `get-azurermsubscription -subscriptionname "ESS Monitoring Platform - Development" | set-azurermcontext`
-- Execute `./Pre-SpnCreationAndValidation.ps1 -keyVaultName KVL-DEV-<your initials>-CI-BPL-MON -environment DEV -serviceId BPL-MON -spnSuffix <your alias>` 
+- Execute `.\Pre-SpnCreationAndValidation.ps1 -keyVaultName KVL-DEV-<your initials>-CI-BPL-MON -environment DEV -serviceId BPL-MON -spnSuffix <your alias>` 
 
 ### Customise Environment Parameter Files
 In the Configuration repository, in the `bpl-mon\dev` folder, you’ll see two files: `deploy.monitoringagent.dm.parameters.json` and `target.monitoringagent.dm.json`.
@@ -60,7 +60,7 @@ In the Configuration repository, in the `bpl-mon\dev` folder, you’ll see two f
 ### Configure Monitoring Agent Monitoring Targets
 •	Run the monitoring target import script, remembering to update with your own initials:
 
-`Pre-SetTargetResourceGroups.ps1 -path <path to your local copy of the file>\target.monitoringagent.<your initials>.json -serviceID BPL-MON -environment DEV -vaultName KVL-DEV-<your initials>-CI-BPL-MON`
+`.\Pre-SetTargetResourceGroups.ps1 -path <path to your local copy of the file>\target.monitoringagent.<your initials>.json -serviceID BPL-MON -environment DEV -vaultName KVL-DEV-<your initials>-CI-BPL-MON`
 
 ### Complete the Deployment
 Go back to your release pipeline and deploy the MonitoringAgent environment. 
