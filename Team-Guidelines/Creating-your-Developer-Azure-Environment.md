@@ -28,8 +28,8 @@ You now have BL + CI deployed. We now have a few manual steps before deploying M
 ## Deploying Monitoring Agent
 ### Set Blob storage access
 Browse to your storage account in Business Logic: 
-- Open the <initials>-DEV-BusinesLogic resource group
-- Locate your storage account, named "stadev<random string>"
+- Open the `<your initials>-DEV-BusinesLogic` resource group
+- Locate your storage account, named `stadev<random string>`
 - click "Browse Blobs" (under "Blob Service")
 - Click "Content"
 - Click "Access policy" and set it to "Container (anonymous read access for containers and blobs)"
