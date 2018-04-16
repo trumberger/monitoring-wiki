@@ -69,6 +69,6 @@ In the Configuration repository, in the `bpl-mon\dev` folder, you’ll see a fil
 
 ### Complete the Deployment
 Go back to your release pipeline and deploy the MonitoringAgent environment. 
-
+**NOTE: You may get a failure with a few resources saying "Conflict". If you get this, re-run the deployment and it will work second time. This is due to an as-yet undiagnosed occasional error deploying Azure PowerShell modules.**
 ## Conclusion
 You should now have three fully deployed resource groups in the DEV subscription.
