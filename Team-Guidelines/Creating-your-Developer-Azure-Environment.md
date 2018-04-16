@@ -45,11 +45,10 @@ Browse to your storage account in Business Logic:
 
 
 
-### Set Key Vault Values 
+### Set Key Vault Value
 - Using the Azure Portal, open the KeyVault in your `<your initials>-DEV-CustomerIntegration` resource group. Your KeyVault is called: `KVL-DEV-<your initials>-CI-BPL-MON`
 - Go into Access Policies and add yourself as a user with full access to all the key/secret/certificate management. Keep the `Configure from template` dropdown empty.
 - Add the esshostkey value from the previous step clicking the `Generate/Import` button. Add in the KeyVault a secret named `KEY-MSFT-IntegrationKey`
-- Add another secret: `SET-DEV-TENANTID` with value `72f988bf-86f1-41af-91ab-2d7cd011db47`
 
 ### Create Security Principals
 Run the `Pre-SpnCreationAndValidation.ps1`  powershell command. Remember to use your initials and alias where indicated:
@@ -59,17 +58,14 @@ Run the `Pre-SpnCreationAndValidation.ps1`  powershell command. Remember to use 
 - Execute `.\Pre-SpnCreationAndValidation.ps1 -keyVaultName KVL-DEV-<your initials>-CI-BPL-MON -environment DEV -serviceId BPL-MON -spnSuffix <your alias>` 
 
 ### Customise Environment Parameter Files
-In the Configuration repository, in the `bpl-mon\dev` folder, you’ll see two files: `deploy.monitoringagent.dm.parameters.json` and `target.monitoringagent.dm.json`.
+In the Configuration repository, in the `bpl-mon\dev` folder, you’ll see a files: `deploy.monitoringagent.dm.parameters.json` .
 
-- Make a copy of those files in the same folder, changing the ‘.dm’ to match the initials you used when customising your dev pipeline (note: it's critical to use the same initials!)
-- Edit both of these files, updating them to match your deployment:
-  - Replace “DM“ with your initials in both files (this should change resource group names in both files, and the KeyVault name in the parameters file)
+- Make a copy of it to the same folder, changing the ‘.dm’ to match the initials you used when customising your dev pipeline (note: it's critical to use the same initials!)
+- Edit the file, updating it to match your deployment:
+  - Replace “DM“ with your initials in both files (this should change resource group names in the targetResourceGroup parameter, and the KeyVault name)
   - Replace ‘dumil’ with your alias in the parameters file (should be 6 occurrences)
-- Commit these changes to Git and Sync them
-### Configure Monitoring Agent Monitoring Targets
-•	Run the monitoring target import script, remembering to update with your own initials:
 
-`.\Pre-SetTargetResourceGroups.ps1 -path <path to your local copy of the file>\target.monitoringagent.<your initials>.json -serviceID BPL-MON -environment DEV -vaultName KVL-DEV-<your initials>-CI-BPL-MON`
+- Commit these changes to Git and Sync them
 
 ### Complete the Deployment
 Go back to your release pipeline and deploy the MonitoringAgent environment. 
