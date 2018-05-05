@@ -56,7 +56,6 @@ In order to better understand the underlying information we'll be working with, 
 				® Testing activity
 			§ Application specific metrics
 				® Specific transactions
-				
 	• RCA
 		○ Define KPIs/evidence
 			§ Thresholds
@@ -74,3 +73,5 @@ In order to better understand the underlying information we'll be working with, 
 			§ Bayesian network
 	• Classification Algorithms
 	        § Clustering
+
+Considering the information we would we able to gather from several sources, we might take each one of them and search for anomalies or inconsistencies between different sources, using Application Insights Analytics, and then with a Bayesian Network provide some early Root Cause Analysis (ref: [Root-Cause Analysis with In-Query Machine Learning in Application Insights Analytics](https://azure.microsoft.com/en-us/blog/root-cause-analysis-with-in-query-machine-learning-in-application-insights-analytics/))
