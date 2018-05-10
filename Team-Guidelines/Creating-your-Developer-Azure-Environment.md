@@ -53,6 +53,7 @@ Browse to your storage account in Business Logic:
 ### Create Security Principals
 Run the `Pre-SpnCreationAndValidation.ps1`  powershell command. Remember to use your initials and alias where indicated:
 
+- Open an Azure PowerShell prompt as an Administrator
 - Log in to Azure: `Login-AzureRmAccount`
 - Select the Dev subscription: `get-azurermsubscription -subscriptionname "ESS Monitoring Platform - Development" | set-azurermcontext`
 - Execute `.\Pre-SpnCreationAndValidation.ps1 -keyVaultName KVL-DEV-<your initials>-CI-BPL-MON -environment DEV -serviceId BPL-MON -spnSuffix <your alias> -integrationSpnSecret zVuKYw3VRjgjGK5ZERfb1Zk2SNcCU4TnEF+NS6jzgDs=` 
