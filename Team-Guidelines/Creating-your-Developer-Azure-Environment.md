@@ -48,7 +48,7 @@ Browse to your storage account in Business Logic:
 ### Set Key Vault Value
 - Using the Azure Portal, open the KeyVault in your `<your initials>-DEV-CustomerIntegration` resource group. Your KeyVault is called: `KVL-DEV-<your initials>-CI-BPL-MON`
 - Go into Access Policies and add yourself as a user with full access to all the key/secret/certificate management. Keep the `Configure from template` dropdown empty.
-- Add the esshostkey value from the previous step clicking the `Generate/Import` button. Add in the KeyVault a secret named `KEY-MSFT-IntegrationKey`
+- Now add a Secret to the KeyVault: Navigate to Secrets section, click `Generate/Import` button. Add a secret named `KEY-MSFT-IntegrationKey` and the value is the esshostkey you copied / saved in the previous step
 
 ### Create Security Principals
 Run the `Pre-SpnCreationAndValidation.ps1`  powershell command. Remember to use your initials and alias where indicated:
