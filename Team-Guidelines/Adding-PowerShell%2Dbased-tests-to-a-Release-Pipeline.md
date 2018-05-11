@@ -59,6 +59,7 @@ Describe -Name '<suitable name here>' -Tags '<suitable tags here>' -Fixture {
     }
 }
 ```
+Another example of the kind of thing you might want to do in your PowerShell script is to retrieve an alert from ICM whose title includes your TestRunId (Release.ReleaseId).
  
 Then, in your release pipeline:
 ## Run your custom PowerShell scripts to set up your tests
