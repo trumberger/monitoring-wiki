@@ -10,8 +10,8 @@ If you see errors, like the example below:
 Please review the following items:
 - Verify which part of the Logic App is causing errors (on each block of the Logic App, look for the red exclamation mark)
 
-Example Errors:
-- Error retrieving Error Definitions:
+## Example Errors:
+- Error: Error retrieving Error Definitions
 Message: NotFound
 Status Code : 404
 Example payload (Response):
@@ -36,12 +36,12 @@ Example payload (Response):
         "source": "azureblob-eus.azconn-eus.p.azurewebsites.net"
     }
 }`
-
-Resolution: 
+### Resolution: 
 Verify the alert definition file `alerts.monitoringagent.json` file is correctly deployed into blob storage. 
 Verify credentials to actually retrieve definition file.
 
-- Could not find a valid Configuration
+---
+- Error: Could not find a valid configuration
 Status Code: 500
 Sample Payload (Response):
 `
@@ -62,14 +62,15 @@ Sample Payload (Response):
     }
 }`
 
-Resolution: 
+### Resolution: 
 Verify the `esshostkey` is correctly set in the Azure Function `FUN-PROD-Cinst-{ServiceID}` :
 
 ![image.png](.attachments/image-1e9c8772-ebe0-442d-a224-9c2cfce46e71.png)
 
 Each `esshostkey` is different, please be sure the key exists and the value is correctly set.
 
-- The request had some invalid properties
+---
+- Error: The request had some invalid properties
 Status Code: 400
 Sample Payload (Body Response): 
 `
@@ -88,7 +89,15 @@ Sample Payload (Body Response):
         }
     }
 `
-
-Resolution: 
+### Resolution: 
 Verify the alert definition file `alerts.monitoringagent.json` . It may contain queries that are not available / configured in Log Analytics, and certain schema elements may not be present. If custom logic entities (ending with `_CL`) are not available, all queries must be removed to run successful queries.
+
+---
+
+## Further checks
+
+- Verify the AlertFramework logic app has access to Log Analytics account (OLA-DEV-DataStore-{Initials}-BPL-MON)
+- Verify the secret CER-BPL-MON-IcmAuthentication exists in CustomerIntegration KeyVault
+
+
 
