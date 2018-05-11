@@ -4,11 +4,12 @@ Here are some brief notes on how to add a PowerShell-based test to a Release Pip
 Building tests has the following steps:
 
 Test creation:
-- Create PowerShell scripts to set up/start your tests. Use TestRunId (see below) to inject a unique value into your test data.
+- Create PowerShell scripts to set up/start your tests. Use $(Release.ReleaseId) (see below) to inject a unique* value into your test data.
 - Create PowerShell scripts to validate the results, using the Pester framework (see below)
 
+\* note this value is only unique for the release hence multiple executions of the same release will have the same Id. This is an unfortunate and unavoidable limitation at present - it's not possible to persist a truly unique value across stages of the release pipeline so we have to use a built-in value.
+
 Release Pipeline
-- Create a Guid Test Run ID
 - Run your custom PowerShell script(s) to set up your test(s) 
 - Add a delay long enough for your tests to complete
 - Use the "ESS Monitoring: Run PowerShell-based test" task group to validate your results
@@ -60,16 +61,11 @@ Describe -Name '<suitable name here>' -Tags '<suitable tags here>' -Fixture {
 ```
  
 Then, in your release pipeline:
-
-## Create a Guid to represent the Test Run Id
-Add the "GUID Generator" task to your pipeline and name the variable TestRunId
-
-![image.png](.attachments/image-89885041-b121-49e2-b939-37844a7043d9.png)
-
 ## Run your custom PowerShell scripts to set up your tests
 Simply use the Azure PowerShell task to do this:
 ![image.png](.attachments/image-954cb771-040f-4b8b-bd08-e91e62273c99.png)
 
+If you need a unique(ish) value to act as your Test Run Id, you can use $(Release.ReleaseId)... in the screenshot above, the final part of "Script Arguments" should read: -TestRunId $(Release.ReleaseId) **and not** -TestRunId $(TestRunId).
 ## Delay long enough for your tests to complete
 - Add an "Agentless Phase"
 
