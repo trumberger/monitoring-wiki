@@ -44,14 +44,11 @@ The above line of code verifies that the Resource Group exists (i.e. that Find-A
 So, create a PowerShell script with your validation test/tests in. It should follow the naming scheme similar to:
 <Solution Area>.IntegrationTest.<Test Name>.Validate.ps1
 
-
-Your script MUST follow the template in the below code block (including parameters. If you need additional parameters, speak to Duncan).
+You can use any parameters you like in your validation script - the task groups below will simply pass-through any parameters that you specify. An example validation script is:
 ```
 #region parameters
 Param(
-	[parameter(mandatory=$true, ValueFromPipelineByPropertyName=$true)] [string] $TestRunId,
 	[parameter(mandatory=$true, ValueFromPipelineByPropertyName=$true)] [string] $ResourceGroupName,
-	[parameter(mandatory=$true, ValueFromPipelineByPropertyName=$true)] [string] $Environment
 )
 #endregion
 
@@ -82,7 +79,7 @@ Simply use the Azure PowerShell task to do this:
 ![image.png](.attachments/image-4d166db9-cfdf-4d4d-b84e-c8fd5a5b5492.png)
 
 ## Use the "ESS Monitoring: Run PowerShell-based test" task group to validate your results using your Pester scripts (the ones that end .Validate.ps1)
-![image.png](.attachments/image-e32dbe90-1656-49e8-81df-69b1e0315c7a.png)
+![image.png](.attachments/image-0e88bba4-d226-4459-a4b3-3203ad6f0e99.png)
 
 ## Use the "ESS Monitoring: Publish PowerShell-based test results." task group to publish the results
 (no configuration is needed)
