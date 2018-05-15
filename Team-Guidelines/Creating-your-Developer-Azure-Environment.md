@@ -16,7 +16,7 @@ Follow the steps below to deploy your developer enviornment.
 ## Deploy Business Logic and Customer Integration Components
 
 - [Log in to VSTS and navigate to the Releases tab](https://easplatform.visualstudio.com/Monitoring/_release)
-- Clone `DEV – Duncan – Release Pipeline` 
+- Clone `DEV - Reference Pipeline to clone` 
 - Edit your clone:
   - Rename it to `DEV - <your name> - Release Pipeline`
   - Go to Variables and set `OwnerInitials` to a unique two character string. Preferably your initials, unless someone else has already used those
