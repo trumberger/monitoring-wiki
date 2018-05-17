@@ -1,10 +1,19 @@
 # Overview
-If you receive notification that the system has failed to create an ICM Ticket (or, more likely, several notifications) then here's how you can investigate.
+If you receive notification that the system has failed to create an ICM Ticket (or, more likely, several notifications) then here's the action to take.
 
+It has the following steps:
+- Queries to determine
+-- Reason for failures
+-- Impacted  customers
+-- Failed alerts
+- Communucation to internal support teams
+- Root cause analysis and suggestions for improvement
+
+
+# Investigation and Comms
 For the investigation, you should use Kusto queries against the Business Logic App Insights instance for the environment that failed.
 For PROD (AIS-PROD-NativeMonitoring), this is at [this link](https://analytics.applicationinsights.io/subscriptions/16b26395-68e3-45e2-81c1-54729c26aba8/resourcegroups/PROD-BusinessLogic/components/AIS-PROD-NativeMonitoring#/discover/home?apptype=web&resourceId=%252Fsubscriptions%252F16b26395-68e3-45e2-81c1-54729c26aba8%252Fresourcegroups%252FPROD-BusinessLogic%252Fproviders%252Fmicrosoft.insights%252Fcomponents%252FAIS-PROD-NativeMonitoring).
 
-# Queries
 **Note, all the examples below include a time range of the last 24h - "> ago(24h)". Remember to adjust this for your investigation if needed.**
 
 
@@ -567,5 +576,9 @@ Note also that where count > 1, the subsequent alerts would likely have been sup
 </TABLE>
 
 
-## Step 5: Customer Comms
+## Step 5: Internal Comms
 (To be written)
+
+## Step 6: Root cause analysis + suggestions for improvement
+(To be written)
+Briefly - if there's a problem in our code, feed it back to the team. This might mean improved error handling or improved telemetry.
