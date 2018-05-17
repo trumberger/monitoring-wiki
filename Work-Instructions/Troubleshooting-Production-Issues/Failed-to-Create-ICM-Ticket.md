@@ -564,3 +564,8 @@ Note also that where count > 1, the subsequent alerts would likely have been sup
   <TD class=xl67 style="border-top:none">Azure Resource delete</TD>
   <TD class=xl68 align=right style="border-top:none">5</TD>
  </TR>
+</TABLE>
+
+
+## Step 5: Customer Comms
+(To be written)
