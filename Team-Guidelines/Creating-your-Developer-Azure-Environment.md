@@ -35,21 +35,6 @@ Browse to your storage account in Business Logic:
 - Click "Access policy" and set it to "Container (anonymous read access for containers and blobs)"
 - Do the same for the  "dashboards"
 
-### Create Host Key 
-- Using the Azure Portal, open the portal page for Azure function `FUN-DEV-<your initials>-CI-BPL-MON`.
-- Click on Function App Settings
-- Create new Host key named `esshostkey` and save the key
-- Copy the created value to notepad or similar, as you need it in the next step
-
- ![image.png](.attachments/image-f8e9f4f5-5be6-49e0-ab24-f3d34fbacdcf.png)
-
-
-
-### Set Key Vault Value
-- Using the Azure Portal, open the KeyVault in your `<your initials>-DEV-CustomerIntegration` resource group. Your KeyVault is called: `KVL-DEV-<your initials>-CI-BPL-MON`
-- Go into Access Policies and add yourself as a user with full access to all the key/secret/certificate management. Keep the `Configure from template` dropdown empty.
-- Now add a Secret to the KeyVault: Navigate to Secrets section, click `Generate/Import` button. Add a secret named `KEY-MSFT-IntegrationKey` and the value is the esshostkey you copied / saved in the previous step
-
 ### Create Security Principals
 Run the `Pre-SpnCreationAndValidation.ps1`  powershell command. Remember to use your initials and alias where indicated:
 
