@@ -40,6 +40,7 @@ The following schema's are supported by ESS monitoring interface.
 |Name | Type | Mandatory | Fixed Set of Values | Description |
 |---|---|---|---|---|
 |AlertRuleName| String | Yes | | Name of the alert |
+|Category|String|Yes||Typically values such as 'availability', 'security', etc.
 |Description | String | Yes | | The description of the alert for the support team to read. Either more detailed explanation or link to KB |
 | Entities |	String | No || Entity that initiated the action that led to the alert. |
 | Environment | String | Yes | STAG / PROD / DEV |	 The environment where the monitoring platform is deployed. |
