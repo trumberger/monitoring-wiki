@@ -22,6 +22,7 @@ The following schema's are supported by ESS monitoring interface.
 ```
 {
     "AlertRuleName": "{String}​",
+    "Category": "{String}",
     "Description": "{String}​",
     "Entities": "{String}",
     "Environment": "{String}",
@@ -29,7 +30,9 @@ The following schema's are supported by ESS monitoring interface.
     "Resources": "{String}​",
     "Scenarios": "{String}",
     "SearchIntervalEndtimeUtc": "{DateTime}​",
-    "SearchIntervalStartTimeUtc": "{DateTime}​"
+    "SearchIntervalStartTimeUtc": "{DateTime}​",
+    "Severity": "{Int}",
+    "Source": "{String}"
 }
 ```
 **Values**
@@ -45,3 +48,5 @@ The following schema's are supported by ESS monitoring interface.
 | Scenarios | String | No || Impacted business scenario (if known) |
 | SearchIntervalEndtimeUtc | DateTime | Yes | |		
 | SearchIntervalStartTimeUtc | DateTime | No	| |	
+| Severity | Integer | Yes | |The alert severity. Set by the person creating the alert and should be an integer.	 |	
+| Source | String | Yes | ApplicationInsights or LogAnalytics| The source of the data store that was queried for the alert
