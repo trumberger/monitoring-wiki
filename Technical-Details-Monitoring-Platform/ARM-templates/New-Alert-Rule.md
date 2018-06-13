@@ -1,5 +1,3 @@
-
-1. NEW Alert rule
 a) ARM template file
 
 ```
