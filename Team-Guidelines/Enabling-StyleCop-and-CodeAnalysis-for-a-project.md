@@ -2,7 +2,7 @@ We use StyleCop and Code Analysis on our C# code. We use almost the default set 
 
 If you're adding a new project, or enabling StyleCop + CA for a new project, here's what you have to do:
 
-**Enabling Stylecop**
+##Enabling Stylecop
 - Right-click "Add Existing Item" on your project
 - Change to "Show all files"
 - Browse to src\stylecop.json
@@ -20,3 +20,6 @@ If you get lots of warnings about enabling Xml Documentation, it means you haven
 
 ![image.png](.attachments/image-0b666300-634c-4c0e-90de-78494ae59a42.png)
 
+### Install Style Cop Nuget package.
+
+<IMG src="https://cloud.githubusercontent.com/assets/1408396/8233513/491f301a-159c-11e5-8b7a-1e16a0695da6.png" alt="Install via nuget"/>
