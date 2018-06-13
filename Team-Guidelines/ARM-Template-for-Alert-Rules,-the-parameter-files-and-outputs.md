@@ -140,6 +140,8 @@ b) ARM template parameter file
 
 c) Output
 
+to be generated
+
 
 2) NEW Metric Alert rule
 a) ARM template file
@@ -337,3 +339,4 @@ b) ARM template parameter file
 
 c) Output
 
+to be generated
