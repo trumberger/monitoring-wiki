@@ -41,7 +41,7 @@ Principles:
 
 Flow:
 -	Every customer will have an Excel Sheet with all their alerts (derives from the master alert sheet)
--	There is a Alert generator that (in the end) takes the alert and produces two output files:
+-	There is a Alert generator that (in the end) takes the customer specific alert sheet  and produces two output files:
 o	Alert Definition file for customer that will be feed into alerting framework
 o	Alert ARM template containing the Activity, Metric and scheduled alerts for that customer. 
 -	A script in the pipeline will aggregate through target resources to collect all Resource IDs of different support resource types
