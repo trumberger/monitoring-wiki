@@ -6,7 +6,6 @@ In order to generate an ARM template for new alert rule you will need two files:
 [ESS.Master.MonitoringAlertsF.xlsx](.attachments/ESS.Master.MonitoringAlertsF-d007bbfa-412f-4410-a786-785dcfe18a05.xlsx)
 
 The command used in order to generate the ARM template is the following:
-
 .\Pre-GenerateArmTemplateForAlertRules.ps1 -pathExcel "full_path_to_excel_file"
 
 **Example**:
