@@ -25,25 +25,30 @@ The release process is as follows
 
 ```
 PRODUCTION RELEASE
-|--> FREEZE MASTER
+|--> TAG MASTER BRANCH
 |----> PERFORM INTEGRATION AND UAT TESTINGS IN STAGING
-|------> TRIGGER PRODUCTION BUILD
-|--------> NOTIFY AND RELEASE
+|------> CREATE RELEASE NOTES
+|--------> TRIGGER PRODUCTION BUILD
+|----------> NOTIFY AND RELEASE
 ```
 
-### Freeze Master
+### Tag Master Branch
 
-All final code for sprint is commited to master and pushed to Staging Environment. This should happen last thursday of the sprint EoD.
+At the end of each sprint, all pull requests to the master branch are commited Wednesday end of day, so the development lead can review and approve these requests on Thursday. All approved PRs are merged into master and make up the production release. Thursday at 2pm Pacific Time the product manager will tag the master branch with the labels `production` and `v0.x.y.z` if there are no errors in staging. Next the branch will be released into Pre-Prod.
 
 ### Perform Integration and UAT testing
 
-All required integration and acceptance test are performed. The required UAT and Integration tests will be perform in staging. Someone from the monitoring team will be assigned to perform these tests. **TODO: Add the right tests to execute**
+All required integration and acceptance tests are performed are performed on Friday. The required UAT and Integration tests will be performed in pre-prod. Someone from the team will be assigned to perform these tests. **TODO: Add the right tests to execute**
+
+### Create Release Notes
+
+During the integration and uat testing the product owner will create release notes of the upcoming production release, based on the user story that the team has worked on. The release notes will be extended in ReleaseNotes.md file in the root (**Add reference**).  
 
 ### Trigger Production Release
 
-Production Release starts with a build that is manually triggered at the start of sprint planning (next sprint) with no objections from the team and / or bugs found during the tests. The production build will result in package that can used for the ESS VSTS release pipeline for the different components (business logic / customer integration / monitoring agent) in the ESS subscription and the monitoring agents in the customers subscriptions (according to the approvals setup in their pipeline).
+Production Release starts with a build (**Add reference**) that is manually triggered at the start of the sprint planning (next sprint) with no objections from the team and / or bugs found during the tests. The production build will result in package that can used for the ESS VSTS release pipeline for the different components (business logic / customer integration / monitoring agent) in the ESS subscription and the monitoring agents in the customers subscriptions (according to the approvals setup in their pipeline).
 
-For the monitoring agents that use the application VSTS instance to deploy the monitoring agent, the artifacts to deploy the monitoring agent will be copied to a common share for the different teams to download (See Monitoring Agent Artifacts below)
+For the monitoring agents that don't use the ESS VSTS instance to deploy the monitoring agent, the artifacts to deploy the monitoring agent will be copied to a common share for the different teams to download (See Monitoring Agent Artifacts below)
 
 ### Notify and release
 
@@ -71,6 +76,7 @@ The following artifacts will be used currently:
 
 | Artifact | Explanation |
 |-|-|
+| release.notes.md | Notes describing the latest changes in release (including known issues) |
 | deploy.monitoringagent.json | Template that deploys the monitoring agent|
 | deploy.monitoringagent.parameters.json | Contains the parameters used to deploy the monitoring agent. This file will not contain actual parameters (except for default values).|
 | scripts\Pre-Spn-CreationAndValidation.ps1 | The script that creates and assigns an SPN for the monitoring agent. |
