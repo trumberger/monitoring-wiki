@@ -10,13 +10,12 @@ After every (2 weeks) sprint a production release is performed (unless there are
 
 Parts of the monitoring platform have multiple simular instances (monitoring agent) are running in customer subscriptions. To be able to support this the following versioning is defined for the monitoring platform.
 
-`version #.x.y.z (example: v1.5.2.12)`
+`version x.y.z (example: v1.5.12)`
 
 | letter | Type | Comment |
 |-|-|-|
 |#|Major Version| Major version of the monitoring platform. Version is determined by product manager. |
-|x|Agent Changed|This number will be increased as the monitoring agent is changed compared to previous release. |
-|y|Back-end Changed|This number will be increased as the ESS back-end (customer integration and/or busines) changed compared to previous release. |
+|x|Minor Version| This number will be increased for every release (if it is not a major version change). |
 |z|Revision|  |
 
 ## Process
@@ -34,7 +33,7 @@ PRODUCTION RELEASE
 
 ### Tag Master Branch
 
-At the end of each sprint, all pull requests to the master branch are commited Wednesday end of day, so the development lead can review and approve these requests on Thursday. All approved PRs are merged into master and make up the production release. Thursday at 2pm Pacific Time the product manager will tag the master branch with the labels `production` and `v0.x.y.z` if there are no errors in staging. Next the branch will be released into Pre-Prod.
+At the end of each sprint, all pull requests to the master branch are created Wednesday end of day, so the development lead can review and approve these requests on Thursday. All approved PRs are merged into master and make up the production release. Thursday at 2pm Pacific Time the product manager will tag the master branch with the labels `production` and `v0.x.y.z` if there are no errors in staging. Next the branch will be released into Pre-Prod.
 
 ### Perform Integration and UAT testing
 
