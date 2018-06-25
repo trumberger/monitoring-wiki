@@ -148,10 +148,32 @@ ________________________________________________________________________________
 
 **Q: The Health History allows you to list the history of all event for the different types. Is there an API / source to query this history programmatically?**
 
-A: We can query management.azure.com.
+A: We can query management.azure.com. The history can only be obtained per resource uri.
 
 **Get By Resource** 
 Gets current availability status for a single resource
+
+`https://management.azure.com/subscriptions/632cc760-aa97-46a9-9c12-50b13163c9c7/resourceGroups/BP-DEV-MonitoringAgent/providers/Microsoft.Storage/storageAccounts/bpdevmonitoringagent925/providers/Microsoft.ResourceHealth/availabilityStatuses/curent?api-version=2015-01-01`
+
+
+```
+{
+    "id": "/subscriptions/632cc760-aa97-46a9-9c12-50b13163c9c7/resourceGroups/BP-DEV-MonitoringAgent/providers/Microsoft.Storage/storageAccounts/bpdevmonitoringagent925/providers/Microsoft.ResourceHealth/availabilityStatuses/current",
+    "name": "current",
+    "type": "Microsoft.ResourceHealth/AvailabilityStatuses",
+    "location": "westeurope",
+    "properties": {
+        "availabilityState": "Available",
+        "summary": "There aren't any known Azure platform problems affecting this storage accounts",
+        "detailedStatus": "",
+        "reasonType": "",
+        "occuredTime": "2018-06-19T08:30:53Z",
+        "reasonChronicity": "Persistent",
+        "reportedTime": "2018-06-25T10:37:36.9736207Z"
+    }
+}
+```
+
 
 **List** 
 Lists the historical availability statuses for a single resource.
