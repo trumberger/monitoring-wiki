@@ -2,7 +2,7 @@ This research was done in regards with [US755 [Research] Extend customer templat
 
 Q: Can the health Alerts be templatized in ARM?
 
-A: Yes, please see below:
+A: Yes, actually the type of alert rule is Microsoft.Insights/ActivityLogAlerts. Please see below:
 
   
 ```
