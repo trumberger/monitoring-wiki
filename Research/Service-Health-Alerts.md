@@ -148,7 +148,81 @@ ________________________________________________________________________________
 
 Q: The Health History allows you to list the history of all event for the different types. Is there an API / source to query this history programmatically?
 
-A:
+A: I have performed some queries, all of them are for actual status and not for history:
+
+
+1. Recommendations by Subscription Id
+
+`https://management.azure.com/subscriptions/209c1564-77e4-4711-bca3-797dc5668477/providers/Microsoft.ResourceHealth/availabilityStatuses?api-version=2015-01-01&$expand=recommendedActions`
+
+```
+{
+    "value": [
+        {
+            "id": "/subscriptions/209c1564-77e4-4711-bca3-797dc5668477/resourceGroups/AzureFunctions-WestEurope/providers/Microsoft.Storage/storageAccounts/azurefunctionsde7454a1/providers/Microsoft.ResourceHealth/availabilityStatuses/current",
+            "name": "current",
+            "type": "Microsoft.ResourceHealth/AvailabilityStatuses",
+            "location": "westeurope",
+            "properties": {
+                "availabilityState": "Available",
+                "summary": "There aren't any known Azure platform problems affecting this storage accounts",
+                "detailedStatus": "",
+                "reasonType": "",
+                "recommendedActions": [
+                    {
+                        "action": "Ensure that your Storage Account is not approaching Storage Scability and Performance Targets",
+                        "actionUrl": "https://docs.microsoft.com/azure/storage/common/storage-scalability-targets",
+                        "actionUrlText": "Storage Scability and Performance Targets"
+                    },
+                    {
+                        "action": "Diagnose and troubleshoot issues using Storage metrics",
+                        "actionUrl": "https://docs.microsoft.com/azure/storage/common/storage-e2e-troubleshooting?toc=%2fazure%2fstorage%2fblobs%2ftoc.json",
+                        "actionUrlText": "Diagnose and troubleshoot issues using Storage metrics"
+                    },
+                    {
+                        "action": "If you are experiencing problems you believe are caused by Azure, contact support",
+                        "actionUrl": "<#SupportCase>",
+                        "actionUrlText": "contact support"
+                    }
+                ],
+                "occuredTime": "2018-05-18T12:43:29Z",
+                "reasonChronicity": "Persistent",
+                "reportedTime": "2018-06-25T10:17:56.4655366Z"
+            }
+        }
+    ]
+}
+```
+
+2. Available Statuses by Subscription ID (trimmed output)
+
+`https://management.azure.com/subscriptions/209c1564-77e4-4711-bca3-797dc5668477/providers/Microsoft.ResourceHealth/availabilityStatuses?api-version=2015-01-01`
+
+```
+{
+    "value": [
+        {
+            "id": "/subscriptions/209c1564-77e4-4711-bca3-797dc5668477/resourceGroups/AzureFunctions-WestEurope/providers/Microsoft.Storage/storageAccounts/azurefunctionsde7454a1/providers/Microsoft.ResourceHealth/availabilityStatuses/current",
+            "name": "current",
+            "type": "Microsoft.ResourceHealth/AvailabilityStatuses",
+            "location": "westeurope",
+            "properties": {
+                "availabilityState": "Available",
+                "summary": "There aren't any known Azure platform problems affecting this storage accounts",
+                "detailedStatus": "",
+                "reasonType": "",
+                "occuredTime": "2018-06-22T01:23:22Z",
+                "reasonChronicity": "Persistent",
+                "reportedTime": "2018-06-25T10:21:36.2106932Z"
+            }
+        }
+    ]
+}
+```
+
+
+
+
 
 Documentation:
 [Service Health](https://docs.microsoft.com/en-us/azure/service-health/service-health-overview)
