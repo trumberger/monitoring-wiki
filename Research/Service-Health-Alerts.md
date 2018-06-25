@@ -90,7 +90,14 @@ ________________________________________________________________________________
 
 Q: The Service Health alerts have three event types (Service Issue / Planned Maintenance / Health Advisories). What do those types mean and are there any policies?
 
-A: If you select at Event Type the following values, you will have the following ARM template:
+A: 
+Service Health tracks three types of health events that may impact your resources:
+
+**Service issues** - Problems in the Azure services that affect you right now. 
+**Planned maintenance** - Upcoming maintenance that can affect the availability of your services in the future. 
+**Health advisories** - Changes in Azure services that require your attention. Examples include when Azure features are deprecated or if you exceed a usage quota.
+
+If you select at Event Type the following values, you will have the following ARM template:
 
 **Service Issue**
 
@@ -140,3 +147,10 @@ A: If you select at Event Type the following values, you will have the following
 ______________________________________________________________________________________________________________________________________________________________________________
 
 Q: The Health History allows you to list the history of all event for the different types. Is there an API / source to query this history programmatically?
+
+A:
+
+Documentation:
+[Service Health](https://docs.microsoft.com/en-us/azure/service-health/service-health-overview)
+[Resource types and health checks in Azure resource health](https://docs.microsoft.com/en-us/azure/service-health/resource-health-checks-resource-types)
+[Availability Statuses](https://docs.microsoft.com/en-us/rest/api/resourcehealth/availabilitystatuses/list)
