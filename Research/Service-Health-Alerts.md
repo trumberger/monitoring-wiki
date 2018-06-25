@@ -1,6 +1,8 @@
-The following where found in my research:
+This research was done in regards with [US755 [Research] Extend customer template with Health Service Alerts using new Azure alerting framework](https://easplatform.visualstudio.com/Monitoring/_backlogs/taskboard/Sprint%201806-1?_a=requirements)
 
-A valid ARM template:
+Q: Can the health Alerts be templatized in ARM?
+
+A: Yes, please see below:
 
   
 ```
@@ -81,7 +83,14 @@ A valid ARM template:
 }
 ```
 
-If you select at Event Type the following values
+Note: A Service Health Alert deployed from ARM template is visible ONLY from GUI and is not returned when using resources.azure.com or doing https queries:
+
+ ![image.png](/.attachments/image-69f4a332-0a47-4cd8-887f-69274c0b1b2b.png)
+______________________________________________________________________________________________________________________________________________________________________________
+
+Q: The Service Health alerts have three event types (Service Issue / Planned Maintenance / Health Advisories). What do those types mean and are there any policies?
+
+A: If you select at Event Type the following values, you will have the following ARM template:
 
 **Service Issue**
 
@@ -128,5 +137,6 @@ If you select at Event Type the following values
               }
 ]
 ```
+______________________________________________________________________________________________________________________________________________________________________________
 
-
+Q: The Health History allows you to list the history of all event for the different types. Is there an API / source to query this history programmatically?
