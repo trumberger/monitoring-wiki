@@ -150,7 +150,7 @@ ________________________________________________________________________________
 
 A: We can query management.azure.com. The history can only be obtained per resource uri.
 
-**Get By Resource** 
+**1. Get By Resource** 
 Gets current availability status for a single resource
 
 `https://management.azure.com/subscriptions/632cc760-aa97-46a9-9c12-50b13163c9c7/resourceGroups/BP-DEV-MonitoringAgent/providers/Microsoft.Storage/storageAccounts/bpdevmonitoringagent925/providers/Microsoft.ResourceHealth/availabilityStatuses/curent?api-version=2015-01-01`
@@ -175,7 +175,7 @@ Gets current availability status for a single resource
 ```
 
 
-**List** 
+**2. List** 
 Lists the historical availability statuses for a single resource.
 
 `https://management.azure.com/subscriptions/632cc760-aa97-46a9-9c12-50b13163c9c7/resourceGroups/BP-DEV-MonitoringAgent/providers/Microsoft.Storage/storageAccounts/bpdevmonitoringagent925/providers/Microsoft.ResourceHealth/availabilityStatuses?api-version=2015-01-01`
@@ -217,10 +217,35 @@ Lists the historical availability statuses for a single resource.
 ```
 
 
-**List By Resource Group** 
+**3. List By Resource Group** 
 Lists the current availability status for all the resources in the resource group.
 
-**List By Subscription Id** 
+`https://management.azure.com/subscriptions/632cc760-aa97-46a9-9c12-50b13163c9c7/resourceGroups/BP-DEV-MonitoringAgent/providers/Microsoft.ResourceHealth/availabilityStatuses?api-version=2015-01-01`
+
+
+```
+{
+    "value": [
+        {
+            "id": "/subscriptions/632cc760-aa97-46a9-9c12-50b13163c9c7/resourceGroups/BP-DEV-MonitoringAgent/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.ResourceHealth/availabilityStatuses/current",
+            "name": "current",
+            "type": "Microsoft.ResourceHealth/AvailabilityStatuses",
+            "location": "eastus",
+            "properties": {
+                "availabilityState": "Unknown",
+                "summary": "We are currently unable to determine the health of this virtual machine",
+                "reasonType": "",
+                "occuredTime": "2018-06-25T10:40:36.2135516Z",
+                "reasonChronicity": "Transient",
+                "reportedTime": "2018-06-25T10:40:36.2135516Z"
+            }
+        }
+    ]
+}
+```
+
+
+**4. List By Subscription Id** 
 Lists the current availability status for all the resources in the subscription. Use the nextLink property in the response to get the next page of availability statuses.
 
 `https://management.azure.com/subscriptions/209c1564-77e4-4711-bca3-797dc5668477/providers/Microsoft.ResourceHealth/availabilityStatuses?api-version=2015-01-01`
