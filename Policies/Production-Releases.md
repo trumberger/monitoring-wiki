@@ -33,7 +33,7 @@ PRODUCTION RELEASE
 
 ### Tag Master Branch
 
-At the end of each sprint, all pull requests to the master branch are created Wednesday end of day, so the development lead can review and approve these requests on Thursday. All approved PRs are merged into master and make up the production release. Thursday at 2pm Pacific Time the product manager will tag the master branch with the labels `production` and `vx.y` if there are no errors in staging. Next a new brach will be created named `production.x.y'. This branch will be released into Pre-Prod.
+At the end of each sprint, all pull requests to the master branch are created Wednesday end of day, so the development lead can review and approve these requests on Thursday. All approved PRs are merged into master and make up the production release. Thursday at 2pm Pacific Time the product manager will tag the master branch with the labels `production` and `vx.y` if there are no errors in staging. Next a new brach will be created named `production.x.y`. This branch will be released into Pre-Prod.
 
 ### Perform Integration and UAT testing
 
