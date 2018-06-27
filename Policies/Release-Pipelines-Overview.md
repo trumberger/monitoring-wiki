@@ -2,16 +2,13 @@
 The Monitoring Solution is deployed using a series of Release Pipelines and scripts. This Wiki page describes the different kinds of release pipeline and what they do. For a full technical breakdown, see [Release Pipelines](/Technical-Details-Monitoring-Platform/Release-Pipelines).
 
 ### A Note on Branches
-We maintain two long-lived branches: **master** and **production**. Work is committed to master, periodically merged to production and then production releases are pushed from production branch builds.
-
-We will be moving to a single branch, master, from which production releases are pushed through a staging environment then on into the production environment.
+We one long-lived **master** branche. All work is committed to master using pull requests. Monitoring Team members and Monitoring contributors are allowed to create pull requests.
 
 ### Approvals
 Merging work to master is done regularly by team members, but code must be reviewed and approved by an experienced team member before being committed.
-Merging work into production must be done by a member of the leadership team and only with explicit approval.
 
-Deployment to development and staging environments can be done as-needed by the development team without approval.
-Deployment of any components to a production environment must only be done with explicit approval from the leadership team (i.e. Niels).
+Deployment to development environments can be done as-needed by the development team without approval. Deployment to staging is configured using continuous delivery to ensure that the master branch and staging environment are identical.
+Deployment of any components to a production environment uses predefined [process](http://www.microsoft.com).
 
 ## Release Process Overview and Automation
 When fully deployed in an environment, the system has the following components:
