@@ -1,4 +1,4 @@
-The following agent is used in order to monitor virtual machines: https://github.com/Microsoft/OMS-Agent-for-Linux
+The following agent is used in order to monitor Linux virtual machines: https://github.com/Microsoft/OMS-Agent-for-Linux
 
 This are the supported Linux Operating Systems by the agent:
 
