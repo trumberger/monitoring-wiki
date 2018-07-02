@@ -1,6 +1,6 @@
 The following agent is used in order to monitor Linux virtual machines: https://github.com/Microsoft/OMS-Agent-for-Linux
 
-This are the supported Linux Operating Systems by the agent:
+These are the supported Linux Operating Systems by the agent:
 
 Amazon Linux 2012.09 --> 2017 (x86/x64)
 CentOS Linux 5,6, and 7 (x86/x64)
