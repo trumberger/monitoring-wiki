@@ -46,11 +46,11 @@ At the end of each sprint, all pull requests to the master branch are created We
 
 ### Perform Integration and UAT testing
 
-All required integration and acceptance tests are performed on Friday. The required UAT and Integration tests will be performed in pre-prod. Someone from the team will be assigned to perform these tests. **TODO: Add the right tests to execute**
+All required integration and acceptance tests are performed on Friday. The required UAT and Integration tests will be performed in pre-prod. Someone from the team will be assigned to perform these tests. 
 
 ### Create Release Notes
 
-During the integration and uat testing the product owner will create release notes of the upcoming production release, based on the user story that the team has worked on. The release notes will be extended in ReleaseNotes.md file in the root (**Add reference**).  
+During the integration and uat testing the product owner will create release notes of the upcoming production release, based on the user story that the team has worked on. The release notes will be extended in ReleaseNotes.md file in the root.  
 
 ### Trigger Production Release
 
