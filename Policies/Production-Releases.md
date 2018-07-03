@@ -76,7 +76,7 @@ A successfull build will automatically trigger the following notifications:
 
 All artifacts required to deploy the monitoring agent are copied to the following share in a folder with the version name:
 
-`https://esscommonprod.blob.core.windows.net/agent/{version}`
+`https://esscommonprod.blob.core.windows.net/releases/release {version}`
 
 The share is only used by EAS delivery teams that deploy the monitoring agent out of the application pipeline. They can download the artifacts and push them into their repository (as pull request).
 
