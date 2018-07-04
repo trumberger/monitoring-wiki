@@ -4,7 +4,7 @@ This article describes the different alert schema that ARM uses to configure ale
 
 - Metric Alerts
 - Diagnostics and Activity Alerts
-- Scheduled Query Rule Alerts (Application Insights only)
+- Scheduled Query Rule Alerts 
 
 ## Alert Types
 
@@ -118,57 +118,101 @@ The following schema is used for activity and diagnostics alerts
 ```
 
 ### Scheduled Query Rules
-The following API call can be used to retrieve all scheduled (custom) query alerts within a resource group:
+These alert rules are mainly queries against Log Analytics and Application Insights. 
+The alert rule itself has three components:
 
-```
-GET https://management.azure.com/subscriptions/{subscriptionID}/resourceGroups/{resourceGroupName}/providers/microsoft.insights/scheduledqueryrules?api-version=2017-09-01-preview
-```
+a) Microsoft.OperationalInsights/workspaces/savedSearches
 
-The following schema is used for scheduled query alerts
+API call to get all savedSearches within a resource group:
+
+`GET https://management.azure.com/subscriptions/{subscriptionID}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceID}/savedSearches?api-version=2015-03-20`
+
+b) Microsoft.OperationalInsights/workspaces/savedSearches/schedules
+
+API call to get the schedules for a saved search:
+
+`GET https://management.azure.com/subscriptions/{subscriptionID}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceID}/savedSearches/{savedSearchID}/schedules?api-version=2015-03-20`
+
+c) Microsoft.OperationalInsights/workspaces/savedSearches/schedules/actions
+
+API call to get the actions performed for a schedule within a saved search.
+
+`GET https://management.azure.com/subscriptions/{subscriptionID}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceID}/savedSearches/{savedSearchID}/schedules/{schedulesID}/actions?api-version=2015-03-20`
+
+Microsoft.OperationalInsights/workspaces/savedSearches template reference
 
 ```
 {
-    "name": "ENTER NAME ALERT",
-    "type": "microsoft.insights/scheduledqueryrules",
-    "location": "eastus",
-    "tags": { },
+  "name": "string",
+  "type": "Microsoft.OperationalInsights/workspaces/savedSearches",
+  "apiVersion": "2015-03-20",
+  "properties": {
+    "Category": "string",
+    "DisplayName": "string",
+    "Query": "string",
+    "Version": "integer",
+    "Tags": [
+      {
+        "Name": "string",
+        "Value": "string"
+      }
+    ]
+  }
+}
+```
+
+Microsoft.OperationalInsights/workspaces/savedSearches/shedules template reference
+
+```
+{
+    "name": "string",
+    "type": "Microsoft.OperationalInsights/workspaces/savedSearches/schedules/",
+    "apiVersion": "2015-03-20",
+    "dependsOn": [
+        "string"
+    ],
     "properties": {
-        "description": "ENTER DESCRIPTION ALERT",
-        "enabled": "true",
-        "skuType": "L3",
-        "source": {
-            "query": "ENTER KUSTO QUERY HERE",
-            "authorizedResources": null,
-            "resourceId": null,
-            "dataSourceId": "AZURE RESOURCE ID OF DATA SOURCE",
-            "queryType": "ResultCount"
+        "etag": "*",
+        "Interval": "integer",
+        "QueryTimeSpan": "integer",
+        "Enabled": true
+    }
+}
+```
+Microsoft.OperationalInsights/workspaces/savedSearches/shedules/actions template reference
+
+
+```
+{
+    "name": "string",
+    "type": "Microsoft.OperationalInsights/workspaces/savedSearches/schedules/actions",
+    "apiVersion": "2015-03-20",
+    "dependsOn": [
+        "string"
+    ],
+    "properties": {
+        "etag": "*",
+        "Type": "Alert",
+        "Name": "string",
+        "Description": "string",
+        "Severity": "string",
+        "Threshold": {
+            "Operator": "string",
+            "Value": "integer",
+            "MetricsTrigger": {
+                "string",
+                "Operator": "string",
+                "Value": "integer"
+            }
         },
-        "metricName": null,
-        "schedule": {
-            "frequencyInMinutes": 60,
-            "timeWindowInMinutes": 360
+        "Throttling": {
+            "DurationInMinutes": integer
         },
-        "action": {
-            "lastFiredTime": null,
-            "severity": "3",
-            "status": "Active",
-            "aznsAction": {
-                "actionGroup": [
-                    "ACTION GROUP ID"
-                ],
-                "emailSubject": null,
-                "customWebhookPayload": null
-            },
-            "actionGroup": null,
-            "alertStateManagement": null,
-            "throttlingInMin": null,
-            "trigger": {
-                "thresholdOperator": "GreaterThan",
-                "threshold": 0,
-                "consecutiveBreach": 1,
-                "metricTrigger": null
-            },
-            "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction"
+        "EmailNotification": {
+            "Recipients": [
+                "string"
+            ],
+            "Subject": "string"
         }
     }
 }
