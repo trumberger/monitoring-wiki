@@ -70,6 +70,46 @@ https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-alerts
 
 ```
 
+###Azure Application Insights Log Alert
+https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-alerts-unified-log-webhook#log-alert-for-azure-application-insights
+
+```
+{
+    "schemaId":"Microsoft.Insights/LogAlert","data":
+    { 
+    "SubscriptionId":"12345a-1234b-123c-123d-12345678e",
+    "AlertRuleName":"AcmeRule","SearchQuery":"search *",
+    "SearchResult":
+        {
+        "tables":[
+                    {"name":"PrimaryResult","columns":
+                        [
+                        {"name":"$table","type":"string"},
+                        {"name":"Id","type":"string"},
+                        {"name":"TimeGenerated","type":"datetime"}
+                        ],
+                    "rows":
+                        [
+                            ["Fabrikam","33446677a","2018-02-02T15:03:12.18Z"],
+                            ["Contoso","33445566b","2018-02-02T15:16:53.932Z"]
+                        ]
+                    }
+                ]
+        },
+    "SearchIntervalStartTimeUtc": "2018-03-26T08:10:40Z",
+    "SearchIntervalEndtimeUtc": "2018-03-26T09:10:40Z",
+    "AlertThresholdOperator": "Greater Than",
+    "AlertThresholdValue": 0,
+    "ResultCount": 2,
+    "SearchIntervalInSeconds": 3600,
+    "LinkToSearchResults": "https://analytics.applicationinsights.io/subscriptions/12345a-1234b-123c-123d-12345678e/?query=search+*+&timeInterval.intervalEnd=2018-03-26T09%3a10%3a40.0000000Z&_timeInterval.intervalDuration=3600&q=Usage",
+    "Description": null,
+    "Severity": "Error",
+    "ApplicationId": "123123f0-01d3-12ab-123f-abc1ab01c0a1"
+    }
+}
+```
+
 ###Azure Metric Alert
 https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-near-real-time-metric-alerts#payload-schema
 
