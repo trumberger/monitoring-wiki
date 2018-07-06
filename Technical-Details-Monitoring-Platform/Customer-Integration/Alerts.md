@@ -2,6 +2,74 @@
 ## Supported JSON Schema's
 The following schema's are supported by ESS monitoring interface. 
 
+###Azure Activity Log Alert
+https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-activity-log-alerts-webhook#payload-schema
+
+```
+{
+    "schemaId": "Microsoft.Insights/activityLogs",
+    "data": {
+        "status": "Activated",
+        "context": {
+            "activityLog": {
+                "channels": "Operation",
+                "correlationId": "6ac88262-43be-4adf-a11c-bd2179852898",
+                "eventSource": "Administrative",
+                "eventTimestamp": "2017-03-29T15:43:08.0019532+00:00",
+                "eventDataId": "8195a56a-85de-4663-943e-1a2bf401ad94",
+                "level": "Informational",
+                "operationName": "Microsoft.Insights/actionGroups/write",
+                "operationId": "6ac88262-43be-4adf-a11c-bd2179852898",
+                "status": "Started",
+                "subStatus": "",
+                "subscriptionId": "52c65f65-0518-4d37-9719-7dbbfc68c57a",
+                "submissionTimestamp": "2017-03-29T15:43:20.3863637+00:00",
+                ...
+            }
+        },
+        "properties": {}
+    }
+}
+
+```
+
+###Azure Log Alert
+https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-alerts-unified-log-webhook#sample-payloads
+
+```
+{
+    "WorkspaceId":"12345a-1234b-123c-123d-12345678e",
+    "AlertRuleName":"AcmeRule","SearchQuery":"search *",
+    "SearchResult":
+        {
+        "tables":[
+                    {"name":"PrimaryResult","columns":
+                        [
+                        {"name":"$table","type":"string"},
+                        {"name":"Id","type":"string"},
+                        {"name":"TimeGenerated","type":"datetime"}
+                        ],
+                    "rows":
+                        [
+                            ["Fabrikam","33446677a","2018-02-02T15:03:12.18Z"],
+                            ["Contoso","33445566b","2018-02-02T15:16:53.932Z"]
+                        ]
+                    }
+                ]
+        },
+    "SearchIntervalStartTimeUtc": "2018-03-26T08:10:40Z",
+    "SearchIntervalEndtimeUtc": "2018-03-26T09:10:40Z",
+    "AlertThresholdOperator": "Greater Than",
+    "AlertThresholdValue": 0,
+    "ResultCount": 2,
+    "SearchIntervalInSeconds": 3600,
+    "LinkToSearchResults": "https://workspaceID.portal.mms.microsoft.com/#Workspace/search/index?_timeInterval.intervalEnd=2018-03-26T09%3a10%3a40.0000000Z&_timeInterval.intervalDuration=3600&q=Usage",
+    "Description": null,
+    "Severity": "Warning"
+ }
+
+```
+
 ###Azure Metric Alert
 https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-near-real-time-metric-alerts#payload-schema
 
