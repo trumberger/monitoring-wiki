@@ -70,6 +70,498 @@ https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-alerts
 
 ```
 
+Example:
+
+```
+Request body: {"schemaId":"Microsoft.Insights/LogAlert","data":{
+  "SubscriptionId": "c8cd80a0-4450-4b56-9245-2842d6f6357a",
+  "AlertRuleName": "stag log alert test",
+  "SearchQuery": "requests",
+  "SearchResult": {
+    "tables": [
+      {
+        "name": "PrimaryResult",
+        "columns": [
+          {
+            "name": "timestamp",
+            "type": "datetime"
+          },
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "source",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "type": "string"
+          },
+          {
+            "name": "success",
+            "type": "string"
+          },
+          {
+            "name": "resultCode",
+            "type": "string"
+          },
+          {
+            "name": "duration",
+            "type": "real"
+          },
+          {
+            "name": "performanceBucket",
+            "type": "string"
+          },
+          {
+            "name": "itemType",
+            "type": "string"
+          },
+          {
+            "name": "customDimensions",
+            "type": "dynamic"
+          },
+          {
+            "name": "customMeasurements",
+            "type": "dynamic"
+          },
+          {
+            "name": "operation_Name",
+            "type": "string"
+          },
+          {
+            "name": "operation_Id",
+            "type": "string"
+          },
+          {
+            "name": "operation_ParentId",
+            "type": "string"
+          },
+          {
+            "name": "operation_SyntheticSource",
+            "type": "string"
+          },
+          {
+            "name": "session_Id",
+            "type": "string"
+          },
+          {
+            "name": "user_Id",
+            "type": "string"
+          },
+          {
+            "name": "user_AuthenticatedId",
+            "type": "string"
+          },
+          {
+            "name": "user_AccountId",
+            "type": "string"
+          },
+          {
+            "name": "application_Version",
+            "type": "string"
+          },
+          {
+            "name": "client_Type",
+            "type": "string"
+          },
+          {
+            "name": "client_Model",
+            "type": "string"
+          },
+          {
+            "name": "client_OS",
+            "type": "string"
+          },
+          {
+            "name": "client_IP",
+            "type": "string"
+          },
+          {
+            "name": "client_City",
+            "type": "string"
+          },
+          {
+            "name": "client_StateOrProvince",
+            "type": "string"
+          },
+          {
+            "name": "client_CountryOrRegion",
+            "type": "string"
+          },
+          {
+            "name": "client_Browser",
+            "type": "string"
+          },
+          {
+            "name": "cloud_RoleName",
+            "type": "string"
+          },
+          {
+            "name": "cloud_RoleInstance",
+            "type": "string"
+          },
+          {
+            "name": "appId",
+            "type": "string"
+          },
+          {
+            "name": "appName",
+            "type": "string"
+          },
+          {
+            "name": "iKey",
+            "type": "string"
+          },
+          {
+            "name": "sdkVersion",
+            "type": "string"
+          },
+          {
+            "name": "itemId",
+            "type": "string"
+          },
+          {
+            "name": "itemCount",
+            "type": "int"
+          }
+        ],
+        "rows": [
+          [
+            "2018-07-11T19:05:00.019Z",
+            "1dc85814-a608-4049-9aec-0468a6cd11ce",
+            "",
+            "HostValidation",
+            "",
+            "False",
+            "0",
+            9.8013,
+            "<250ms",
+            "request",
+            "{\"LogLevel\":\"Error\",\"Category\":\"Host.Results\",\"{OriginalFormat}\":\"Executed '{FullName}' (Failed, Id={InvocationId})\",\"TriggerReason\":\"Timer fired at 2018-07-11T19:05:00.0199909+00:00\",\"Succeeded\":\"False\",\"FullName\":\"HostValidation\",\"EndTime\":\"2018-07-11T19:05:00.0190000Z\"}",
+            null,
+            "HostValidation",
+            "1dc85814-a608-4049-9aec-0468a6cd11ce",
+            "1dc85814-a608-4049-9aec-0468a6cd11ce",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "PC",
+            "",
+            "",
+            "0.0.0.0",
+            "",
+            "",
+            "",
+            "",
+            "fun-stag-env-bpl-mon",
+            "ad35009864d962717bf36085962320f36397c7fc102f89b938d447307ad4151d",
+            "e0fbfdfa-545e-4089-8464-113762a9d7de",
+            "AIS-STAG-BPL-MON",
+            "93aee2ff-e554-43ad-8815-d5aea9c78e64",
+            "azurefunctions: 1.0.11820.0",
+            "60f02416-853d-11e8-911d-01103fe4f6d1",
+            1
+          ],
+          [
+            "2018-07-11T19:10:00.019Z",
+            "847df215-187e-4b13-83ee-156aee258f9f",
+            "",
+            "HostValidation",
+            "",
+            "False",
+            "0",
+            3.7814,
+            "<250ms",
+            "request",
+            "{\"{OriginalFormat}\":\"Executed '{FullName}' (Failed, Id={InvocationId})\",\"LogLevel\":\"Error\",\"Category\":\"Host.Results\",\"TriggerReason\":\"Timer fired at 2018-07-11T19:10:00.0192442+00:00\",\"Succeeded\":\"False\",\"FullName\":\"HostValidation\",\"EndTime\":\"2018-07-11T19:10:00.0190000Z\"}",
+            null,
+            "HostValidation",
+            "847df215-187e-4b13-83ee-156aee258f9f",
+            "847df215-187e-4b13-83ee-156aee258f9f",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "PC",
+            "",
+            "",
+            "0.0.0.0",
+            "",
+            "",
+            "",
+            "",
+            "fun-stag-env-bpl-mon",
+            "ad35009864d962717bf36085962320f36397c7fc102f89b938d447307ad4151d",
+            "e0fbfdfa-545e-4089-8464-113762a9d7de",
+            "AIS-STAG-BPL-MON",
+            "93aee2ff-e554-43ad-8815-d5aea9c78e64",
+            "azurefunctions: 1.0.11820.0",
+            "13c0d036-853e-11e8-8fee-21b2ce67ad7d",
+            1
+          ],
+          [
+            "2018-07-11T19:06:00.02Z",
+            "4fee114e-8406-43d4-a248-820b7fb898d1",
+            "",
+            "BatchAlertFramework",
+            "",
+            "False",
+            "0",
+            372.4059,
+            "250ms-500ms",
+            "request",
+            "{\"LogLevel\":\"Error\",\"Category\":\"Host.Results\",\"{OriginalFormat}\":\"Executed '{FullName}' (Failed, Id={InvocationId})\",\"TriggerReason\":\"Timer fired at 2018-07-11T19:06:00.0207520+00:00\",\"Succeeded\":\"False\",\"FullName\":\"BatchAlertFramework\",\"EndTime\":\"2018-07-11T19:06:00.3840000Z\"}",
+            null,
+            "BatchAlertFramework",
+            "4fee114e-8406-43d4-a248-820b7fb898d1",
+            "4fee114e-8406-43d4-a248-820b7fb898d1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "PC",
+            "",
+            "",
+            "0.0.0.0",
+            "",
+            "",
+            "",
+            "",
+            "fun-stag-env-bpl-mon",
+            "ad35009864d962717bf36085962320f36397c7fc102f89b938d447307ad4151d",
+            "e0fbfdfa-545e-4089-8464-113762a9d7de",
+            "AIS-STAG-BPL-MON",
+            "93aee2ff-e554-43ad-8815-d5aea9c78e64",
+            "azurefunctions: 1.0.11820.0",
+            "84b3430b-853d-11e8-911d-01103fe4f6d1",
+            1
+          ],
+          [
+            "2018-07-11T19:09:00.023Z",
+            "8c13f3a6-5d5a-4829-82d1-e5b9028d07e5",
+            "",
+            "BatchAlertFramework",
+            "",
+            "False",
+            "0",
+            363.7775,
+            "250ms-500ms",
+            "request",
+            "{\"LogLevel\":\"Error\",\"Category\":\"Host.Results\",\"{OriginalFormat}\":\"Executed '{FullName}' (Failed, Id={InvocationId})\",\"TriggerReason\":\"Timer fired at 2018-07-11T19:09:00.0235190+00:00\",\"Succeeded\":\"False\",\"FullName\":\"BatchAlertFramework\",\"EndTime\":\"2018-07-11T19:09:00.3810000Z\"}",
+            null,
+            "BatchAlertFramework",
+            "8c13f3a6-5d5a-4829-82d1-e5b9028d07e5",
+            "8c13f3a6-5d5a-4829-82d1-e5b9028d07e5",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "PC",
+            "",
+            "",
+            "0.0.0.0",
+            "",
+            "",
+            "",
+            "",
+            "fun-stag-env-bpl-mon",
+            "ad35009864d962717bf36085962320f36397c7fc102f89b938d447307ad4151d",
+            "e0fbfdfa-545e-4089-8464-113762a9d7de",
+            "AIS-STAG-BPL-MON",
+            "93aee2ff-e554-43ad-8815-d5aea9c78e64",
+            "azurefunctions: 1.0.11820.0",
+            "effffb3b-853d-11e8-acfb-35a459ea5619",
+            1
+          ],
+          [
+            "2018-07-11T19:00:00.014Z",
+            "be6634d0-c3f6-43c8-83b9-6a9a9c6fcd06",
+            "",
+            "HostValidation",
+            "",
+            "False",
+            "0",
+            11.0773,
+            "<250ms",
+            "request",
+            "{\"LogLevel\":\"Error\",\"Category\":\"Host.Results\",\"{OriginalFormat}\":\"Executed '{FullName}' (Failed, Id={InvocationId})\",\"TriggerReason\":\"Timer fired at 2018-07-11T19:00:00.0148025+00:00\",\"Succeeded\":\"False\",\"FullName\":\"HostValidation\",\"EndTime\":\"2018-07-11T19:00:00.0140000Z\"}",
+            null,
+            "HostValidation",
+            "be6634d0-c3f6-43c8-83b9-6a9a9c6fcd06",
+            "be6634d0-c3f6-43c8-83b9-6a9a9c6fcd06",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "PC",
+            "",
+            "",
+            "0.0.0.0",
+            "",
+            "",
+            "",
+            "",
+            "fun-stag-env-bpl-mon",
+            "ad35009864d962717bf36085962320f36397c7fc102f89b938d447307ad4151d",
+            "e0fbfdfa-545e-4089-8464-113762a9d7de",
+            "AIS-STAG-BPL-MON",
+            "93aee2ff-e554-43ad-8815-d5aea9c78e64",
+            "azurefunctions: 1.0.11820.0",
+            "ae221005-853c-11e8-911d-01103fe4f6d1",
+            1
+          ],
+          [
+            "2018-07-11T19:00:00.046Z",
+            "1b28d7be-a23c-46c1-b5c9-c1b7110c63f0",
+            "",
+            "BatchAlertFramework",
+            "",
+            "False",
+            "0",
+            348.0692,
+            "250ms-500ms",
+            "request",
+            "{\"LogLevel\":\"Error\",\"Category\":\"Host.Results\",\"{OriginalFormat}\":\"Executed '{FullName}' (Failed, Id={InvocationId})\",\"TriggerReason\":\"Timer fired at 2018-07-11T19:00:00.0460016+00:00\",\"Succeeded\":\"False\",\"FullName\":\"BatchAlertFramework\",\"EndTime\":\"2018-07-11T19:00:00.3740000Z\"}",
+            null,
+            "BatchAlertFramework",
+            "1b28d7be-a23c-46c1-b5c9-c1b7110c63f0",
+            "1b28d7be-a23c-46c1-b5c9-c1b7110c63f0",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "PC",
+            "",
+            "",
+            "0.0.0.0",
+            "",
+            "",
+            "",
+            "",
+            "fun-stag-env-bpl-mon",
+            "ad35009864d962717bf36085962320f36397c7fc102f89b938d447307ad4151d",
+            "e0fbfdfa-545e-4089-8464-113762a9d7de",
+            "AIS-STAG-BPL-MON",
+            "93aee2ff-e554-43ad-8815-d5aea9c78e64",
+            "azurefunctions: 1.0.11820.0",
+            "ae221006-853c-11e8-911d-01103fe4f6d1",
+            1
+          ],
+          [
+            "2018-07-11T18:57:00.011Z",
+            "4da9f8fa-9245-48bd-b719-e238fcae1a64",
+            "",
+            "BatchAlertFramework",
+            "",
+            "False",
+            "0",
+            382.4126,
+            "250ms-500ms",
+            "request",
+            "{\"LogLevel\":\"Error\",\"Category\":\"Host.Results\",\"{OriginalFormat}\":\"Executed '{FullName}' (Failed, Id={InvocationId})\",\"TriggerReason\":\"Timer fired at 2018-07-11T18:57:00.0118064+00:00\",\"Succeeded\":\"False\",\"FullName\":\"BatchAlertFramework\",\"EndTime\":\"2018-07-11T18:57:00.3830000Z\"}",
+            null,
+            "BatchAlertFramework",
+            "4da9f8fa-9245-48bd-b719-e238fcae1a64",
+            "4da9f8fa-9245-48bd-b719-e238fcae1a64",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "PC",
+            "",
+            "",
+            "0.0.0.0",
+            "",
+            "",
+            "",
+            "",
+            "fun-stag-env-bpl-mon",
+            "ad35009864d962717bf36085962320f36397c7fc102f89b938d447307ad4151d",
+            "e0fbfdfa-545e-4089-8464-113762a9d7de",
+            "AIS-STAG-BPL-MON",
+            "93aee2ff-e554-43ad-8815-d5aea9c78e64",
+            "azurefunctions: 1.0.11820.0",
+            "42d816fb-853c-11e8-acfb-35a459ea5619",
+            1
+          ],
+          [
+            "2018-07-11T19:03:00.017Z",
+            "3f2d61ae-3125-445c-abf4-a88e493f974b",
+            "",
+            "BatchAlertFramework",
+            "",
+            "False",
+            "0",
+            648.5111,
+            "500ms-1sec",
+            "request",
+            "{\"LogLevel\":\"Error\",\"Category\":\"Host.Results\",\"{OriginalFormat}\":\"Executed '{FullName}' (Failed, Id={InvocationId})\",\"TriggerReason\":\"Timer fired at 2018-07-11T19:03:00.0179401+00:00\",\"Succeeded\":\"False\",\"FullName\":\"BatchAlertFramework\",\"EndTime\":\"2018-07-11T19:03:00.6520000Z\"}",
+            null,
+            "BatchAlertFramework",
+            "3f2d61ae-3125-445c-abf4-a88e493f974b",
+            "3f2d61ae-3125-445c-abf4-a88e493f974b",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "PC",
+            "",
+            "",
+            "0.0.0.0",
+            "",
+            "",
+            "",
+            "",
+            "fun-stag-env-bpl-mon",
+            "ad35009864d962717bf36085962320f36397c7fc102f89b938d447307ad4151d",
+            "e0fbfdfa-545e-4089-8464-113762a9d7de",
+            "AIS-STAG-BPL-MON",
+            "93aee2ff-e554-43ad-8815-d5aea9c78e64",
+            "azurefunctions: 1.0.11820.0",
+            "196c302b-853d-11e8-8fee-21b2ce67ad7d",
+            1
+          ]
+        ]
+      }
+    ]
+  },
+  "SearchIntervalStartTimeUtc": "2018-07-11T18:56:24",
+  "SearchIntervalEndtimeUtc": "2018-07-11T19:11:24",
+  "AlertThresholdOperator": "Less Than",
+  "AlertThresholdValue": 9999,
+  "ResultCount": 8,
+  "SearchIntervalInSeconds": 900,
+  "LinkToSearchResults": "https://analytics.applicationinsights.io/subscriptions/c8cd80a0-4450-4b56-9245-2842d6f6357a/resourceGroups/STAG-MonitoringAgent/components/AIS-STAG-BPL-MON?query=requests&prettify=1&timespan=2018-07-11T18:56:24.0000000Z/2018-07-11T19:11:24.0000000Z",
+  "Description": "STAG Log Alert Test",
+  "Severity": "High",
+  "ApplicationId": "e0fbfdfa-545e-4089-8464-113762a9d7de"
+}}
+
+```
+
 ###Azure Application Insights Log Alert
 https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-alerts-unified-log-webhook#log-alert-for-azure-application-insights
 
