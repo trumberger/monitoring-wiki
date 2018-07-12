@@ -27,8 +27,52 @@ https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-act
                 ...
             }
         },
-        "properties": {}
+        "properties": { Custom properties }
     }
+}
+
+```
+
+Example:
+
+```
+{
+   "schemaId":"Microsoft.Insights/activityLogs",
+   "data":{
+      "status":"Activated",
+      "context":{
+         "activityLog":{
+            "authorization":{
+               "action":"Microsoft.Resources/deployments/write",
+               "scope":"/subscriptions/c8cd80a0-4450-4b56-9245-2842d6f6357a/resourcegroups/STAG-BusinessLogic/providers/Microsoft.Resources/deployments/deploy-20180611-195903-ef9a"
+            },
+            "channels":"Operation",
+            "claims":"{\"aud\":\"https://management.azure.com/\",\"iss\":\"https://sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/\",\"iat\":\"1531338842\",\"nbf\":\"1531338842\",\"exp\":\"1531342742\",\"aio\":\"42BgYDj68uz0sCwmf+GChAdCz1WqAA==\",\"appid\":\"2bb724b8-9843-4731-a8dc-5b55e1bd0a50\",\"appidacr\":\"1\",\"http://schemas.microsoft.com/identity/claims/identityprovider\":\"https://sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/\",\"http://schemas.microsoft.com/identity/claims/objectidentifier\":\"a22d6a2f-4cf2-4398-994a-0ea11535af10\",\"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\":\"a22d6a2f-4cf2-4398-994a-0ea11535af10\",\"http://schemas.microsoft.com/identity/claims/tenantid\":\"72f988bf-86f1-41af-91ab-2d7cd011db47\",\"uti\":\"k0kBZryyM0iA9fWlFShNAA\",\"ver\":\"1.0\"}",
+            "caller":"a22d6a2f-4cf2-4398-994a-0ea11535af10",
+            "correlationId":"aca46725-bd5c-4ab3-8ae1-8910b0554a68",
+            "description":"",
+            "eventSource":"Administrative",
+            "eventTimestamp":"2018-07-11T19:59:52.850193+00:00",
+            "eventDataId":"b889836f-9530-4091-855d-6b0e374b8056",
+            "level":"Informational",
+            "operationName":"Microsoft.Resources/deployments/write",
+            "operationId":"0d5e11c2-e43a-4c0d-a57b-f76cf28c4e6b",
+            "resourceId":"/subscriptions/c8cd80a0-4450-4b56-9245-2842d6f6357a/resourcegroups/STAG-BusinessLogic/providers/Microsoft.Resources/deployments/deploy-20180611-195903-ef9a",
+            "resourceGroupName":"STAG-BusinessLogic",
+            "resourceProviderName":"Microsoft.Resources",
+            "status":"Succeeded",
+            "subStatus":"",
+            "subscriptionId":"c8cd80a0-4450-4b56-9245-2842d6f6357a",
+            "submissionTimestamp":"2018-07-11T20:00:18.0975806+00:00",
+            "resourceType":"Microsoft.Resources/deployments"
+         }
+      },
+      "properties":{
+            "environment":"STA",
+            "severity":"3",
+	    "alertName":"STAG Activity Log Test2"
+     }	
+   }
 }
 
 ```
