@@ -697,6 +697,50 @@ https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-nea
 }
 ```
 
+Example:
+
+```
+{"schemaId":"AzureMonitorMetricAlert","data":{
+  "version": "2.0",
+  "status": "Activated",
+  "context": {
+    "timestamp": "2018-06-28T17:42:17.5377441Z",
+    "id": "/subscriptions/632cc760-aa97-46a9-9c12-50b13163c9c7/resourcegroups/RT-DEV-CustomerIntegration/providers/Microsoft.Insights/metricAlerts/ARM%20Metric%20Alert",
+    "name": "ARM Metric Alert",
+    "description": "",
+    "conditionType": "SingleResourceMultipleMetricCriteria",
+    "condition": {
+      "windowSize": "PT5M",
+      "allOf": [
+        {
+          "metricName": "QueueCapacity",
+          "dimensions": [
+            {
+              "name": "ResourceId",
+              "value": "/subscriptions/632cc760-aa97-46a9-9c12-50b13163c9c7/resourceGroups/RT-DEV-BusinessLogic/providers/Microsoft.Storage/storageAccounts/stadevumsm36x4p6ry6/queueServices/default"
+            }
+          ],
+          "operator": "LessThan",
+          "threshold": "9999",
+          "timeAggregation": "PT5M",
+          "metricValue": 1.0
+        }
+      ]
+    },
+    "subscriptionId": "632cc760-aa97-46a9-9c12-50b13163c9c7",
+    "resourceGroupName": "RT-DEV-BusinessLogic",
+    "resourceName": "stadevumsm36x4p6ry6",
+    "resourceType": "Microsoft.Storage/storageAccounts/queueServices",
+    "resourceId": "/subscriptions/632cc760-aa97-46a9-9c12-50b13163c9c7/resourceGroups/RT-DEV-BusinessLogic/providers/Microsoft.Storage/storageAccounts/stadevumsm36x4p6ry6/queueServices/default",
+    "portalLink": "https://portal.azure.com/#resource//subscriptions/632cc760-aa97-46a9-9c12-50b13163c9c7/resourceGroups/RT-DEV-BusinessLogic/providers/Microsoft.Storage/storageAccounts/stadevumsm36x4p6ry6/queueServices/default"
+  },
+  "properties": {
+    "environment": "DEV",
+    "severity": "3"
+  }
+}}
+```
+
 ###Standard Log Analytics 
 ```
 {
