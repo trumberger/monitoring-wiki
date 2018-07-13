@@ -75,9 +75,9 @@ The following azure resources are part of the monitoring agent
 | Logic App: Scheduler AAD Collector | FLO-{environment}-SchedulerAadAudit-{serviceID} |
 | Logic App: Scheduler Archiving | FLO-{environment}-SchedulerArchiving-{sericeID} |
 | API Connection: storage blob | CON-{environment}-AzureBlob |
-| Key Vault | KVL-{environment}-{serviceID} | For future use (DOES NOT ADD CONSUMPTION) |
-| App Service | FUN-{environment}-{serviceID} | For future use (DOES NOT ADD CONSUMPTION) |
-| App Service Plan | APL-{environment}-{serviceID} | For future use (DOES NOT ADD CONSUMPTION) |
+| Key Vault | KVL-{environment}-{serviceID} |  |
+| Azure Function | FUN-{environment}-{serviceID} |  |
+| App Service Plan | APL-{environment}-{serviceID} |  |
 | App Service Plan | APL-{environment}-SqlAudit-{serviceID} | Only deploy if SQL audit is enabled |
 | App Service | WES-{environment}-SqlAudit-{serviceID} | Only deploy if SQL audit is enabled |
 | Job Scheduler | SJC-{environment}-SqlAudit-{serviceID} | Only deploy if SQL audit is enabled |
