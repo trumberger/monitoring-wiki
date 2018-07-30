@@ -1,5 +1,5 @@
 #Introduction
-While developing the ESS Monitoring Solution, sometimes a new clean deployment is needed for end-2-end testing of the scripts and deployment stages. This can also mean that we need to change details in the SPNs used/created by the deployment pipeline. Since the App Registrations and SPNs are created by the pipeline using a Service Account (Ess-mon), as developers we cannot edit the apps and SPNs directly. 
+While developing the ESS Monitoring Solution, sometimes a new clean deployment is needed for end-2-end testing of the scripts and deployment stages. This can also mean that we need to change details in the SPNs used/created by the deployment pipeline. Since the Apps and SPNs are created by the pipeline using a Service Account (Ess-mon), as developers we cannot edit the apps and SPNs directly. 
 
 #Overview
 To be able to change details and even remove the Apps and SPNs mentioned above, in each of those resources we need to assign the Owner role to each developer. This is done by going through some simple steps in PowerShell.
@@ -25,7 +25,7 @@ The following command is used
 `Add-AzureADServicePrincipalOwner -ObjectId "<SPNObjectId>" -RefObjectId "<UserObjectId>"`
 
 
-When adding an owner to an App Registration we find the **<ApplicationObjectId>** under
+When adding an owner to an App we find the **<ApplicationObjectId>** under
 **Microsoft AAD -> App Registrations -> Search -> Click on desired app**
 ![image.png](/.attachments/image-60eac33e-b682-4232-a80a-02a1795e3d7c.png)
 
