@@ -32,7 +32,7 @@ When adding an owner to an App we find the **<ApplicationObjectId>** under
 The following command is used 
 `Add-AzureADApplicationOwner -ObjectId "<ApplicationObjectId>" -RefObjectId "<UserObjectId>"`
 
-##To remove owners from App Registrations and SPNs
+##To remove owners from Apps and SPNs
 The details needed can be found as shown above, and the PowerShell commands used are: 
 For App Registrations ->`Remove-AzureADApplicationOwner -ObjectId "<ApplicationObjectId>" -OwnerId "<UserObjectId>"`
 For SPNs -> `Remove-AzureADServicePrincipalOwner -ObjectId "<SPNObjectId>" -OwnerId "<UserObjectId>"`
