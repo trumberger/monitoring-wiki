@@ -7,7 +7,8 @@ The following references can be used to better understand the monitoring solutio
 | Document| Comment |
 |---|---|
 |[High Level Overview](https://microsoft.sharepoint.com/teams/ESSMonitoringAutomationPlatform/_layouts/15/WopiFrame2.aspx?action=edit&sourcedoc={EC2E740B-6D65-4A39-BB29-3C7DBE81D1C6}) | Presentation that provides an high level overview of the goals of the monitoring environments, its capabilities and how it is used within EAS engagements.|
-| [Architecture](https://microsoft.sharepoint.com/teams/ESSMonitoringAutomationTeam/Shared%20Documents/General/BPL%20-%20Reference%20Architecture%20Monitoring%20and%20Automation.vsdx) | Visio diagram visualizing the architecture of the monitoring environment as it currently is.  
+| [Architecture](https://microsoft.sharepoint.com/teams/ESSMonitoringAutomationTeam/Shared%20Documents/General/BPL%20-%20Reference%20Architecture%20Monitoring%20and%20Automation.vsdx) | Visio diagram visualizing the architecture of the monitoring environment as it currently is. |
+| [FAQ](https://microsoft.sharepoint.com/teams/ESSMonitoringAutomationTeam/Shared%20Documents/General/BPL%20-%20Reference%20Architecture%20Monitoring%20and%20Automation.vsdx) | FAQ
 
 ### Wiki
 All other documentation regarding the monitoring platform, work instructions and policies are written in markdown and are part of this Wiki. The Wiki is setup in the following way.
