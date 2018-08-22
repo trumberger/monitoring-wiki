@@ -1,5 +1,5 @@
 **History**
-Since US1517, the ARM generators where combined into one piece which can generate the following:
+Since US1517, the ARM generators where combined into one script which can generate the following:
 
 - Metric Alert Rules ARM template (standard)
 - Alert Rules ARM template (standard)
