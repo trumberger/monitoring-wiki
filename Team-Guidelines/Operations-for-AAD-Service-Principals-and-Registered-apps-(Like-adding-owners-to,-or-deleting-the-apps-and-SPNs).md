@@ -7,7 +7,7 @@ To be able to change details and even remove the Apps and SPNs mentioned above, 
 ##Login with the Ess-mon Service account in PowerShell:
 Use the following commands in PowerShell (as Admin) 
 `$essSaName = "ess-mon@microsoft.com"`
-`$EssSaSecret = 'DSwern234sdf%#df!!'`    
+`$EssSaSecret = <EssServiceAccountSecret>` (this value can be retrieved from [VSTS Library](https://easplatform.visualstudio.com/Monitoring/_library?itemType=VariableGroups) in **Global Settings** -> **EssServiceAccountSecret**)
 `$securePassword = ConvertTo-SecureString -String $EssSaSecret -AsPlainText -Force`
 `$credential = New-Object System.Management.Automation.PSCredential($essSaName, $securePassword)`
 `Connect-AzureAD -Credential $credential | Write-Verbose `
