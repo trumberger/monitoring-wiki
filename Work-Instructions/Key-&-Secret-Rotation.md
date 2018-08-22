@@ -24,4 +24,4 @@ This account is currently enrolled in the 70 day password policy. This means tha
 
 ##Notes
 1. The current (old) password for the Ess-Mon account is found in the [VSTS Library](https://easplatform.visualstudio.com/Monitoring/_library?itemType=VariableGroups) in **Global Settings** -> **EssServiceAccountSecret**. 
-2. Generate a new password with a high complexity making use of upper case and lower case letter, symbols and numbers. **!!!** Do not include the **$** symbol inside the password **!!!**
+2. Generate a new password with a high complexity making use of upper case and lower case letter, symbols and numbers. **!!!** Do not include any symbols used by PowerShell such as **$** / **`** / **&**  inside the password **!!!**
