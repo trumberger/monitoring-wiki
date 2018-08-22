@@ -32,6 +32,8 @@ $**Scope** -> Possible values: AlertFramework, AlertRules, MetricAlertRules
 
 $**PathJSON** -> the output file
 
+Example: [af.json](/.attachments/af-c27bb658-2524-4390-ba60-a7318dd46e26.json)
+
 $**OverwriteExisting** -> It is required if the JSON file already exists, in order to be replaced.
 
 $**WarnIfInputFileNotFound** ->
