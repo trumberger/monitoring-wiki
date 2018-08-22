@@ -1,0 +1,43 @@
+**History**
+Since US1517, the ARM generators where combined into one piece which can generate the following:
+
+- Metric Alert Rules ARM template (standard)
+- Alert Rules ARM template (standard)
+- Alert Framework ARM template (our custom format)
+
+**Location:**
+The script can be found here:
+
+https://easplatform.visualstudio.com/_git/Monitoring?path=%2Fsrc%2FMicrosoft.EAS.Automation%2FPipeLineScripts%2FPre-GenerateARMTemplatePipeline.ps1&version=GBmaster
+
+**Usage:**
+
+a) **Parameters**
+
+```
+Param(
+[string] [Parameter(Mandatory=$true)] $PathExcel,
+[string] [Parameter(Mandatory=$true)] $Scope,
+[string] [Parameter(Mandatory=$true)] $PathJSON,
+[switch] [Parameter(Mandatory=$false)] $OverwriteExisting,
+[switch] [Parameter(Mandatory=$false)] $WarnIfInputFileNotFound
+)
+```
+
+$**PathExcel** -> the input file (i.e : https://easplatform.visualstudio.com/_git/Configurations?path=%2FBPL-MON%2FBBDV%2FBPL-MON.MonitoringAlerts.xlsx&version=GBmaster)
+
+!Note: The Excel file needs to have an exact format in terms of columns.
+
+$**Scope** -> Possible values: AlertFramework, AlertRules, MetricAlertRules
+
+$**PathJSON** -> the output file
+
+$**OverwriteExisting** -> It is required if the JSON file already exists, in order to be replaced.
+
+$**WarnIfInputFileNotFound** ->
+If the Excel is not provided/is not found and the parameter is set then only a warning is displayed.
+If the Excel is not provided/is not found and the parameter is NOT set then an exception is thrown.
+
+b) **Command line**:
+
+.\Pre-GenerateARMTemplates_WE.ps1 -Scope AlertFramework -PathExcel "C:\Users\bopetres\OneDrive - Microsoft\Stuff\US1203\BPL-MON.MonitoringAlerts.xlsx" -PathJSON "C:\Users\bopetres\OneDrive - Microsoft\Stuff\US1203\af.json" -OverwriteExisting -WarnIfInputFileNotFound
