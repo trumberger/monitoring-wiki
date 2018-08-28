@@ -42,7 +42,7 @@ PRODUCTION RELEASE
 
 ### Tag and Create Release Branch
 
-At the end of each sprint, all pull requests to the master branch are created Wednesday end of day, so the development lead can review and approve these requests on Thursday. All approved PRs are merged into master and make up the production release. Thursday at 2pm Pacific Time the product manager will tag the master branch with the labels `release` and `vx.y` if there are no errors in staging. Next a new branch will be created named `release.x.y`. This branch will be released into Pre-Prod (using production pipeline).
+At the end of each sprint, all pull requests to the master branch are created Wednesday end of day, so the development lead can review and approve these requests on Thursday. All approved PRs are merged into master and make up the production release. Thursday at 2pm Pacific Time the team lead will tag the master branch with the labels `release` and `vx.y` if there are no errors in staging. Next a new branch will be created named `release.x.y`. This branch will be released into Pre-Prod (using production pipeline).
 
 ### Perform Integration and UAT testing
 
@@ -50,7 +50,7 @@ All required integration and acceptance tests are performed on Friday. The requi
 
 ### Create Release Notes
 
-During the integration and uat testing the product owner will create release notes of the upcoming production release, based on the user story that the team has worked on. The release notes will be extended in ReleaseNotes.md file in the root.  
+During the integration and uat testing the team lead will create release notes of the upcoming production release, based on the user story that the team has worked on. The release notes will be extended in ReleaseNotes.md file in the root.  
 
 ### Trigger Production Release
 
@@ -76,7 +76,7 @@ A successfull build will automatically trigger the following notifications:
 
 All artifacts required to deploy the monitoring agent are copied to the following share in a folder with the version name:
 
-`https://esscommonprod.blob.core.windows.net/releases/release {version}`
+[https://esscommonprod.blob.core.windows.net/releases/latest](https://ms.portal.azure.com/#blade/Microsoft_Azure_Storage/ContainerMenuBlade/overview/storageAccountId/%2Fsubscriptions%2F16b26395-68e3-45e2-81c1-54729c26aba8%2FresourceGroups%2FPROD-CommonArtifacts%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Fesscommonprod/path/releases/etag/%220x8D60D3177D6721E%22)
 
 The share is only used by EAS delivery teams that deploy the monitoring agent out of the application pipeline. They can download the artifacts and push them into their repository (as pull request).
 
@@ -84,7 +84,10 @@ The following artifacts will be used currently:
 
 | Artifact | Explanation |
 |-|-|
-| release.notes.md | Notes describing the latest changes in release (including known issues) |
+| deploy.monitoringagentprerequisites.json | Template that deploys storage account where artifacts are copied towards.
 | deploy.monitoringagent.json | Template that deploys the monitoring agent|
 | deploy.monitoringagent.parameters.json | Contains the parameters used to deploy the monitoring agent. This file will not contain actual parameters (except for default values).|
 | scripts\Pre-Spn-CreationAndValidation.ps1 | The script that creates and assigns an SPN for the monitoring agent. |
+| script\Pre-Spn-CustomRoleCreation.ps1| The script that creates the ESS Custom Role for least privileged use |
+| runbooks\* | All runbooks that will be available in the Azure Automation Account of the monitoring agent. |
+| views\* | All OMS dashboards that will be available in the monitoring agent. |
