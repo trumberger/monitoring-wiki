@@ -6,9 +6,8 @@ Since US1517, the ARM generators where combined into one script which can genera
 - Alert Framework ARM template (our custom format)
 
 **Location:**
-The script can be found here:
+The script can be found [here:](https://easplatform.visualstudio.com/_git/Monitoring?path=%2Fsrc%2FMicrosoft.EAS.Automation%2FPipeLineScripts%2FPre-GenerateARMTemplatePipeline.ps1&version=GBmaster)
 
-https://easplatform.visualstudio.com/_git/Monitoring?path=%2Fsrc%2FMicrosoft.EAS.Automation%2FPipeLineScripts%2FPre-GenerateARMTemplatePipeline.ps1&version=GBmaster
 
 **Usage:**
 
@@ -25,8 +24,7 @@ Param(
 )
 ```
 
-$**PathExcel** -> the input file (i.e : https://easplatform.visualstudio.com/_git/Configurations?path=%2FBPL-MON%2FBBDV%2FBPL-MON.MonitoringAlerts.xlsx&version=GBmaster)
-
+$**PathExcel** -> the input file (i.e :   [MonitoringAlerts.xlsx](/.attachments/MonitoringAlerts-aceeb386-46b9-45e0-b45e-8ca162b10a65.xlsx))
 !Note: The Excel file needs to have an exact format in terms of columns.
 
 $**Scope** -> Possible values: AlertFramework, AlertRules, MetricAlertRules
