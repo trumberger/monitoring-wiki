@@ -1,0 +1,368 @@
+{
+    "contentVersion":  "1.0.1.0"
+,
+"alerts": [
+{
+    "alertName":  "Unusual Peak in HTTP 5xx messages",
+    "description":  "Unusual peak in 5xx errors coming from the application endpoints",
+    "severity":  2,
+    "query":  "AzureMetrics| where ResourceProvider == \"MICROSOFT.WEB\" | where MetricName == \"Http5xx\"| where Total != 0| summarize Errors = count() by Resource| where Errors > 5 ",
+    "searchCategory":  "Availability",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Unusual Peak in Average Response Time",
+    "description":  "Unusual peak in average response time from application endpoints",
+    "severity":  2,
+    "query":  "AzureMetrics| where ResourceProvider == \"MICROSOFT.WEB\" | where MetricName == \"AverageResponseTime\"| where TimeGenerated > ago(6h) | summarize ResponseTime = avg(Total) by Resource| where ResponseTime > 4",
+    "searchCategory":  "Availability",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "AAD audit collection is unavailable",
+    "description":  "Is AAD audit collector is available",
+    "severity":  2,
+    "query":  "AzureDiagnostics| where TimeGenerated > ago(5m) | where ResourceProvider == \"MICROSOFT.AUTOMATION\" and ResultType == \"Failed\" | where RunbookName_s == \"RUN-CollectAuditEventsAAD\" or RunbookName_s == \"RUN-CollectSigninEventsAAD\" | project RunbookName_s, TimeGenerated",
+    "searchCategory":  "Availability",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Runbooks Fails",
+    "description":  "Single or multilple runbooks in Automation account failed",
+    "severity":  2,
+    "query":  "AzureDiagnostics| where TimeGenerated > ago(5m) | where ResourceProvider == \"MICROSOFT.AUTOMATION\" and ResultType == \"Failed\" | where RunbookName_s != \"RUN-CollectAuditEventsAAD\" and RunbookName_s != \"RUN-CollectSigninEventsAAD\" | project RunbookName_s, TimeGenerated",
+    "searchCategory":  "Availability",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Key Vault failed operations",
+    "description":  "List failed applications for key vault",
+    "severity":  2,
+    "query":  "AzureDiagnostics | where TimeGenerated > ago(5m) | where ResourceType == \"VAULTS\" and httpStatusCode_d >= 300 and not(OperationName == \"Authentication\" and httpStatusCode_d == 401) | summarize FailedOperations = count() by bin(TimeGenerated, 1h) | sort by TimeGenerated desc",
+    "searchCategory":  "Availability",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Unusual Peak in HTTP 4xx messages",
+    "description":  "Unusual peak in 4xx errors coming from the application endpoints",
+    "severity":  2,
+    "query":  "AzureMetrics| where ResourceProvider == \"MICROSOFT.WEB\" | where MetricName == \"Http4xx\"| where Total != 0| summarize Errors = count() by Resource| where Errors > 10 ",
+    "searchCategory":  "Security",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Azure Resource changed or created",
+    "description":  "Azure Resource changed or created",
+    "severity":  2,
+    "query":  "AzureActivity| where TimeGenerated > ago(5m) | where ActivityStatus == \"Accepted\" | where OperationName != \"Microsoft.Automation/automationAccounts/jobs/write\" | extend raw = parsejson(Authorization)| extend actionFull = raw.action | extend resourceID = raw.scope| extend actionSplit = split(actionFull, \"/\")| extend resourceSplit = split(resourceID, \"/\") | extend actionItems = arraylength(actionSplit)-1 | extend provider = actionSplit[0]| extend type = actionSplit[1]| extend resourceItems = iff( type == \"automationAccounts\", 8, arraylength(resourceSplit)-1)| extend Action = actionSplit[actionItems]| extend ResourceName = resourceSplit [resourceItems]| summarize Changes = countif(Action == \"write\") by tostring(type), tostring(ResourceName), tostring(Caller)| where Changes > 0 | sort by Changes desc",
+    "searchCategory":  "Security",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Azure Resource deleted",
+    "description":  "Azure Resource deleted",
+    "severity":  2,
+    "query":  "AzureActivity| where TimeGenerated > ago(5m) | where ActivityStatus == \"Accepted\"| extend raw = parsejson(Authorization)| extend actionFull = raw.action | extend resourceID = raw.scope| extend actionSplit = split(actionFull, \"/\")| extend resourceSplit = split(resourceID, \"/\") | extend actionItems = arraylength(actionSplit)-1 | extend provider = actionSplit[0]| extend type = actionSplit[1]| extend resourceItems = iff( type == \"automationAccounts\", 8, arraylength(resourceSplit)-1)| extend Action = actionSplit[actionItems]| extend ResourceName = resourceSplit [resourceItems]| summarize Changes = countif(Action == \"delete\") by tostring(type), tostring(ResourceName), tostring(Caller)| where Changes > 0 | sort by Changes desc",
+    "searchCategory":  "Security",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Service bus namespace Server Errors (Preview)",
+    "description":  "Server Errors for Microsoft.ServiceBus. (Preview)",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.SERVICEBUS' | where MetricName == 'ServerErrors' | where UnitName == 'Count' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Service bus namespace User Errors (Preview)",
+    "description":  "User Errors for Microsoft.ServiceBus. (Preview)",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.SERVICEBUS' | where MetricName == 'UserErrors' | where UnitName == 'Count' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Service bus namespace Throttled Requests (Preview)",
+    "description":  "Throttled Requests for Microsoft.ServiceBus. (Preview)",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.SERVICEBUS' | where MetricName == 'ThrottledRequests' | where UnitName == 'Count' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Service bus CPU usage per namespace",
+    "description":  "Service bus premium namespace CPU usage metric",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.SERVICEBUS' | where MetricName == 'CPUXNS' | where UnitName == 'Percent' | where Maximum >= 90 | project Resource, Maximum",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Service bus Memory size usage per namespace",
+    "description":  "Service bus premium namespace memory usage metric",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.SERVICEBUS' | where MetricName == 'WSXNS' | where UnitName == 'Percent' | where Maximum >= 90 | project Resource, Maximum",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Event hub namespace Server Errors (Preview)",
+    "description":  "Server Errors for Microsoft.EventHub. (Preview)",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.EVENTHUB' | where MetricName == 'ServerErrors' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Event hub namespace user Errors (Preview)",
+    "description":  "User Errors for Microsoft.EventHub. (Preview)",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.EVENTHUB' | where MetricName == 'UserErrors' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Event hub namespace Quota Exceeded Errors (Preview)",
+    "description":  "Quota Exceeded Errors for Microsoft.EventHub. (Preview)",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.EVENTHUB' | where MetricName == 'QuotaExceededErrors' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Event hub namespace Throttled Requests (Preview)",
+    "description":  "Throttled Requests for Microsoft.EventHub. (Preview)",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.EVENTHUB' | where MetricName == 'ThrottledRequests' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Event hub namespace Failed Requests",
+    "description":  "Total failed requests for a namespace",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.EVENTHUB' | where MetricName == 'FAILREQ' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Event hub namespace Other Errors",
+    "description":  "Total miscellaneous errors for a namespace",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.EVENTHUB' | where MetricName == 'MISCERR' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Input Deserialization Errors",
+    "description":  "Total Input Deserialization Errors",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.STREAMANALYTICS' | where MetricName == 'DeserializationError' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Failed Function Requests",
+    "description":  "Total Failed Function Requests",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.STREAMANALYTICS' | where MetricName == 'AMLCalloutFailedRequests' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Out of order Events",
+    "description":  "Total Out of order Events",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.STREAMANALYTICS' | where MetricName == 'DroppedOrAdjustedEvents' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Runtime Errors",
+    "description":  "Total Runtime Errors",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.STREAMANALYTICS' | where MetricName == 'Errors' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Data Conversion Errors",
+    "description":  "Total Data Conversion Errors",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.STREAMANALYTICS' | where MetricName == 'ConversionErrors' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "SU % Utilization",
+    "description":  "SU % Utilization",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(10m) | where ResourceProvider == 'MICROSOFT.STREAMANALYTICS' | where MetricName == 'ResourceUtilization' | where Maximum >= 90 | project Resource, Maximum",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Cache Misses on Redis Cache",
+    "description":  "Total Cache Misses on Redis Cache",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(15m) | where ResourceProvider == 'MICROSOFT.CACHE' | where MetricName == 'cachemisses' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Availability",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Redis Cache Server Load Percentage",
+    "description":  "Redis Cache Server Load Percentage",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(15m) | where ResourceProvider == 'MICROSOFT.CACHE' | where MetricName == 'serverLoad' | where Maximum >= 90 | project Resource, Maximum",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Redis Cache CPU Percentage",
+    "description":  "Redis Cache CPU Percentage",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(15m) | where ResourceProvider == 'MICROSOFT.CACHE' | where MetricName == 'percentProcessorTime' | where Maximum >= 90 | project Resource, Maximum",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total ApiManagement Unauthorized Gateway Requests",
+    "description":  "Number of unauthorized gateway requests",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(15m) | where ResourceProvider == 'MICROSOFT.MICROSOFT.APIMANAGEMENT' | where MetricName == 'UnauthorizedRequests' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Security ",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total ApiManagement Failed Gateway Requests",
+    "description":  "Number of failures in gateway requests",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(15m) | where ResourceProvider == 'MICROSOFT.MICROSOFT.APIMANAGEMENT' | where MetricName == 'FailedRequests' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Security ",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Data Factory Integration runtime CPU utilization",
+    "description":  "Data Factory Integration runtime CPU utilization",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(15m) | where ResourceProvider == 'MICROSOFT.DATAFACTORY' | where MetricName == 'IntegrationRuntimeCpuPercentage' | where Average >= 90 | project Resource, Average",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Data Factory Failed Runs",
+    "description":  "Total Data Factory Failed Runs",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(15m) | where ResourceProvider == 'MICROSOFT.DATAFACTORY' | where MetricName == 'FailedRuns' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Failed pipeline runs metrics",
+    "description":  "Failed pipeline runs metrics",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(15m) | where ResourceProvider == 'MICROSOFT.DATAFACTORY' | where MetricName == 'PipelineFailedRuns' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Failed activity runs metrics",
+    "description":  "Failed activity runs metrics",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(15m) | where ResourceProvider == 'MICROSOFT.DATAFACTORY' | where MetricName == 'ActivityFailedRuns' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Failed trigger runs metrics",
+    "description":  "Failed trigger runs metrics",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(15m) | where ResourceProvider == 'MICROSOFT.DATAFACTORY' | where MetricName == 'TriggerFailedRuns' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Total Failed Jobs",
+    "description":  "Count of Failed Jobs",
+    "severity":  2,
+    "query":  "AzureMetrics | where TimeGenerated >= ago(15m) | where ResourceProvider == 'MICROSOFT.DATALAKEANALYTICS' | where MetricName == 'JobEndedFailure' | where Total > 0 | project Resource, Total",
+    "searchCategory":  "Performance",
+    "source":  "LogAnalytics"
+}
+,
+{
+    "alertName":  "Failed to create IcM ticket",
+    "description":  "Unable to create IcM ticket due to internal error",
+    "severity":  2,
+    "query":  "requests | where success == false | where name == \"ICM-CreateTicket\" | project name, timestamp ",
+    "searchCategory":  "Availability",
+    "source":  "ApplicationInsights",
+    "sourceInstance":  "8cdffd5b-6bb9-46a5-9d84-33d4b1cc7ab2"
+}
+,
+{
+    "alertName":  "Failed to receive alert",
+    "description":  "Unable to process received alerts due to internal error",
+    "severity":  2,
+    "query":  "requests | where success == false | where name == \"alerts\" | extend service = substring(cloud_RoleName, 17) | project name, service, resultCode, timestamp",
+    "searchCategory":  "Availability",
+    "source":  "ApplicationInsights",
+    "sourceInstance":  "8cdffd5b-6bb9-46a5-9d84-33d4b1cc7ab2"
+}
+,
+{
+    "alertName":  "Failed to receive heartbeat",
+    "description":  "Unable to receive heartbeat message due to internal error",
+    "severity":  3,
+    "query":  "requests | where success == false | where name == \"heartbeat\" | extend service = substring(cloud_RoleName, 17) | project name, service, resultCode, timestamp",
+    "searchCategory":  "Availability",
+    "source":  "ApplicationInsights",
+    "sourceInstance":  "8cdffd5b-6bb9-46a5-9d84-33d4b1cc7ab2"
+}
+,
+{
+    "alertName":  "Heartbeat dropped",
+    "description":  "Heartbeat for customer is dropping",
+    "severity":  2,
+    "query":  "customEvents | where timestamp > ago(1h) | where name == \"HeartBeatReceived\" | extend service = tostring(customDimensions.serviceID) | extend environment = tostring(customDimensions.environment) | extend instance = tostring(customDimensions.instanceName) | extend instance = tostring(customDimensions.instanceName) | extend instance = tostring(customDimensions.instanceName) | summarize beats = count() by service, environment, instance | where beats < 10 | project service, instance, environment, beats",
+    "searchCategory":  "Availability",
+    "source":  "ApplicationInsights",
+    "sourceInstance":  "8cdffd5b-6bb9-46a5-9d84-33d4b1cc7ab2"
+}
+]}
