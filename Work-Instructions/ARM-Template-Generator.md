@@ -46,4 +46,4 @@ The Application Insights ID
 
 b) **Command line**:
 
-.\Pre-GenerateARMTemplates_WE.ps1 -Scope AlertFramework -PathExcel "C:\Users\bopetres\OneDrive - Microsoft\Stuff\US1203\BPL-MON.MonitoringAlerts.xlsx" -PathJSON "C:\Users\bopetres\OneDrive - Microsoft\Stuff\US1203\af.json" -OverwriteExisting -WarnIfInputFileNotFound
+.\Pre-GenerateARMTemplates_WE.ps1 -Scope AlertFramework -PathExcel "full_path_to_Excel_file" -PathJSON "full_path_to_JSON_file" -OverwriteExisting -WarnIfInputFileNotFound -sourceInstance "appinsightsid"
