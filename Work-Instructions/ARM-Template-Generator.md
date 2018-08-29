@@ -20,7 +20,8 @@ Param(
 [string] [Parameter(Mandatory=$true)] $Scope,
 [string] [Parameter(Mandatory=$true)] $PathJSON,
 [switch] [Parameter(Mandatory=$false)] $OverwriteExisting,
-[switch] [Parameter(Mandatory=$false)] $WarnIfInputFileNotFound
+[switch] [Parameter(Mandatory=$false)] $WarnIfInputFileNotFound,
+[string] [Parameter(Mandatory=$true)] $sourceInstance
 )
 ```
 
@@ -39,6 +40,9 @@ $**OverwriteExisting** -> It is required if the JSON file already exists, in ord
 $**WarnIfInputFileNotFound** ->
 If the Excel is not provided/is not found and the parameter is set then only a warning is displayed.
 If the Excel is not provided/is not found and the parameter is NOT set then an exception is thrown.
+
+$**sourceInstance**
+The Application Insights ID
 
 b) **Command line**:
 
